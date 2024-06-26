@@ -1,3 +1,8 @@
 numpy
 scikit-learn
 pandas
+pytest
+pytest-asyncio
+aiofiles
+pandas
+fastapi
