@@ -202,18 +202,16 @@ async def get_model(file: UploadFile = File(...)):
         current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
         result_filename = f"model_results_{current_time}.pkl"
 
-        # Save the buffer to a file (optional)
-        with open(result_filename, "wb") as f:
-            f.write(buffer.getbuffer())
 
         # Return the file as a response
         headers = {
             'Content-Disposition': f'attachment; filename="{result_filename}"'
         }
 
-        return FileResponse(result_filename, 
-                            media_type='application/octet-stream', 
-                            headers=headers)
+        # Return the file as a streaming response
+        return StreamingResponse(buffer, 
+                                 media_type='application/octet-stream', 
+                                 headers=headers)
     
     except Exception as e:
         logger.error(f"Error: {e}")
