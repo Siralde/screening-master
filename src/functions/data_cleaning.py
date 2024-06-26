@@ -3,6 +3,11 @@ from datetime import datetime
 import csv
 import math
 import re
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 
 #NOTE: The following CSV's are available but currently not used:
 """
@@ -95,8 +100,19 @@ def clean_funding_information_csv(org_df,
 
 def clean_ipos_csv(ipos_path,
                    filter_ac_df,
+                   start_date,
+                   end_date,
                    sim_start_date,
                    sim_end_date):
+    
+    if not start_date or end_date:
+        start_date = datetime.strptime('2015-01-01', '%Y-%m-%d') # Start Day: 1 of January of 2015
+        end_date = datetime.strptime('2018-12-31', '%Y-%m-%d') # End Day: 31 of December of 2018
+    if not sim_start_date or sim_end_date:
+        sim_start_date = datetime.strptime('2019-01-01', '%Y-%m-%d') # Start Day: 1 of January of 2019
+        sim_end_date = datetime.strptime('2022-12-31', '%Y-%m-%d') # End Day: 31 of December of 2022
+
+
     # Remove ones that IPO'd during warmup window
     ipo_df = pd.read_csv(ipos_path)
 
@@ -106,7 +122,7 @@ def clean_ipos_csv(ipos_path,
 
     ipo_df.rename(columns={'org_uuid': 'uuid_ipos'}, inplace=True)
 
-    ipo_df =  filter_ac_df.merge(ipo_df, left_on='uuid_org', right_on='uuid_ipos', how="left")
+    ipo_df = filter_ac_df.merge(ipo_df, left_on='uuid_org', right_on='uuid_ipos', how="left")
 
     ipo_df['went_public_on'] = pd.to_datetime(ipo_df['went_public_on'])
     AC_CL_IPO_df = ipo_df[(ipo_df['went_public_on'] < start_date) | (ipo_df['went_public_on'] > end_date) | (ipo_df['went_public_on'].isna())]
@@ -120,9 +136,10 @@ def clean_ipos_csv(ipos_path,
     # Remove duplicates
     unique_filtered = filtered_df.drop_duplicates(subset=['uuid_org'], keep='first')
 
+
     # Remove unwanted Columns
     columns_to_drop = ['uuid_y', 'name_y', 'type_x', 'permalink_y', 'cb_url_x', 'rank_x', 'created_at_x', 'updated_at_x', 'country_code_y', 'state_code_y', 'region_y', 'city_y', 'investment_type', 'announced_on', 'raised_amount_usd', 'raised_amount', 'raised_amount_currency_code', 'post_money_valuation_usd', 'post_money_valuation', 'post_money_valuation_currency_code', 'investor_count', 'org_uuid', 'org_name_x', 'lead_investor_uuids', 'uuid_x', 'name_x', 'type_y', 'permalink_x', 'cb_url_y', 'rank_y', 'created_at_y', 'updated_at_y', 'acquiree_uuid', 'acquiree_name', 'acquiree_cb_url', 'acquiree_country_code', 'acquiree_state_code', 'acquiree_region', 'acquiree_city', 'acquirer_uuid', 'acquirer_name', 'acquirer_cb_url', 'acquirer_country_code', 'acquirer_state_code', 'acquirer_region', 'acquirer_city', 'acquisition_type', 'acquired_on', 'price_usd', 'price', 'price_currency_code', 'uuid_y.1', 'name_y.1', 'type', 'permalink_y.1', 'cb_url', 'rank', 'created_at', 'updated_at', 'uuid_ipos', 'org_name_y', 'org_cb_url', 'country_code', 'state_code', 'region', 'city', 'stock_exchange_symbol', 'stock_symbol', 'went_public_on', 'share_price_usd', 'share_price', 'share_price_currency_code', 'valuation_price_usd', 'valuation_price', 'valuation_price_currency_code', 'money_raised_usd', 'money_raised', 'money_raised_currency_code']
-    unique_filtered = unique_filtered.drop(columns=columns_to_drop)
+    unique_filtered = unique_filtered.drop(columns=columns_to_drop, errors='ignore')
 
     unique_filtered.rename(columns={'country_code_x': 'country_code'}, inplace=True)
     unique_filtered.rename(columns={'state_code_x': 'state_code'}, inplace=True)
@@ -136,8 +153,9 @@ def clean_ipos_csv(ipos_path,
 
     unique_filtered['founded_on'] = pd.to_datetime(unique_filtered['founded_on'])
 
-    unique_filtered['age_months'] = ((simulation_start_date - unique_filtered['founded_on']).dt.days / 30).apply(math.ceil)
-
+    unique_filtered['age_months'] = unique_filtered['founded_on'].apply(
+        lambda x: math.ceil((simulation_start_date - x).days / 30) if pd.notnull(x) else float('nan')
+    )
     # Convert URLs into binary variables
     unique_filtered['has_facebook_url'] = unique_filtered['facebook_url'].apply(has_url)
     unique_filtered['has_twitter_url'] = unique_filtered['twitter_url'].apply(has_url)
@@ -149,6 +167,11 @@ def clean_funding_rounds_csv(funding_rounds_path,
                              sim_start_date,
                              unique_filtered
                             ):
+    
+    if not sim_start_date:
+        sim_start_date = datetime.strptime('2019-01-01', '%Y-%m-%d') # Start Day: 1 of January of 2019
+
+
     funding_rounds_data = pd.read_csv(funding_rounds_path)
 
     # Convert relevant date columns to datetime format
@@ -176,8 +199,15 @@ def clean_funding_rounds_csv(funding_rounds_path,
     unique_filtered = unique_filtered.merge(raised_amount_usd, left_on="uuid_org", right_on='org_uuid', how='left', suffixes=('', '_y'))
 
     # Replace NaN values with 0 for companies with no data
-    unique_filtered['round_count'].fillna(0, inplace=True)
-    unique_filtered['raised_amount_usd'].fillna(0, inplace=True)
+
+    unique_filtered.fillna({'round_count':0}, inplace=True)
+
+    # Ensure the column is treated as a numeric type
+    # Convert all non-numeric values to NaN
+    unique_filtered['raised_amount_usd'] = pd.to_numeric(unique_filtered['raised_amount_usd'], errors='coerce')
+
+    # Fill NaN values with 0
+    unique_filtered.fillna({'raised_amount_usd' : 0}, inplace=True)
 
     # Drop IDs
     unique_filtered = unique_filtered.drop(columns=['org_uuid', 'org_uuid_y'])
@@ -189,19 +219,20 @@ def clean_funding_rounds_csv(funding_rounds_path,
     last_round_investment_type = last_round_warmup['investment_type'].rename('last_round_investment_type')
     last_round_raised_amount_usd = last_round_warmup['raised_amount_usd'].rename('last_round_raised_amount_usd')
     last_round_post_money_valuation = last_round_warmup['post_money_valuation_usd'].rename('last_round_post_money_valuation')
+
     # 4. Calculate the time lapse in months between simulation start date and the last funding round
     last_round_timelapse_months = ((sim_start_date - last_round_warmup['announced_on']).dt.days / 30).apply(math.ceil).astype(int).rename('last_round_timelapse_months')
-
 
     unique_filtered = unique_filtered.merge(last_round_investment_type, left_on="uuid_org", right_on='org_uuid', how='left')
     unique_filtered = unique_filtered.merge(last_round_raised_amount_usd, left_on="uuid_org", right_on='org_uuid', how='left')
     unique_filtered = unique_filtered.merge(last_round_post_money_valuation, left_on="uuid_org", right_on='org_uuid', how='left')
     unique_filtered = unique_filtered.merge(last_round_timelapse_months, left_on="uuid_org", right_on='org_uuid', how='left')
 
-    return unique_filtered
+    return (funding_before_ts, unique_filtered)
 
 def clean_investments_csv(investments_path,
-                        unique_filtered):
+                        unique_filtered,
+                        funding_before_ts):
     # Number of (unique) investors who participated in funding rounds during warmup
 
     invst_df = pd.read_csv(investments_path)
@@ -260,6 +291,9 @@ def clean_people_and_degrees_csv(people_path,
         lambda x: bool(re.search(pattern, str(x), re.IGNORECASE))
     )]
 
+    if filtered_people_data.empty:
+        filtered_people_data = pd.DataFrame(columns=people.columns)
+
     # Step 4: Calculate founders_dif_country_count, founders_male_count, and founders_female_count
     founders_info = filtered_people_data.groupby('featured_job_organization_uuid').agg(
         founders_dif_country_count=('country_code', pd.Series.nunique),
@@ -275,22 +309,21 @@ def clean_people_and_degrees_csv(people_path,
 
     # Drop the redundant column after merging
     unique_filtered.drop(columns=['featured_job_organization_uuid'], inplace=True)
-
+    
+    
     # Look at education history
 
     degree_df = pd.read_csv(degrees_path)
 
     # Step 4: Merge the degrees data with the filtered people data
     merged_degrees = degree_df.merge(filtered_people_data, left_on='person_uuid', right_on='uuid', how='inner')
-
     # Step 5: Count the number of degrees for each founder
     degree_counts = merged_degrees.groupby('person_uuid').size().reset_index(name='degree_count')
-
     # Step 6: Merge the degree counts with the filtered people data to associate counts with organizations
     founders_with_degrees = filtered_people_data.merge(degree_counts, left_on='uuid', right_on='person_uuid', how='left')
 
     # Step 7: Replace NaN values in degree_count with 0
-    founders_with_degrees['degree_count'].fillna(0, inplace=True)
+    founders_with_degrees.fillna({'degree_count':0}, inplace=True)
 
     # Step 8: Aggregate the degree counts at the organization level
     degree_stats = founders_with_degrees.groupby('featured_job_organization_uuid').agg(
@@ -404,6 +437,11 @@ def define_fr(fund_df,
 def define_cl(org_df,
               sim_start_date,
               sim_end_date):
+    
+    if not sim_start_date or sim_end_date:
+        sim_start_date = datetime.strptime('2019-01-01', '%Y-%m-%d') # Start Day: 1 of January of 2019
+        sim_end_date = datetime.strptime('2022-12-31', '%Y-%m-%d') # End Day: 31 of December of 2022
+
     # Convert 'closed_on' column to datetime
     org_df['closed_on'] = pd.to_datetime(org_df['closed_on'], errors='coerce')
 
@@ -435,12 +473,12 @@ def clean_data(organization_path,
                ):
     
     # Filtering organizations.csv
-
-    org_df = clean_organization_csv(organization_path)
+    logger.info("Cleaning organizations.csv")
+    org_df = clean_organization_csv(organization_path, start_date, end_date)
     
 
     # Filtering funding_rounds.csv and acquisitions.csv
-
+    logger.info("Cleaning funding_rounds.csv and acquisitions.csv")
     filter_ac_df = clean_funding_information_csv(org_df,
                                                 funding_rounds_path,
                                                 acquisitions_path,
@@ -448,27 +486,30 @@ def clean_data(organization_path,
                                                 end_date)
 
     # Filtering ipos.csv
-
+    logger.info("Cleaning ipos.csv")
     unique_filtered = clean_ipos_csv(ipos_path,
                                      filter_ac_df,
+                                     start_date,
+                                     end_date,
                                      sim_start_date,
                                      sim_end_date)
 
     # Filtering  funding_rounds.csv
-
-    unique_filtered = clean_funding_rounds_csv(funding_rounds_path,
+    logger.info("Cleaning funding_rounds.csv")
+    funding_before_ts, unique_filtered = clean_funding_rounds_csv(funding_rounds_path,
                                                 sim_start_date,
                                                 unique_filtered
                                             )
 
 
     # Filtering  investments.csv
-
+    logger.info("Cleaning investments.csv")
     unique_filtered = clean_investments_csv(investments_path,
-                                          unique_filtered)
+                                          unique_filtered,
+                                          funding_before_ts)
 
     # Filtering people.csv and degrees.csv
-
+    logger.info("Cleaning people.csv and degrees.csv")
     unqiue_filtered = clean_people_and_degrees_csv( people_path,
                                                     degrees_path,
                                                     unique_filtered)
@@ -476,6 +517,7 @@ def clean_data(organization_path,
 
     # Begin to define Targets:
     
+    logger.info("Defining targets")
     org_df = unique_filtered
     ac_df = pd.read_csv(acquisitions_path)
     ipo_df = pd.read_csv(ipos_path)
@@ -483,13 +525,14 @@ def clean_data(organization_path,
 
 
     ### DEFINING ACQUIRED (AC) ###
-
+    logging.info("Defining ACs")
     org_df, acquired_during_simulation = define_acquired(ac_df,
                              org_df,
                              sim_start_date,
                              sim_end_date)
 
     ### DEFINING IPO (IP) ###
+    logging.info("Defining IPs")
 
     org_df, ipo_during_simulation = define_ipo(ipo_df,
                         org_df,
@@ -498,6 +541,7 @@ def clean_data(organization_path,
 
 
     ## DEFINING FUNDING ROUND (FR) ###
+    logging.info("Defining FRs")
 
     org_df = define_fr(fund_df,
                        org_df,
@@ -507,6 +551,7 @@ def clean_data(organization_path,
                        acquired_during_simulation)
 
     ## DEFINING CLOSED (CL) ###
+    logging.info("Defining CLs")
 
     org_df = define_cl(org_df,
                     sim_start_date,

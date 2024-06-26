@@ -1,94 +1,221 @@
-import numpy as np
-from sklearn.model_selection import StratifiedKFold, cross_val_score
-from sklearn.preprocessing import LabelEncoder
-from sklearn.svm import SVC
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier, ExtraTreesClassifier, GradientBoostingClassifier
-
-import pickle
-import random
-
+from fastapi import FastAPI, HTTPException, UploadFile, File # type: ignore
+from fastapi.middleware.cors import CORSMiddleware # type: ignore # For Secure Access
+from fastapi.responses import StreamingResponse, FileResponse
+import logging
+import os
+import gzip
+import shutil
+from datetime import datetime
+import tarfile
 import pandas as pd
+import io
+import pickle
+# Local Imports
+import functions.data_cleaning as Clean
+import functions.model_results as Models
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Start App
+
+app = FastAPI()
 
 
-data = pd.read_csv('data/filtered_CB_data.csv')
+# CORS - Allowed Origins
 
-
-# Encode categorical variables
-categorical_columns = [
-    'country_code', 'state_code', 'region', 'city', 'status', 
-    'category_list', 'category_groups_list', 'last_round_investment_type'
+origins = [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:4173",
+    "http://localhost:3000",
 ]
 
-le = LabelEncoder()
-for col in categorical_columns:
-    data[col] = le.fit_transform(data[col].astype(str))
+app.add_middleware(CORSMiddleware,
+                   allow_origins=origins,
+                   allow_credentials=True,
+                   allow_methods=["*"],
+                   allow_headers=["*"],
+                   )
 
 
-# Encode target variable
-data['outcome'] = le.fit_transform(data['outcome'].astype(str))
+@app.post(
+    "/get-data-and-model/", 
+    summary="Uploads data and retrieve a trained model",
+    description="""
+    Given a compressed archive folder (.gz) from CrunchBase, this endpoint will
+    go through the data, clean it, and use it to train a model. It will then save
+    the results of the training locally.
+    """ ,
+    tags=["data-cleaning-model-training"],
+    deprecated=False,
+    operation_id="clean_data_and_train_model",
+    response_description="A file containing the results of the model training",
+)
+async def get_data_and_model(folder: UploadFile = File(...)):
+    if not folder.filename.endswith(".gz"):
+        return "Invalid file format. Please upload a .gz folder."
+    
+    # Saving and extracting the data:
 
-y = data['outcome']
+    try:
+        # Save the uploaded file
+        upload_path = f"/tmp/{folder.filename}"
+        with open(upload_path, "wb") as buffer:
+            shutil.copyfileobj(folder.file, buffer)
 
-# Define features and target
-X = data.drop(columns=[
-    'uuid_org', 'name_org', 'permalink_org', 'domain', 'homepage_url', 
-    'address', 'postal_code', 'short_description', 'facebook_url', 
-    'linkedin_url', 'twitter_url', 'founded_on', 'last_funding_on', 
-    'closed_on', 'total_funding_currency_code','outcome'
-])
+        # Decompress the .gz file to get the .tar file
+        tar_path = upload_path.replace(".gz", "")
+        with gzip.open(upload_path, "rb") as f_in:
+            with open(tar_path, "wb") as f_out:
+                shutil.copyfileobj(f_in, f_out)
+
+        # Remove the original .gz file
+        os.remove(upload_path)
+
+        # Extract the .tar file
+        extracted_folder = tar_path.replace(".tar", "")
+        os.makedirs(extracted_folder, exist_ok=True)
+        
+        with tarfile.open(tar_path, "r") as tar:
+            tar.extractall(path=extracted_folder)
+
+        # Remove the .tar file
+        os.remove(tar_path)
+
+        logger.info(f"File uploaded and extracted successfully extracted_path: {extracted_folder}")
+    except Exception as e:
+        logger.error(f"Error: {e}")
+        raise HTTPException(status_code=500, detail=f"An error occurred while processing the file: {str(e)}")
+
+    # Cleaning the data:
+
+    try:
+
+        csv_files = {f: os.path.join(extracted_folder, f) for f in os.listdir(extracted_folder) if f.endswith(".csv")}
+
+        # Ensure that the required CSV files are present
+        required_files = [
+                            "organizations.csv",
+                            "funding_rounds.csv",
+                            "acquisitions.csv",
+                            "ipos.csv",
+                            "investments.csv",
+                            "people.csv",
+                            "degrees.csv",
+                        ]
+        
+        for required_file in required_files:
+            if required_file not in csv_files:
+                raise HTTPException(status_code=400, detail=f"Missing required file: {required_file}")
+
+        logger.info("All required files are present")
+
+        dataframe = Clean.clean_data(organization_path=csv_files["organizations.csv"], 
+                                    funding_rounds_path=csv_files["funding_rounds.csv"],
+                                    acquisitions_path=csv_files["acquisitions.csv"],
+                                    ipos_path=csv_files["ipos.csv"],
+                                    investments_path=csv_files["investments.csv"],
+                                    people_path=csv_files["people.csv"],
+                                    degrees_path=csv_files["degrees.csv"],
+                                    start_date=None, 
+                                    end_date=None,
+                                    sim_start_date=None,
+                                    sim_end_date=None)
+        
+        logger.info("Data is cleaned")
+
+        if dataframe.empty:
+            logger.error(f"Error: Cleaned Dataset is empty")
+
+        results = Models.train_models(dataframe)
+
+        # Create a unique filename for the result file
+        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+        result_filename = f"model_results_{current_time}.pkl"
+
+        headers = {
+            'Content-Disposition': f'attachment; filename="{result_filename}"'
+        }
+
+        # Return the file as a response
+        logging.info("Returning results")
+        return FileResponse(results, 
+                            media_type='application/octet-stream', 
+                            filename=result_filename, 
+                            headers=headers)
+    
+    except Exception as e:
+        logger.error(f"Error: {e}")
+        raise HTTPException(status_code=501, 
+                            detail=f"An error occurred while cleaning the data: {str(e)}")
 
 
-# Define classifiers
-classifiers = {
-    #'SVM': SVC(kernel='linear'), (TOO SLOW)
-    'Decision Tree': DecisionTreeClassifier(),
-    'Random Forest': RandomForestClassifier(),
-    'Extra Trees': ExtraTreesClassifier(),
-    'Gradient Boosting': GradientBoostingClassifier()
-}
+@app.post(
+    "/get-model/", 
+    summary="Trains and retrieves a model given clean data",
+    description="""
+    Given a clean data csv, this endpoint will use it to train a model. It will then save
+    the results of the training locally.
+    """ ,
+    tags=["model-training"],
+    deprecated=False,
+    operation_id="train_model",
+    response_description="A string containing the status of the operation and possible errors",
+)
+async def get_model(file: UploadFile = File(...)):
+    if not file.filename.endswith(".csv"):
+        return "Invalid file format. Please upload a .csv file."
+    
+    # Saving and extracting the data:
 
-# Perform stratified k-fold cross-validation
-skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    
 
-# Evaluate classifiers and save results
-results = {}
+    try:
+        # Read the uploaded CSV file into a DataFrame
+        contents = await file.read()
+        dataframe = pd.read_csv(io.StringIO(contents.decode('utf-8')))
 
-for clf_name, clf in classifiers.items():
-    cv_results = cross_val_score(clf, X, y, cv=skf, scoring='accuracy')
-    results[clf_name] = {
-        'mean_accuracy': np.mean(cv_results),
-        'std_accuracy': np.std(cv_results),
-        'cv_results': cv_results
-    }
-    print(f"{clf_name}: Mean accuracy = {np.mean(cv_results):.4f}, Std = {np.std(cv_results):.4f}")
+        # Process the data and train models
+        results = Models.train_models(dataframe)
 
-# Decode the target variable back to original labels for readability
-data['outcome'] = le.inverse_transform(data['outcome'])
+        # Create a unique filename for the result file
+        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+        result_filename = f"model_results_{current_time}.pkl"
 
-# Print distribution of the outcome variable
-outcome_counts = data['outcome'].value_counts()
-total = len(data)
-print("\nClass value distribution of the outcome variable:")
-print("Class\tFrequency\tRatio")
-outcome_distribution = {}
-for cls, count in outcome_counts.items():
-    ratio = (count / total) * 100
-    print(f"{cls}\t{count}\t{ratio:.2f}%")
-    outcome_distribution[cls] = {
-        'count': count,
-        'ratio': ratio
-    }
+        headers = {
+            'Content-Disposition': f'attachment; filename="{result_filename}"'
+        }
+        
+        logging.info("Returning results")
+        
+        # Create an io.BytesIO buffer
+        buffer = io.BytesIO()
 
-# Save results and variables to a file using pickle
-file_number = random.randint(1000, 9999)
-file_path = f"results/model_results_{file_number}.pkl"
+        # Serialize the dictionary using pickle
+        pickle.dump(results, buffer)
 
-with open(file_path, 'wb') as file:
-    pickle.dump({
-        'results': results,
-        'outcome_distribution': outcome_distribution,
-        'classes': le.classes_
-    }, file)
+        # Ensure the buffer's position is at the beginning
+        buffer.seek(0)
 
-print(f"\nResults and variables have been saved to 'results/model_results_{file_number}.pkl'")
+        # Create a unique filename for the result file
+        current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
+        result_filename = f"model_results_{current_time}.pkl"
+
+        # Save the buffer to a file (optional)
+        with open(result_filename, "wb") as f:
+            f.write(buffer.getbuffer())
+
+        # Return the file as a response
+        headers = {
+            'Content-Disposition': f'attachment; filename="{result_filename}"'
+        }
+
+        return FileResponse(result_filename, 
+                            media_type='application/octet-stream', 
+                            headers=headers)
+    
+    except Exception as e:
+        logger.error(f"Error: {e}")
+        raise HTTPException(status_code=501, 
+                            detail=f"An error occurred while cleaning the data: {str(e)}")
