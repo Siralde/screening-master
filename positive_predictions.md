@@ -1,452 +1,38 @@
 # IPO Predictions
 
-## Company 80
+## Company 174
 
-**uuid_org:** f1e79a62-d910-43d5-a8d7-3ba6ee4aeef1
+**Probability:** 0.6900 ± 0.0000
 
-**name_org:** Corre Energy
+**uuid_org:** a18dd59f-32e4-4167-be14-4223e79c2aed
 
-**permalink_org:** corre-energy
+**name_org:** G.H.Y Culture & Media
 
-**domain:** corre.energy
+**permalink_org:** g-h-y-culture-media
 
-**homepage_url:** https://corre.energy
+**domain:** ghyculturemedia.com
 
-**country_code:** 145
+**homepage_url:** http://www.ghyculturemedia.com
+
+**country_code:** 170
 
 **state_code:** 0
 
-**region:** 562
+**region:** 316
 
-**city:** 7800
+**city:** 19223
 
-**address:** Helperpark 278-3
+**address:** 988 Toa Payoh North #07-08
 
-**postal_code:** 9723 ZA
-
-**status:** 2
-
-**short_description:** Corre Energy develops, builds and operates grid-scale underground energy storage.
-
-**category_list:** 135141
-
-**category_groups_list:** 33249
-
-**num_funding_rounds:** 2.0
-
-**total_funding_usd:** 21131046.0
-
-**total_funding:** 19800000.0
-
-**total_funding_currency_code:** EUR
-
-**founded_on:** 2018-01-01
-
-**last_funding_on:** 2023-02-23
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/correenergy
-
-**twitter_url:** https://twitter.com/correenergy
-
-**age_months:** 13
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 1.0
-
-**founders_male_count:** 1.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 1.0
-
-**founders_degree_count_max:** 1.0
-
-**founders_degree_count_mean:** 1.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 317
-
-**uuid_org:** 66496638-dbab-4489-b238-b45f1e54fb37
-
-**name_org:** Real Good Foods
-
-**permalink_org:** real-good-foods
-
-**domain:** realgoodfoods.com
-
-**homepage_url:** https://www.realgoodfoods.com
-
-**country_code:** 198
-
-**state_code:** 7
-
-**region:** 279
-
-**city:** 7446
-
-**address:** 111 N. Maryland Ave #201
-
-**postal_code:** 91206
+**postal_code:** 319002
 
 **status:** 2
 
-**short_description:** Real Good Foods offers food that is low in carbs, high in protein, and made with real food ingredients.
+**short_description:** G.H.Y Culture and Media is an entertainment company that produces and distributes films and presents live entertainment shows.
 
-**category_list:** 124465
+**category_list:** 117846
 
-**category_groups_list:** 21496
-
-**num_funding_rounds:** 3.0
-
-**total_funding_usd:** 49300000.0
-
-**total_funding:** 49300000.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2016-01-01
-
-**last_funding_on:** 2023-10-10
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/RealGoodfoods
-
-**linkedin_url:** https://www.linkedin.com/company/realgoodfoods
-
-**twitter_url:** https://twitter.com/realgoodfoods_?lang=en
-
-**age_months:** 37
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 1.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 486
-
-**uuid_org:** 07488cb1-1fb0-4d56-abc3-6287acaff82c
-
-**name_org:** Vizsla Copper
-
-**permalink_org:** vizsla-copper
-
-**domain:** vizslacopper.com
-
-**homepage_url:** https://vizslacopper.com/
-
-**country_code:** 34
-
-**state_code:** 6
-
-**region:** 248
-
-**city:** 21608
-
-**address:** 1090 West Georgia Street Unit 700
-
-**postal_code:** V6E 3V7
-
-**status:** 2
-
-**short_description:** Vizsla Copper focuses on growing shareholder value by exploring, developing, and acquiring precious and base metal assets.
-
-**category_list:** 168631
-
-**category_groups_list:** 38649
-
-**num_funding_rounds:** 1.0
-
-**total_funding_usd:** 1104532.0
-
-**total_funding:** 1500000.0
-
-**total_funding_currency_code:** CAD
-
-**founded_on:** 2017-01-01
-
-**last_funding_on:** 2024-03-05
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/VizslaCopperCorp
-
-**linkedin_url:** https://www.linkedin.com/company/vizsla-copper/
-
-**twitter_url:** https://twitter.com/VizslaCopper
-
-**age_months:** 25
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 397
-
-**uuid_org:** c93ca2d3-048b-437a-a58b-93965e7ae054
-
-**name_org:** Andean Precious Metals
-
-**permalink_org:** andean-precious-metals
-
-**domain:** andeanpm.com
-
-**homepage_url:** https://www.andeanpm.com
-
-**country_code:** 34
-
-**state_code:** 6
-
-**region:** 248
-
-**city:** 21608
-
-**address:** 0
-
-**postal_code:** V6Z1S4
-
-**status:** 2
-
-**short_description:** Andean Precious Metals focused precious metals producer that owns and operates the San Bartolomé project.
-
-**category_list:** 168647
-
-**category_groups_list:** 38649
-
-**num_funding_rounds:** 1.0
-
-**total_funding_usd:** 25000000.0
-
-**total_funding:** 25000000.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2018-01-01
-
-**last_funding_on:** 2024-02-29
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/andeanpm
-
-**twitter_url:** https://twitter.com/AndeanPM
-
-**age_months:** 13
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 168
-
-**uuid_org:** 856a7169-b5c6-4acc-9598-4760386a102c
-
-**name_org:** PT Metro Healthcare Indonesia
-
-**permalink_org:** pt-metro-healthcare-indonesia
-
-**domain:** metrohealthcareindonesia.co.id
-
-**homepage_url:** https://www.metrohealthcareindonesia.co.id/
-
-**country_code:** 87
-
-**state_code:** 0
-
-**region:** 682
-
-**city:** 20428
-
-**address:** Jl. Raya Serang Km 16.8 RT/RW 005/001
-
-**postal_code:** 15710
-
-**status:** 2
-
-**short_description:** PT Metro Healthcare Indonesia offers maternity room facilities, operating room, laboratory, obstetrics and other integrated health services.
-
-**category_list:** 139420
-
-**category_groups_list:** 3153
+**category_groups_list:** 38441
 
 **num_funding_rounds:** 0.0
 
@@ -456,7 +42,119 @@
 
 **total_funding_currency_code:** 0
 
-**founded_on:** 2015-01-01
+**founded_on:** 2018-01-01
+
+**last_funding_on:** 0
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/GHYculturemedia/
+
+**linkedin_url:** https://www.linkedin.com/company/ghyculturemedia
+
+**twitter_url:** 0
+
+**age_months:** 13
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 3
+
+**IPO_vs_Other:** 1
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 1
+
+**IPO_vs_Other_Probability:** 0.88
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 5.75806814894202e-05
+
+
+
+## Company 275
+
+**Probability:** 0.5800 ± 0.0000
+
+**uuid_org:** 314b84a3-c0f5-4b7f-a309-bcf1ef5a1042
+
+**name_org:** Salasar Exteriors
+
+**permalink_org:** salasar-exteriors
+
+**domain:** salasarexterior.com
+
+**homepage_url:** http://www.salasarexterior.com
+
+**country_code:** 89
+
+**state_code:** 0
+
+**region:** 906
+
+**city:** 13724
+
+**address:** 922/923 CORPORATE AVENUE, SONAWALA ROAD, NEAR UDYOG BHAVAN, GOREGAON (EAST), MUMBAI – 400063, INDIA
+
+**postal_code:** 0
+
+**status:** 2
+
+**short_description:** Salasar Exteriors is a construction company that offers interior and exterior design and civil works services.
+
+**category_list:** 80042
+
+**category_groups_list:** 31286
+
+**num_funding_rounds:** 0.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** 0
+
+**founded_on:** 2018-01-01
 
 **last_funding_on:** 0
 
@@ -468,7 +166,7 @@
 
 **twitter_url:** 0
 
-**age_months:** 49
+**age_months:** 13
 
 **has_facebook_url:** 0
 
@@ -514,13 +212,21 @@
 
 **IPO_vs_Other_Prediction:** 1
 
+**IPO_vs_Other_Probability:** 0.82
+
 **FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 4.665977246874562e-05
 
 
-## Company 494
+
+## Company 493
+
+**Probability:** 0.7000 ± 0.0000
 
 **uuid_org:** 03371144-b48c-49e6-b8c6-1a9eb692b87d
 
@@ -618,251 +324,51 @@
 
 **IPO_vs_Other_Prediction:** 1
 
+**IPO_vs_Other_Probability:** 0.9
+
 **FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.09
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 2.5577872761988472e-05
 
 
-## Company 64
 
-**uuid_org:** 5efb2a57-f993-4dec-967d-6156c2fe87c8
+## Company 73
 
-**name_org:** Society Pass
+**Probability:** 0.7400 ± 0.0000
 
-**permalink_org:** society-pass
+**uuid_org:** 38423d1e-55ce-45aa-8d76-b55f7f31a915
 
-**domain:** thesocietypass.com
+**name_org:** Michman Basad
 
-**homepage_url:** https://www.thesocietypass.com/
+**permalink_org:** michman-basad
 
-**country_code:** 170
+**domain:** michman-loans.co.il
+
+**homepage_url:** https://michman-loans.co.il/
+
+**country_code:** 95
 
 **state_code:** 0
 
-**region:** 316
+**region:** 609
 
-**city:** 19223
+**city:** 8079
 
-**address:** Grace Global Raffles, #10-02 137 Market Street Singapore
-
-**postal_code:** 048943
-
-**status:** 2
-
-**short_description:** Society Pass is an acquisitions focused e-commerce company building the next-generation digital ecosystem in SEA and South Asia.
-
-**category_list:** 126172
-
-**category_groups_list:** 22270
-
-**num_funding_rounds:** 3.0
-
-**total_funding_usd:** 20000000.0
-
-**total_funding:** 20000000.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2018-01-01
-
-**last_funding_on:** 2023-08-21
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/SocietyPass/
-
-**linkedin_url:** https://www.linkedin.com/company/societypass/
-
-**twitter_url:** https://twitter.com/society_pass?lang=en
-
-**age_months:** 13
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 1.0
-
-**founders_male_count:** 1.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 1.0
-
-**founders_degree_count_max:** 1.0
-
-**founders_degree_count_mean:** 1.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 186
-
-**uuid_org:** b7663309-9533-4d9d-908b-602c0afe1349
-
-**name_org:** Cardio Diagnostics
-
-**permalink_org:** cardio-diagnostics
-
-**domain:** cardiodiagnosticsinc.com
-
-**homepage_url:** https://cardiodiagnosticsinc.com
-
-**country_code:** 198
-
-**state_code:** 17
-
-**region:** 649
-
-**city:** 4103
-
-**address:** 400 N Aberdeen St, Suite 900
-
-**postal_code:** 60642
-
-**status:** 2
-
-**short_description:** Cardio Diagnostics makes heart disease prevention and early detection more accessible, personalized, and precise.
-
-**category_list:** 63274
-
-**category_groups_list:** 16036
-
-**num_funding_rounds:** 1.0
-
-**total_funding_usd:** 11200000.0
-
-**total_funding:** 11200000.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2017-01-01
-
-**last_funding_on:** 2023-03-08
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/CDIncPreventHeartDisease
-
-**linkedin_url:** https://www.linkedin.com/company/cardio-diagnostics-inc
-
-**twitter_url:** 0
-
-**age_months:** 25
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 1.0
-
-**founders_female_count:** 1.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 85
-
-**uuid_org:** adb7e6b7-10b7-46bc-9fe3-7a4d46bf914b
-
-**name_org:** Yonghe Medical
-
-**permalink_org:** yonghe-medical
-
-**domain:** sjzzhifa.cn
-
-**homepage_url:** http://www.sjzzhifa.cn/
-
-**country_code:** 37
-
-**state_code:** 0
-
-**region:** 191
-
-**city:** 1791
-
-**address:** 4th Floor, Building 4, No. 8, Workers Stadium North Road, Chaoyang District
+**address:** BSR Towers 3 (29th floor) Bnei Brak Israel
 
 **postal_code:** 0
 
 **status:** 2
 
-**short_description:** Yonghe Medical is a medical institution that provides autologous hair transplant, beard planting, beauty tip planting, and other services.
+**short_description:** Michman is a financial firm that provides a variety of non-bank loans and services to businesses.
 
-**category_list:** 150356
+**category_list:** 85685
 
-**category_groups_list:** 36753
+**category_groups_list:** 34430
 
 **num_funding_rounds:** 0.0
 
@@ -872,230 +378,22 @@
 
 **total_funding_currency_code:** 0
 
-**founded_on:** 2015-09-01
+**founded_on:** 2015-01-01
 
 **last_funding_on:** 0
 
 **closed_on:** nan
 
-**facebook_url:** 0
+**facebook_url:** https://www.facebook.com/%D7%9E%D7%99%D7%9B%D7%9E%D7%9F-%D7%90%D7%A9%D7%A8%D7%90%D7%99-%D7%9C%D7%A2%D7%A1%D7%A7%D7%99%D7%9D-2085636588352259/
 
-**linkedin_url:** 0
+**linkedin_url:** https://www.linkedin.com/company/michman-bsd
 
 **twitter_url:** 0
 
-**age_months:** 41
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 0
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 125
-
-**uuid_org:** 2ea0ae36-4b23-44cc-b117-42a689ba3839
-
-**name_org:** Agrify
-
-**permalink_org:** agrify
-
-**domain:** agrify.com
-
-**homepage_url:** https://www.agrify.com/
-
-**country_code:** 198
-
-**state_code:** 22
-
-**region:** 939
-
-**city:** 3052
-
-**address:** 101 Middlesex Turnpike Ste 6, PMB 326
-
-**postal_code:** 01803
-
-**status:** 2
-
-**short_description:** Agrify is a developer of premium indoor grow solutions for the cannabis and hemp marketplace.
-
-**category_list:** 21438
-
-**category_groups_list:** 7140
-
-**num_funding_rounds:** 7.0
-
-**total_funding_usd:** 245010770.0
-
-**total_funding:** 245010770.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2016-01-01
-
-**last_funding_on:** 2024-02-28
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/AgrifyCorp
-
-**linkedin_url:** https://www.linkedin.com/company/agrify
-
-**twitter_url:** https://twitter.com/agrifycorp
-
-**age_months:** 37
+**age_months:** 49
 
 **has_facebook_url:** 1
 
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 74
-
-**uuid_org:** ec473ead-f8f6-4c61-afc2-31cccfba1e6a
-
-**name_org:** Nirmitee Robotics India
-
-**permalink_org:** nirmitee-robotics-india
-
-**domain:** nirmiteerobotics.com
-
-**homepage_url:** http://www.nirmiteerobotics.com
-
-**country_code:** 89
-
-**state_code:** 0
-
-**region:** 906
-
-**city:** 13908
-
-**address:** D 3/2, Hingna MIDC
-
-**postal_code:** 440028
-
-**status:** 2
-
-**short_description:** Nirmitee Robotics provides custom robots to clean air ducts.
-
-**category_list:** 173263
-
-**category_groups_list:** 36733
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2016-01-01
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/nirmitee-robotics-india-private-limited
-
-**twitter_url:** 0
-
-**age_months:** 37
-
-**has_facebook_url:** 0
-
 **has_twitter_url:** 0
 
 **has_linkedin_url:** 1
@@ -1138,547 +436,31 @@
 
 **IPO_vs_Other_Prediction:** 1
 
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 285
-
-**uuid_org:** 324782d5-6d4e-49cd-b65b-f00f356f5669
-
-**name_org:** MRP Agro
-
-**permalink_org:** mrp-agro
-
-**domain:** mrpagro.com
-
-**homepage_url:** http://www.mrpagro.com
-
-**country_code:** 89
-
-**state_code:** 0
-
-**region:** 1621
-
-**city:** 20796
-
-**address:** House No.100, First Floor, Ward, No.23, Infront of Thane Ajak, Civil Line Road TIKAMGARH Tikamgarh MP, 472001 IN.
-
-**postal_code:** 0
-
-**status:** 2
-
-**short_description:** MRP Agro is an agricultural company engaged in the trade of food grains, fly-ash and coal.
-
-**category_list:** 20939
-
-**category_groups_list:** 7509
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2018-04-13
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** 0
-
-**twitter_url:** 0
-
-**age_months:** 9
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 0
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
+**IPO_vs_Other_Probability:** 0.88
 
 **FR_vs_Other_Prediction:** 0
 
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 132
-
-**uuid_org:** e06cf704-b5f7-43e1-930a-10a52674829e
-
-**name_org:** Veg of Lund
-
-**permalink_org:** veg-of-lund
-
-**domain:** dugdrinks.com
-
-**homepage_url:** https://dugdrinks.com/sv/
-
-**country_code:** 181
-
-**state_code:** 0
-
-**region:** 1437
-
-**city:** 12274
-
-**address:** Södra Vallgatan 5
-
-**postal_code:** 211 40
-
-**status:** 2
-
-**short_description:** Veg of Lund produces and sells nutritious, filling, allergen-free and great-tasting plant-based drinks.
-
-**category_list:** 146603
-
-**category_groups_list:** 34910
-
-**num_funding_rounds:** 5.0
-
-**total_funding_usd:** 20723542.0
-
-**total_funding:** 20723542.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2016-03-08
-
-**last_funding_on:** 2024-01-26
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/vegoflund
-
-**linkedin_url:** https://www.linkedin.com/company/veg-of-lund-ab
-
-**twitter_url:** https://twitter.com/vegoflund
-
-**age_months:** 35
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 1.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 1.0
-
-**founders_degree_count_total:** 1.0
-
-**founders_degree_count_max:** 1.0
-
-**founders_degree_count_mean:** 1.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
+**FR_vs_Other_Probability:** 0.0
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 5.71567694031626e-05
 
 
-## Company 69
 
-**uuid_org:** 4b4c996f-f86f-4e15-88ce-40c4ff5c2af2
+## Company 454
 
-**name_org:** Enest Group
+**Probability:** 0.8100 ± 0.0000
 
-**permalink_org:** enest-group
+**uuid_org:** cf04b0a5-7d86-4424-8550-d29e24fa7fd2
 
-**domain:** bailengyen.com.my
+**name_org:** AYR Wellness
 
-**homepage_url:** http://www.bailengyen.com.my
+**permalink_org:** ayr-strategies
 
-**country_code:** 138
+**domain:** ayrwellness.com
 
-**state_code:** 0
-
-**region:** 1064
-
-**city:** 9800
-
-**address:** No.2B-G, Jalan Semenyih Bandar Kajang, Kajang, Selangor
-
-**postal_code:** 43000
-
-**status:** 2
-
-**short_description:** Enest Group is a manufactures and supplies bird's nests.
-
-**category_list:** 164725
-
-**category_groups_list:** 7678
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2018-04-09
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/bailengyen
-
-**linkedin_url:** 0
-
-**twitter_url:** https://twitter.com/BaiLengYen
-
-**age_months:** 9
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 0
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 71
-
-**uuid_org:** 565de5f4-2cc3-4800-b66a-8f429ac6365a
-
-**name_org:** MRE-III-Proyecto Cinco Socimi SA
-
-**permalink_org:** mre-iii-proyecto-cinco-socimi-sa
-
-**domain:** mreiiiproyectocincosocimi.com
-
-**homepage_url:** http://www.mreiiiproyectocincosocimi.com
-
-**country_code:** 58
-
-**state_code:** 0
-
-**region:** 303
-
-**city:** 1513
-
-**address:** Avenida Diagonal 640 ES-08017 Barcelona Spain
-
-**postal_code:** 0
-
-**status:** 2
-
-**short_description:** MRE-III-Proyecto Cinco Socimi is an investment firm that invests in the real estate sector.
-
-**category_list:** 172516
-
-**category_groups_list:** 34829
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2016-01-01
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** 0
-
-**twitter_url:** 0
-
-**age_months:** 37
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 0
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 3
-
-**IPO_vs_Other:** 1
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 1
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-
-
-# Funding Round Predictions
-
-## Company 12784
-
-**uuid_org:** 54275b28-54c7-47b7-a689-d8805c87dbce
-
-**name_org:** Amathus Therapeutics
-
-**permalink_org:** amathus-therapeutics
-
-**domain:** amathustx.com
-
-**homepage_url:** http://www.amathustx.com/
-
-**country_code:** 198
-
-**state_code:** 22
-
-**region:** 939
-
-**city:** 3290
-
-**address:** 700 Main Street, c/o Lab Central Cambridge, MA
-
-**postal_code:** 02139
-
-**status:** 3
-
-**short_description:** Amathus Therapeutics is a biotechnology company that develops small molecules to treat stress and Parkinson’s disease.
-
-**category_list:** 63382
-
-**category_groups_list:** 15643
-
-**num_funding_rounds:** 1.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2016-01-01
-
-**last_funding_on:** 2019-09-09
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/amathus-therapeutics-inc/about/
-
-**twitter_url:** 0
-
-**age_months:** 37
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 2
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 1
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 1
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 28443
-
-**uuid_org:** d2318930-4876-4681-8378-1932cc1b154b
-
-**name_org:** Multporn
-
-**permalink_org:** multporn
-
-**domain:** multporn.us
-
-**homepage_url:** https://multporn.us
+**homepage_url:** https://www.ayrwellness.com/
 
 **country_code:** 198
 
@@ -1688,251 +470,43 @@
 
 **city:** 14261
 
-**address:** 0
+**address:** 590 Madison Avenue
 
-**postal_code:** 0
+**postal_code:** 10022
 
-**status:** 3
+**status:** 2
 
-**short_description:** Multporn is an image-hosting and file-sharing website focused on hentai.
+**short_description:** AYR Wellness aims higher for the wellness of our customers, through the power of cannabis.
 
-**category_list:** 3925
+**category_list:** 76133
 
-**category_groups_list:** 22853
-
-**num_funding_rounds:** 2.0
-
-**total_funding_usd:** 56000000.0
-
-**total_funding:** 56000000.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2016-01-05
-
-**last_funding_on:** 2021-03-02
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/multporn/
-
-**twitter_url:** https://twitter.com/Multporn_us
-
-**age_months:** 37
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 1.0
-
-**raised_amount_usd:** 1000000.0
-
-**last_round_investment_type:** 15
-
-**last_round_raised_amount_usd:** 1000000.0
-
-**last_round_post_money_valuation:** 2000000.0
-
-**last_round_timelapse_months:** 25.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 2
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 1
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 1
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 35675
-
-**uuid_org:** 4775844d-891b-4729-aa46-1428789b4cf2
-
-**name_org:** geniSIGHTS
-
-**permalink_org:** genisights
-
-**domain:** genisights.com
-
-**homepage_url:** https://genisights.com
-
-**country_code:** 89
-
-**state_code:** 0
-
-**region:** 1533
-
-**city:** 4043
-
-**address:** Module No. 2, Sixth Floor, Block - B IIT Madras Research Park, Kanagam Rd, Tharamani, Chennai, Tamil Nadu
-
-**postal_code:** 600113
-
-**status:** 3
-
-**short_description:** Your analytical cente of excellence to provide Automated AI driven Actionable insights
-
-**category_list:** 24487
-
-**category_groups_list:** 15099
-
-**num_funding_rounds:** 3.0
-
-**total_funding_usd:** 150000.0
-
-**total_funding:** 150000.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2017-04-18
-
-**last_funding_on:** 2022-08-09
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/genisights
-
-**linkedin_url:** https://www.linkedin.com/company/genisights-pvt-india-ltd
-
-**twitter_url:** https://www.twitter.com/geniSIGHTS
-
-**age_months:** 21
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 1.0
-
-**raised_amount_usd:** 50000.0
-
-**last_round_investment_type:** 11
-
-**last_round_raised_amount_usd:** 50000.0
-
-**last_round_post_money_valuation:** 2050000.0
-
-**last_round_timelapse_months:** 8.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 2
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 1
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 1
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 21491
-
-**uuid_org:** 908c5966-e374-40d6-ada1-908e1f53f726
-
-**name_org:** Linio Biotech Ltd
-
-**permalink_org:** linio-biotech-ltd
-
-**domain:** linio-biotech.com
-
-**homepage_url:** http://www.linio-biotech.com
-
-**country_code:** 61
-
-**state_code:** 0
-
-**region:** 1470
-
-**city:** 8482
-
-**address:** 0
-
-**postal_code:** 00180
-
-**status:** 3
-
-**short_description:** Linio Biotech is a biotechnology platform company developing novel tissue product Tience® that regenerates healthy skin.
-
-**category_list:** 63520
-
-**category_groups_list:** 16107
+**category_groups_list:** 22893
 
 **num_funding_rounds:** 4.0
 
-**total_funding_usd:** 11616647.0
+**total_funding_usd:** 324700000.0
 
-**total_funding:** 11616647.0
+**total_funding:** 324700000.0
 
 **total_funding_currency_code:** USD
 
 **founded_on:** 2017-01-01
 
-**last_funding_on:** 2023-11-22
+**last_funding_on:** 2023-11-01
 
 **closed_on:** nan
 
-**facebook_url:** 0
+**facebook_url:** https://www.facebook.com/Ayr-Wellness-103454418291336/
 
-**linkedin_url:** https://www.linkedin.com/company/linio-biotech/
+**linkedin_url:** https://www.linkedin.com/company/ayr-wellness-inc/
 
-**twitter_url:** 0
+**twitter_url:** https://twitter.com/ayrwellness
 
 **age_months:** 25
 
-**has_facebook_url:** 0
+**has_facebook_url:** 1
 
-**has_twitter_url:** 0
+**has_twitter_url:** 1
 
 **has_linkedin_url:** 1
 
@@ -1952,113 +526,9 @@
 
 **last_round_investor_count:** 0.0
 
-**founders_dif_country_count:** 0.0
+**founders_dif_country_count:** 1.0
 
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 2
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 1
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 1
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 8565
-
-**uuid_org:** 86f64901-9561-445c-9c6d-9f520292629d
-
-**name_org:** 4D Path
-
-**permalink_org:** 4d-path
-
-**domain:** 4dpath.com
-
-**homepage_url:** http://www.4dpath.com/
-
-**country_code:** 198
-
-**state_code:** 22
-
-**region:** 939
-
-**city:** 1872
-
-**address:** 26 CLIFTON STREET
-
-**postal_code:** 02478
-
-**status:** 3
-
-**short_description:** 4D Path uses H&E biopsy images to unveil hidden data instantly providing biomarker profiling and stratification.
-
-**category_list:** 63274
-
-**category_groups_list:** 16036
-
-**num_funding_rounds:** 4.0
-
-**total_funding_usd:** 18754108.0
-
-**total_funding:** 18754108.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2016-01-01
-
-**last_funding_on:** 2023-05-03
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/4d-path
-
-**twitter_url:** 0
-
-**age_months:** 37
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 1.0
-
-**raised_amount_usd:** 250000.0
-
-**last_round_investment_type:** 15
-
-**last_round_raised_amount_usd:** 250000.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 20.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
+**founders_male_count:** 1.0
 
 **founders_female_count:** 0.0
 
@@ -2068,77 +538,85 @@
 
 **founders_degree_count_mean:** 0.0
 
-**outcome:** 2
+**outcome:** 3
 
-**IPO_vs_Other:** 0
+**IPO_vs_Other:** 1
 
-**FR_vs_Other:** 1
+**FR_vs_Other:** 0
 
 **AC_vs_Other:** 0
 
-**IPO_vs_Other_Prediction:** 0
+**IPO_vs_Other_Prediction:** 1
 
-**FR_vs_Other_Prediction:** 1
+**IPO_vs_Other_Probability:** 0.96
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.04
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 2.047545819346399e-05
 
 
-## Company 6676
 
-**uuid_org:** 2bc1d464-e01b-4f3b-ad79-6457dcf0b17c
+## Company 77
 
-**name_org:** Medjeduse
+**Probability:** 0.8400 ± 0.0000
 
-**permalink_org:** medjeduse
+**uuid_org:** 9564b6d4-96f9-41cd-a772-460fb89ee0a6
 
-**domain:** medjeduse.com
+**name_org:** Kraft Bank ASA
 
-**homepage_url:** http://medjeduse.com
+**permalink_org:** kraft-bank-asa
 
-**country_code:** 63
+**domain:** kraftbank.no
+
+**homepage_url:** https://kraftbank.no/
+
+**country_code:** 146
 
 **state_code:** 0
 
-**region:** 646
+**region:** 1317
 
-**city:** 15558
+**city:** 18303
 
-**address:** 57 Rue de Richelieu
+**address:** 0
 
-**postal_code:** 75002
+**postal_code:** 0
 
-**status:** 3
+**status:** 2
 
-**short_description:** Medjeduse is a medical implant developer that aims to treat nervous system traumas and avoid paralysis.
+**short_description:** Kraft Bank ASA offers refinancing to customers with a difficult economy.
 
-**category_list:** 152054
+**category_list:** 141690
 
-**category_groups_list:** 36753
+**category_groups_list:** 33699
 
-**num_funding_rounds:** 1.0
+**num_funding_rounds:** 0.0
 
 **total_funding_usd:** 0.0
 
 **total_funding:** 0.0
 
-**total_funding_currency_code:** USD
+**total_funding_currency_code:** 0
 
-**founded_on:** 2017-01-01
+**founded_on:** 2018-01-01
 
-**last_funding_on:** 2021-02-16
+**last_funding_on:** 0
 
 **closed_on:** nan
 
-**facebook_url:** 0
+**facebook_url:** https://www.facebook.com/KraftBankASA/
 
 **linkedin_url:** 0
 
 **twitter_url:** 0
 
-**age_months:** 25
+**age_months:** 13
 
-**has_facebook_url:** 0
+**has_facebook_url:** 1
 
 **has_twitter_url:** 0
 
@@ -2172,101 +650,109 @@
 
 **founders_degree_count_mean:** 0.0
 
-**outcome:** 2
+**outcome:** 3
 
-**IPO_vs_Other:** 0
+**IPO_vs_Other:** 1
 
-**FR_vs_Other:** 1
+**FR_vs_Other:** 0
 
 **AC_vs_Other:** 0
 
-**IPO_vs_Other_Prediction:** 0
+**IPO_vs_Other_Prediction:** 1
 
-**FR_vs_Other_Prediction:** 1
+**IPO_vs_Other_Probability:** 0.92
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 5.9000164910838624e-05
 
 
-## Company 18698
 
-**uuid_org:** 54396a31-5f5a-499e-832b-bc87eac683d9
+## Company 317
 
-**name_org:** Humble Angel Records
+**Probability:** 0.6600 ± 0.0000
 
-**permalink_org:** humble-angel-records
+**uuid_org:** 7e38c5c7-c813-4f87-af6f-0d1c140bc4b2
 
-**domain:** humbleangelrecords.com
+**name_org:** Inozyme
 
-**homepage_url:** http://humbleangelrecords.com
+**permalink_org:** inozyme
 
-**country_code:** 66
+**domain:** inozyme.com
 
-**state_code:** 0
+**homepage_url:** http://www.inozyme.com/
 
-**region:** 1080
+**country_code:** 198
 
-**city:** 14274
+**state_code:** 22
 
-**address:** Spaceworks Benton Park Road
+**region:** 939
 
-**postal_code:** NE7 7LX
+**city:** 2553
 
-**status:** 3
+**address:** 321 Summer Street Floor 4 Boston, MA
 
-**short_description:** Streaming only record label
+**postal_code:** 02210
 
-**category_list:** 0
+**status:** 2
 
-**category_groups_list:** 0
+**short_description:** Inozyme  is a provider of therapies for rare diseases of calcification affecting soft tissues and bone created to offer potentially.
 
-**num_funding_rounds:** 2.0
+**category_list:** 63314
 
-**total_funding_usd:** 632055.0
+**category_groups_list:** 16036
 
-**total_funding:** 500000.0
+**num_funding_rounds:** 6.0
 
-**total_funding_currency_code:** GBP
+**total_funding_usd:** 353099989.0
 
-**founded_on:** 2018-01-02
+**total_funding:** 353099989.0
 
-**last_funding_on:** 2019-07-17
+**total_funding_currency_code:** USD
+
+**founded_on:** 2016-01-01
+
+**last_funding_on:** 2023-07-27
 
 **closed_on:** nan
 
 **facebook_url:** 0
 
-**linkedin_url:** https://www.linkedin.com/company/humble-angel-records
+**linkedin_url:** https://www.linkedin.com/company/inozyme
 
-**twitter_url:** 0
+**twitter_url:** https://twitter.com/inozyme?lang=en
 
-**age_months:** 13
+**age_months:** 37
 
 **has_facebook_url:** 0
 
-**has_twitter_url:** 0
+**has_twitter_url:** 1
 
 **has_linkedin_url:** 1
 
-**round_count:** 1.0
+**round_count:** 2.0
 
-**raised_amount_usd:** 196875.0
+**raised_amount_usd:** 82699996.0
 
-**last_round_investment_type:** 11
+**last_round_investment_type:** 17
 
-**last_round_raised_amount_usd:** 196875.0
+**last_round_raised_amount_usd:** 33699996.0
 
 **last_round_post_money_valuation:** 0.0
 
-**last_round_timelapse_months:** 6.0
+**last_round_timelapse_months:** 2.0
 
-**investor_countwup:** 1.0
+**investor_countwup:** 0.0
 
-**last_round_investor_count:** 1.0
+**last_round_investor_count:** 0.0
 
-**founders_dif_country_count:** 1.0
+**founders_dif_country_count:** 0.0
 
-**founders_male_count:** 1.0
+**founders_male_count:** 0.0
 
 **founders_female_count:** 0.0
 
@@ -2276,75 +762,307 @@
 
 **founders_degree_count_mean:** 0.0
 
-**outcome:** 2
+**outcome:** 3
 
-**IPO_vs_Other:** 0
+**IPO_vs_Other:** 1
 
-**FR_vs_Other:** 1
+**FR_vs_Other:** 0
 
 **AC_vs_Other:** 0
 
-**IPO_vs_Other_Prediction:** 0
+**IPO_vs_Other_Prediction:** 1
 
-**FR_vs_Other_Prediction:** 1
+**IPO_vs_Other_Probability:** 0.88
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.09
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 1.1689838025870263e-05
 
 
-## Company 14208
 
-**uuid_org:** af187f9d-ee07-4b32-9826-6e9a039c551e
+## Company 141
 
-**name_org:** Milwaukee Community Land Trust
+**Probability:** 0.6300 ± 0.0000
 
-**permalink_org:** milwaukee-community-land-trust
+**uuid_org:** 684de046-0542-4e44-85b8-0823806e5791
 
-**domain:** milwaukeeclt.org
+**name_org:** CNS Pharmaceutical
 
-**homepage_url:** https://www.milwaukeeclt.org
+**permalink_org:** cns-pharmaceutical
+
+**domain:** cnspharma.com
+
+**homepage_url:** https://cnspharma.com/
 
 **country_code:** 198
 
-**state_code:** 61
+**state_code:** 56
 
-**region:** 1724
+**region:** 1556
 
-**city:** 13100
+**city:** 8941
 
-**address:** PO Box 510781
+**address:** 2100 West Loop South Suite 900
 
-**postal_code:** 53203
+**postal_code:** 77027
 
-**status:** 3
+**status:** 2
 
-**short_description:** The mission of Milwaukee Community Land Trust is to empower neighborhoods and neighborhood organizations in Milwaukee.
+**short_description:** CNS Pharmaceutical is a pre-clinical stage biotechnology company specializing in the development of novel treatments for brain tumors.
 
-**category_list:** 170038
+**category_list:** 63575
 
-**category_groups_list:** 38880
+**category_groups_list:** 16036
 
-**num_funding_rounds:** 1.0
+**num_funding_rounds:** 3.0
 
-**total_funding_usd:** 300000.0
+**total_funding_usd:** 21500000.0
 
-**total_funding:** 300000.0
+**total_funding:** 21500000.0
 
 **total_funding_currency_code:** USD
 
-**founded_on:** 2016-01-01
+**founded_on:** 2017-01-01
 
-**last_funding_on:** 2022-06-23
+**last_funding_on:** 2024-01-29
 
 **closed_on:** nan
 
-**facebook_url:** https://www.facebook.com/MilwaukeeCLT
+**facebook_url:** https://www.facebook.com/cnspharma/
 
-**linkedin_url:** https://www.linkedin.com/company/milwaukeecommunitylandtrust
+**linkedin_url:** https://www.linkedin.com/company/cnspharma
+
+**twitter_url:** https://twitter.com/cns_pharma
+
+**age_months:** 25
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 2.0
+
+**founders_degree_count_max:** 2.0
+
+**founders_degree_count_mean:** 2.0
+
+**outcome:** 3
+
+**IPO_vs_Other:** 1
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 1
+
+**IPO_vs_Other_Probability:** 0.88
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.15
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 2.6737180578028115e-05
+
+
+
+## Company 473
+
+**Probability:** 0.5500 ± 0.0000
+
+**uuid_org:** 032d5c72-0112-4739-ba82-0fa127e6dd20
+
+**name_org:** Milton Essex
+
+**permalink_org:** milton-essex-sa
+
+**domain:** miltonessex.eu
+
+**homepage_url:** http://www.miltonessex.eu
+
+**country_code:** 155
+
+**state_code:** 0
+
+**region:** 948
+
+**city:** 22348
+
+**address:** l. J. P. Woronicza 31/348
+
+**postal_code:** 02-640
+
+**status:** 2
+
+**short_description:** Milton Essex develops medical devices that helps in reading skin allergy tests, measure temperature from distance and others.
+
+**category_list:** 0
+
+**category_groups_list:** 0
+
+**num_funding_rounds:** 0.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** 0
+
+**founded_on:** 2016-01-01
+
+**last_funding_on:** 0
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://www.linkedin.com/company/milton-essex-s-a/?originalSubdomain=pl
 
 **twitter_url:** 0
 
 **age_months:** 37
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 3
+
+**IPO_vs_Other:** 1
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 1
+
+**IPO_vs_Other_Probability:** 0.81
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 4.554634549118687e-05
+
+
+
+## Company 502
+
+**Probability:** 0.7800 ± 0.0000
+
+**uuid_org:** 7498228f-9b1a-4825-907a-71dd5497a14e
+
+**name_org:** Blockchain Venture Capital
+
+**permalink_org:** blockchain-venture-capital
+
+**domain:** bvcadt.com
+
+**homepage_url:** https://www.bvcadt.com/
+
+**country_code:** 34
+
+**state_code:** 46
+
+**region:** 1162
+
+**city:** 20956
+
+**address:** 0
+
+**postal_code:** 0
+
+**status:** 2
+
+**short_description:** Blockchain Venture Capital is a financial services company.
+
+**category_list:** 58243
+
+**category_groups_list:** 34430
+
+**num_funding_rounds:** 2.0
+
+**total_funding_usd:** 2853669.0
+
+**total_funding:** 3758668.0
+
+**total_funding_currency_code:** CAD
+
+**founded_on:** 2018-01-01
+
+**last_funding_on:** 2023-11-17
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/bvcpay/
+
+**linkedin_url:** https://www.linkedin.com/company/blockchain-venture-capital-inc/
+
+**twitter_url:** 0
+
+**age_months:** 13
 
 **has_facebook_url:** 1
 
@@ -2380,71 +1098,415 @@
 
 **founders_degree_count_mean:** 0.0
 
-**outcome:** 2
+**outcome:** 3
 
-**IPO_vs_Other:** 0
+**IPO_vs_Other:** 1
 
-**FR_vs_Other:** 1
+**FR_vs_Other:** 0
 
 **AC_vs_Other:** 0
 
-**IPO_vs_Other_Prediction:** 0
+**IPO_vs_Other_Prediction:** 1
 
-**FR_vs_Other_Prediction:** 1
+**IPO_vs_Other_Probability:** 0.93
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.07
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 2.6516590218303032e-05
 
 
-## Company 24234
 
-**uuid_org:** 6efa5007-7b91-4ee8-8449-a6d5ba201ec8
+## Company 219
 
-**name_org:** Addionics
+**Probability:** 0.6800 ± 0.0000
 
-**permalink_org:** addionics-london-united-kingdom
+**uuid_org:** 90730db3-8b9c-51ba-f83f-45fef2356c80
 
-**domain:** addionics.com
+**name_org:** Edesa Biotech
 
-**homepage_url:** http://www.addionics.com
+**permalink_org:** edesa-biotech
 
-**country_code:** 66
+**domain:** edesabiotech.com
 
-**state_code:** 0
+**homepage_url:** http://edesabiotech.com/
 
-**region:** 478
+**country_code:** 34
 
-**city:** 11798
+**state_code:** 46
 
-**address:** 9-13 St Andrew Street
+**region:** 1162
 
-**postal_code:** EC4A 3AF
+**city:** 12528
 
-**status:** 3
+**address:** 100 Spy Court
 
-**short_description:** Addionics is creating next-generation batteries through intelligent 3D battery architecture and engineering.
+**postal_code:** L3R 5H6
 
-**category_list:** 1148
+**status:** 2
 
-**category_groups_list:** 30376
+**short_description:** Edesa develops treatments for dermatological and anorectal diseases. Edesa merged with Stellar Biotechnologies in 2019.
 
-**num_funding_rounds:** 9.0
+**category_list:** 63520
 
-**total_funding_usd:** 34000000.0
+**category_groups_list:** 16107
 
-**total_funding:** 34000000.0
+**num_funding_rounds:** 7.0
+
+**total_funding_usd:** 66422646.0
+
+**total_funding:** 66422646.0
 
 **total_funding_currency_code:** USD
 
-**founded_on:** 2018-01-01
+**founded_on:** 2015-01-01
 
-**last_funding_on:** 2023-06-28
+**last_funding_on:** 2023-10-12
 
 **closed_on:** nan
 
 **facebook_url:** 0
 
-**linkedin_url:** https://www.linkedin.com/company/addionics/
+**linkedin_url:** https://in.linkedin.com/company/edesa-biotech
+
+**twitter_url:** https://twitter.com/edesabiotech
+
+**age_months:** 49
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 1.0
+
+**raised_amount_usd:** 7000000.0
+
+**last_round_investment_type:** 16
+
+**last_round_raised_amount_usd:** 7000000.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 16.0
+
+**investor_countwup:** 3.0
+
+**last_round_investor_count:** 1.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 3
+
+**IPO_vs_Other:** 1
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 1
+
+**IPO_vs_Other_Probability:** 0.92
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.14
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 1.530051713184651e-05
+
+
+
+## Company 10
+
+**Probability:** 0.6500 ± 0.0000
+
+**uuid_org:** 315b1604-8ce6-4273-9269-b197fc6ebecc
+
+**name_org:** Xponential Fitness
+
+**permalink_org:** xponential-fitness
+
+**domain:** xponential.com
+
+**homepage_url:** http://xponential.com/
+
+**country_code:** 198
+
+**state_code:** 7
+
+**region:** 279
+
+**city:** 9328
+
+**address:** 17877 Von Karman Ave
+
+**postal_code:** 92614
+
+**status:** 2
+
+**short_description:** Xponential Fitness is a curator of leading brands across a variety of verticals in the boutique fitness & wellness space.
+
+**category_list:** 144417
+
+**category_groups_list:** 39077
+
+**num_funding_rounds:** 2.0
+
+**total_funding_usd:** 179575000.0
+
+**total_funding:** 179575000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 2023-02-07
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://www.linkedin.com/company/xponential-fitness
+
+**twitter_url:** 0
+
+**age_months:** 25
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 3
+
+**IPO_vs_Other:** 1
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 1
+
+**IPO_vs_Other_Probability:** 0.84
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.06
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 2.801808503063512e-05
+
+
+
+## Company 416
+
+**Probability:** 0.7700 ± 0.0000
+
+**uuid_org:** 43d6f5de-c92e-4077-9c3d-3fb57e9f218b
+
+**name_org:** Uranium Royalty
+
+**permalink_org:** uranium-royalty
+
+**domain:** uraniumroyalty.com
+
+**homepage_url:** http://uraniumroyalty.com/
+
+**country_code:** 34
+
+**state_code:** 46
+
+**region:** 1162
+
+**city:** 20956
+
+**address:** 11 Yonge Street  Suite 502
+
+**postal_code:** M5B 1M4
+
+**status:** 2
+
+**short_description:** Uranium Royalty is a pure-play uranium royalty company that focuses on the uranium and nuclear energy sectors.
+
+**category_list:** 157110
+
+**category_groups_list:** 38226
+
+**num_funding_rounds:** 6.0
+
+**total_funding_usd:** 127480468.0
+
+**total_funding:** 127480468.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 2024-02-02
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://www.linkedin.com/company/uraniumroyalty
+
+**twitter_url:** 0
+
+**age_months:** 25
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 1.0
+
+**raised_amount_usd:** 4539000.0
+
+**last_round_investment_type:** 17
+
+**last_round_raised_amount_usd:** 4539000.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 1.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 3
+
+**IPO_vs_Other:** 1
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 1
+
+**IPO_vs_Other_Probability:** 0.88
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.14
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 2.1105624229574866e-05
+
+
+
+## Company 79
+
+**Probability:** 0.7100 ± 0.0000
+
+**uuid_org:** 687255f9-93e8-4f25-97f3-6abc35ef00de
+
+**name_org:** Wilk
+
+**permalink_org:** biomilk
+
+**domain:** biomilk.com
+
+**homepage_url:** https://www.biomilk.com/
+
+**country_code:** 95
+
+**state_code:** 0
+
+**region:** 581
+
+**city:** 17017
+
+**address:** 0
+
+**postal_code:** 0
+
+**status:** 2
+
+**short_description:** Biomilk develops lab-cultured cow milk from mammary cells.
+
+**category_list:** 21324
+
+**category_groups_list:** 6896
+
+**num_funding_rounds:** 2.0
+
+**total_funding_usd:** 1450000.0
+
+**total_funding:** 1450000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2018-01-01
+
+**last_funding_on:** 2023-04-03
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://il.linkedin.com/company/biomilk
 
 **twitter_url:** 0
 
@@ -2456,103 +1518,111 @@
 
 **has_linkedin_url:** 1
 
-**round_count:** 1.0
+**round_count:** 0.0
 
-**raised_amount_usd:** 1000000.0
+**raised_amount_usd:** 0.0
 
-**last_round_investment_type:** 15
+**last_round_investment_type:** 0
 
-**last_round_raised_amount_usd:** 1000000.0
+**last_round_raised_amount_usd:** 0.0
 
 **last_round_post_money_valuation:** 0.0
 
-**last_round_timelapse_months:** 5.0
+**last_round_timelapse_months:** 0.0
 
-**investor_countwup:** 1.0
+**investor_countwup:** 0.0
 
-**last_round_investor_count:** 1.0
+**last_round_investor_count:** 0.0
 
-**founders_dif_country_count:** 2.0
+**founders_dif_country_count:** 1.0
 
-**founders_male_count:** 2.0
+**founders_male_count:** 1.0
 
 **founders_female_count:** 0.0
 
-**founders_degree_count_total:** 2.0
+**founders_degree_count_total:** 0.0
 
-**founders_degree_count_max:** 1.0
+**founders_degree_count_max:** 0.0
 
-**founders_degree_count_mean:** 1.0
+**founders_degree_count_mean:** 0.0
 
-**outcome:** 2
+**outcome:** 3
 
-**IPO_vs_Other:** 0
+**IPO_vs_Other:** 1
 
-**FR_vs_Other:** 1
+**FR_vs_Other:** 0
 
 **AC_vs_Other:** 0
 
-**IPO_vs_Other_Prediction:** 0
+**IPO_vs_Other_Prediction:** 1
 
-**FR_vs_Other_Prediction:** 1
+**IPO_vs_Other_Probability:** 0.83
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.21
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 3.773801851779019e-05
 
 
-## Company 24222
 
-**uuid_org:** dd625837-b433-4352-8de0-d168573d0046
+## Company 324
 
-**name_org:** Vesputi
+**Probability:** 0.6800 ± 0.0000
 
-**permalink_org:** vesputi
+**uuid_org:** aa30e1fb-3863-438c-823d-44525c120dc6
 
-**domain:** vesputi.com
+**name_org:** Wallbox
 
-**homepage_url:** https://www.vesputi.com/
+**permalink_org:** wallbox
 
-**country_code:** 50
+**domain:** wallbox.com
+
+**homepage_url:** https://www.wallbox.com
+
+**country_code:** 58
 
 **state_code:** 0
 
-**region:** 1332
+**region:** 303
 
-**city:** 11353
+**city:** 1513
 
-**address:** Spinnereistr. 7 c/o SpinLab
+**address:** Carrer del Foc, 68
 
-**postal_code:** 04179
+**postal_code:** 08038
 
-**status:** 3
+**status:** 2
 
-**short_description:** Vesputi enables companies to sell digital public transit tickets to enable the development of a sustainable mobility ecosystem
+**short_description:** Wallbox is a technology company that provides electric vehicle charging and energy management solutions.
 
-**category_list:** 56421
+**category_list:** 52459
 
-**category_groups_list:** 38846
+**category_groups_list:** 26323
 
-**num_funding_rounds:** 4.0
+**num_funding_rounds:** 8.0
 
-**total_funding_usd:** 0.0
+**total_funding_usd:** 247705258.0
 
-**total_funding:** 0.0
+**total_funding:** 247705258.0
 
 **total_funding_currency_code:** USD
 
-**founded_on:** 2016-12-01
+**founded_on:** 2015-01-01
 
-**last_funding_on:** 2023-02-16
+**last_funding_on:** 2023-12-03
 
 **closed_on:** nan
 
-**facebook_url:** https://www.facebook.com/vesputi/
+**facebook_url:** https://www.facebook.com/wallboxchargers
 
-**linkedin_url:** https://www.linkedin.com/company/12612206
+**linkedin_url:** https://www.linkedin.com/company/wallbox-chargers
 
-**twitter_url:** https://twitter.com/vesputi
+**twitter_url:** https://www.twitter.com/wallboxchargers
 
-**age_months:** 26
+**age_months:** 49
 
 **has_facebook_url:** 1
 
@@ -2570,7 +1640,7 @@
 
 **last_round_post_money_valuation:** 0.0
 
-**last_round_timelapse_months:** 6.0
+**last_round_timelapse_months:** 9.0
 
 **investor_countwup:** 1.0
 
@@ -2582,11 +1652,127 @@
 
 **founders_female_count:** 0.0
 
-**founders_degree_count_total:** 4.0
+**founders_degree_count_total:** 0.0
 
-**founders_degree_count_max:** 3.0
+**founders_degree_count_max:** 0.0
 
-**founders_degree_count_mean:** 2.0
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 3
+
+**IPO_vs_Other:** 1
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 1
+
+**IPO_vs_Other_Probability:** 0.92
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.14
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 2.3449798189352035e-05
+
+
+
+
+
+# Funding Round Predictions
+
+## Company 17441
+
+**Probability:** 0.9800 ± 0.0000
+
+**uuid_org:** 9955aa18-f586-4fe5-a555-ee0c37f68b4e
+
+**name_org:** Vectordash
+
+**permalink_org:** vectordash
+
+**domain:** vectordash.com
+
+**homepage_url:** https://vectordash.com/
+
+**country_code:** 198
+
+**state_code:** 7
+
+**region:** 279
+
+**city:** 18160
+
+**address:** 387 Tehama St
+
+**postal_code:** 0
+
+**status:** 3
+
+**short_description:** Vectordash is a cloud-based game launcher that turns any Mac into a powerful gaming PC.
+
+**category_list:** 170827
+
+**category_groups_list:** 35440
+
+**num_funding_rounds:** 1.0
+
+**total_funding_usd:** 150000.0
+
+**total_funding:** 150000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2018-01-01
+
+**last_funding_on:** 2019-03-18
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/vectordashGPU/
+
+**linkedin_url:** https://www.linkedin.com/company/vectordash
+
+**twitter_url:** 0
+
+**age_months:** 13
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 1.0
+
+**founders_degree_count_max:** 1.0
+
+**founders_degree_count_mean:** 1.0
 
 **outcome:** 2
 
@@ -2598,67 +1784,299 @@
 
 **IPO_vs_Other_Prediction:** 0
 
+**IPO_vs_Other_Probability:** 0.0
+
 **FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 1.0
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 4.6635840000579195e-05
 
 
-## Company 27585
 
-**uuid_org:** 2239f627-99fd-4009-9756-9f0f096af945
+## Company 15072
 
-**name_org:** Tianqi Lithium Energy Australia
+**Probability:** 0.9600 ± 0.0000
 
-**permalink_org:** tianqi-lithium-energy-australia
+**uuid_org:** 3f5a1581-1c94-5638-9848-172694a523f9
 
-**domain:** tianqilithium.com.au
+**name_org:** Creator Global
 
-**homepage_url:** https://www.tianqilithium.com.au/
+**permalink_org:** creator-global
+
+**domain:** creator.global
+
+**homepage_url:** http://creator.global/
 
 **country_code:** 12
 
 **state_code:** 0
 
-**region:** 1710
+**region:** 1656
 
-**city:** 10675
+**city:** 12820
 
-**address:** 61 Donaldson Road
+**address:** Level 2, 387 Little Bourke Street
 
-**postal_code:** 6167
+**postal_code:** 3000
 
 **status:** 3
 
-**short_description:** Tianqi Lithium Energy Australia is a supplier of lithium products.
+**short_description:** Strategy, Design Thinking, Industrial Design for The Internet of Things
 
-**category_list:** 78765
+**category_list:** 102819
 
-**category_groups_list:** 38700
+**category_groups_list:** 25478
 
 **num_funding_rounds:** 1.0
 
-**total_funding_usd:** 1400000000.0
+**total_funding_usd:** 500000.0
 
-**total_funding:** 1400000000.0
+**total_funding:** 500000.0
 
 **total_funding_currency_code:** USD
 
-**founded_on:** 2016-01-01
+**founded_on:** 2016-02-01
 
-**last_funding_on:** 2020-12-09
+**last_funding_on:** 2019-08-15
 
 **closed_on:** nan
 
 **facebook_url:** 0
 
-**linkedin_url:** https://www.linkedin.com/company/tianqi-lithium-australia-pty-ltd
+**linkedin_url:** http://www.linkedin.com/company/7598849
+
+**twitter_url:** https://twitter.com/creatorglobal
+
+**age_months:** 36
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.96
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 4.496254806286539e-05
+
+
+
+## Company 968
+
+**Probability:** 0.9500 ± 0.0000
+
+**uuid_org:** fb7af345-648a-b3ff-bbce-af927a3293db
+
+**name_org:** SwipeSum
+
+**permalink_org:** swipesum-inc
+
+**domain:** swipesum.com
+
+**homepage_url:** https://www.swipesum.com/
+
+**country_code:** 198
+
+**state_code:** 28
+
+**region:** 986
+
+**city:** 17786
+
+**address:** 714 N 2nd Street, St. Louis MO
+
+**postal_code:** 63101
+
+**status:** 3
+
+**short_description:** SwipeSum is a technology aimed at reducing credit card and debit card processing fees for companies.
+
+**category_list:** 136328
+
+**category_groups_list:** 34724
+
+**num_funding_rounds:** 6.0
+
+**total_funding_usd:** 4845452.0
+
+**total_funding:** 4845452.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2016-06-14
+
+**last_funding_on:** 2022-06-03
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/useswipesum/
+
+**linkedin_url:** https://www.linkedin.com/company/swipesum/
+
+**twitter_url:** https://twitter.com/tryswipesum
+
+**age_months:** 32
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 3.0
+
+**raised_amount_usd:** 1000000.0
+
+**last_round_investment_type:** 15
+
+**last_round_raised_amount_usd:** 1000000.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 1.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 1.0
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 1.482368186892004e-05
+
+
+
+## Company 36646
+
+**Probability:** 0.8700 ± 0.0000
+
+**uuid_org:** 527744a1-fdcf-4d3a-970e-8349f611571e
+
+**name_org:** Bonjout Beauty
+
+**permalink_org:** bonjout-beauty
+
+**domain:** bonjoutbeauty.com
+
+**homepage_url:** https://www.bonjoutbeauty.com/
+
+**country_code:** 198
+
+**state_code:** 43
+
+**region:** 1079
+
+**city:** 14261
+
+**address:** 0
+
+**postal_code:** 0
+
+**status:** 3
+
+**short_description:** Beauty brand led by a French Doctor in Pharmacy, launching in 2023
+
+**category_list:** 103040
+
+**category_groups_list:** 19563
+
+**num_funding_rounds:** 1.0
+
+**total_funding_usd:** 1470000.0
+
+**total_funding:** 1470000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 2022-08-31
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/bonjoutbeauty1
+
+**linkedin_url:** https://www.linkedin.com/company/bonjoutbeauty
 
 **twitter_url:** 0
 
-**age_months:** 37
+**age_months:** 25
 
-**has_facebook_url:** 0
+**has_facebook_url:** 1
 
 **has_twitter_url:** 0
 
@@ -2702,31 +2120,39 @@
 
 **IPO_vs_Other_Prediction:** 0
 
+**IPO_vs_Other_Probability:** 0.0
+
 **FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.96
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 2.860325760541937e-05
 
 
-## Company 26561
 
-**uuid_org:** d5d1d8f6-74af-489e-b2b1-35a50db3c267
+## Company 19012
 
-**name_org:** Inpock
+**Probability:** 0.9600 ± 0.0000
 
-**permalink_org:** inpock-c267
+**uuid_org:** e4d436b7-da7f-4495-9f3b-334397e1cf68
 
-**domain:** link.inpock.co.kr
+**name_org:** SingleKey
 
-**homepage_url:** https://link.inpock.co.kr
+**permalink_org:** singlekey
 
-**country_code:** 106
+**domain:** singlekey.com
 
-**state_code:** 0
+**homepage_url:** https://www.singlekey.com/
 
-**region:** 804
+**country_code:** 34
 
-**city:** 19517
+**state_code:** 46
+
+**region:** 1162
+
+**city:** 20956
 
 **address:** 0
 
@@ -2734,11 +2160,123 @@
 
 **status:** 3
 
-**short_description:** Inpock offers an online platform for influencers.
+**short_description:** SingleKey helps landlords take the stress out of renting by helping them choose the right tenant and guaranteeing rental income.
 
-**category_list:** 73663
+**category_list:** 172551
 
-**category_groups_list:** 22070
+**category_groups_list:** 22688
+
+**num_funding_rounds:** 6.0
+
+**total_funding_usd:** 2391023.0
+
+**total_funding:** 3000000.0
+
+**total_funding_currency_code:** CAD
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 2022-03-01
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/SingleKeycom/
+
+**linkedin_url:** https://www.linkedin.com/company/singlekey/
+
+**twitter_url:** 0
+
+**age_months:** 25
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 1.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 11
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 13.0
+
+**investor_countwup:** 1.0
+
+**last_round_investor_count:** 1.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 1.0
+
+**founders_degree_count_max:** 1.0
+
+**founders_degree_count_mean:** 1.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 1.0
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 2.0925650104361908e-05
+
+
+
+## Company 11374
+
+**Probability:** 0.9300 ± 0.0000
+
+**uuid_org:** eadab78d-a19b-4ffb-bd1a-873817524410
+
+**name_org:** RFC Power
+
+**permalink_org:** rfc-power
+
+**domain:** rfcpower.com
+
+**homepage_url:** http://rfcpower.com/
+
+**country_code:** 66
+
+**state_code:** 0
+
+**region:** 478
+
+**city:** 11798
+
+**address:** 52 Princes Gate, Exhibition Road
+
+**postal_code:** SW2 2AZ
+
+**status:** 3
+
+**short_description:** RFC Power is a developer of flow battery systems.
+
+**category_list:** 58768
+
+**category_groups_list:** 32488
 
 **num_funding_rounds:** 3.0
 
@@ -2748,25 +2286,249 @@
 
 **total_funding_currency_code:** USD
 
-**founded_on:** 2018-10-19
+**founded_on:** 2017-01-01
 
-**last_funding_on:** 2023-03-27
+**last_funding_on:** 2023-02-02
 
 **closed_on:** nan
 
-**facebook_url:** https://www.facebook.com/Inpock_official-2501354083215889/
+**facebook_url:** 0
 
-**linkedin_url:** 0
+**linkedin_url:** https://www.linkedin.com/company/rfc-power/about/
 
 **twitter_url:** 0
 
-**age_months:** 3
+**age_months:** 25
 
-**has_facebook_url:** 1
+**has_facebook_url:** 0
 
 **has_twitter_url:** 0
 
-**has_linkedin_url:** 0
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 3.0
+
+**founders_degree_count_max:** 3.0
+
+**founders_degree_count_mean:** 3.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.97
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 3.475286999014062e-05
+
+
+
+## Company 8294
+
+**Probability:** 0.6600 ± 0.0000
+
+**uuid_org:** 4cc844d8-27f5-56b9-160d-c29aa4caaa6e
+
+**name_org:** SpacetoCo
+
+**permalink_org:** spacetoco
+
+**domain:** spacetoco.com
+
+**homepage_url:** https://www.spacetoco.com
+
+**country_code:** 12
+
+**state_code:** 0
+
+**region:** 1710
+
+**city:** 15816
+
+**address:** 191 St Georges Terrace Perth Flux Level 1
+
+**postal_code:** 6000
+
+**status:** 3
+
+**short_description:** SpacetoCo is a web-based, sharing economy platform for the short term booking of Space
+
+**category_list:** 173784
+
+**category_groups_list:** 38745
+
+**num_funding_rounds:** 1.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2016-02-05
+
+**last_funding_on:** 2019-09-26
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/spacetoco
+
+**linkedin_url:** https://www.linkedin.com/company/spacetoco
+
+**twitter_url:** https://www.twitter.com/spacetoco
+
+**age_months:** 36
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 3.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 1.0
+
+**founders_degree_count_max:** 1.0
+
+**founders_degree_count_mean:** 0.3333333333333333
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.91
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 4.6239071528827724e-05
+
+
+
+## Company 9352
+
+**Probability:** 1.0000 ± 0.0000
+
+**uuid_org:** a54b77e2-ca0f-42e4-8d76-05a5483a54cd
+
+**name_org:** Plume-App
+
+**permalink_org:** plume-app
+
+**domain:** plume-app.co
+
+**homepage_url:** https://www.plume-app.co/
+
+**country_code:** 63
+
+**state_code:** 0
+
+**region:** 646
+
+**city:** 17942
+
+**address:** 0
+
+**postal_code:** 93400
+
+**status:** 3
+
+**short_description:** Plume is an interactive platform that develops students’ writing skills. How? By making writing fun!
+
+**category_list:** 33280
+
+**category_groups_list:** 9697
+
+**num_funding_rounds:** 3.0
+
+**total_funding_usd:** 2610266.0
+
+**total_funding:** 2200000.0
+
+**total_funding_currency_code:** EUR
+
+**founded_on:** 2018-01-01
+
+**last_funding_on:** 2022-10-12
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/plumeapp/
+
+**linkedin_url:** https://www.linkedin.com/company/plume-app/
+
+**twitter_url:** https://twitter.com/plume_app
+
+**age_months:** 13
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
 
 **round_count:** 0.0
 
@@ -2806,45 +2568,389 @@
 
 **IPO_vs_Other_Prediction:** 0
 
+**IPO_vs_Other_Probability:** 0.0
+
 **FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.98
 
 **AC_vs_Other_Prediction:** 0
 
+**AC_vs_Other_Probability:** 2.5883821006447962e-05
 
 
-## Company 17650
 
-**uuid_org:** 812adcdb-c69a-43b5-bd3d-99f1cf9f576f
+## Company 36161
 
-**name_org:** Electro-Active Technologies
+**Probability:** 0.9900 ± 0.0000
 
-**permalink_org:** electro-active-technologies
+**uuid_org:** 3f5e4634-0687-4aec-8fda-3fb18c48c520
 
-**domain:** electroactive.tech
+**name_org:** Salad Ventures
 
-**homepage_url:** http://electroactive.tech
+**permalink_org:** salad-ventures
 
-**country_code:** 198
+**domain:** salad.ventures
 
-**state_code:** 55
+**homepage_url:** https://www.salad.ventures/
 
-**region:** 1551
+**country_code:** 170
 
-**city:** 10408
+**state_code:** 0
 
-**address:** 0
+**region:** 316
+
+**city:** 19223
+
+**address:** 6, Raffles Blvd, #3-308, Marina Square
 
 **postal_code:** 0
 
 **status:** 3
 
-**short_description:** Electro-Active Technologies is focused on transforming waste into renewable products.
+**short_description:** Salad Ventures builds plug and play apps, games using blockchain.
 
-**category_list:** 166457
+**category_list:** 32880
 
-**category_groups_list:** 33044
+**category_groups_list:** 8629
 
-**num_funding_rounds:** 3.0
+**num_funding_rounds:** 2.0
+
+**total_funding_usd:** 15500000.0
+
+**total_funding:** 15500000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 2022-02-11
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://www.linkedin.com/company/salad-ventures/
+
+**twitter_url:** https://twitter.com/saladventures?lang=en
+
+**age_months:** 25
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 1.0
+
+**founders_degree_count_max:** 1.0
+
+**founders_degree_count_mean:** 1.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 1.0
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 1.8878796450329686e-05
+
+
+
+## Company 27196
+
+**Probability:** 0.9700 ± 0.0000
+
+**uuid_org:** cc6a76c0-1741-40f8-b2aa-b620840ad1eb
+
+**name_org:** Invoier AB
+
+**permalink_org:** invoier-ab
+
+**domain:** invoier.com
+
+**homepage_url:** https://www.invoier.com/
+
+**country_code:** 181
+
+**state_code:** 0
+
+**region:** 1478
+
+**city:** 19875
+
+**address:** Skeppsbron 18
+
+**postal_code:** 11130
+
+**status:** 3
+
+**short_description:** Invoier AB is founded with the ambition to simplify financial services & create a transparent marketplace for invoice trading.
+
+**category_list:** 142704
+
+**category_groups_list:** 21343
+
+**num_funding_rounds:** 4.0
+
+**total_funding_usd:** 6563070.0
+
+**total_funding:** 5704293.0
+
+**total_funding_currency_code:** EUR
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 2022-02-03
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/invoier
+
+**linkedin_url:** https://www.linkedin.com/company/33458009/
+
+**twitter_url:** 0
+
+**age_months:** 25
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 1.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 17
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 25.0
+
+**investor_countwup:** 1.0
+
+**last_round_investor_count:** 1.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 1.0
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 1.9142403596352777e-05
+
+
+
+## Company 2755
+
+**Probability:** 0.8100 ± 0.0000
+
+**uuid_org:** 82148588-4c39-4d63-b4e0-6c9c87102ad3
+
+**name_org:** Cynch Security
+
+**permalink_org:** cynch-security
+
+**domain:** cynch.com.au
+
+**homepage_url:** https://cynch.com.au
+
+**country_code:** 12
+
+**state_code:** 0
+
+**region:** 1656
+
+**city:** 5467
+
+**address:** 710 Collins St
+
+**postal_code:** 3008
+
+**status:** 3
+
+**short_description:** Cyber fitness for small business
+
+**category_list:** 112969
+
+**category_groups_list:** 37781
+
+**num_funding_rounds:** 2.0
+
+**total_funding_usd:** 333200.0
+
+**total_funding:** 485000.0
+
+**total_funding_currency_code:** AUD
+
+**founded_on:** 2017-05-15
+
+**last_funding_on:** 2019-11-19
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/cynchsec
+
+**linkedin_url:** https://www.linkedin.com/company/cynchsec
+
+**twitter_url:** https://twitter.com/cynchsec
+
+**age_months:** 20
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 1.0
+
+**raised_amount_usd:** 36323.0
+
+**last_round_investment_type:** 11
+
+**last_round_raised_amount_usd:** 36323.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 1.0
+
+**investor_countwup:** 1.0
+
+**last_round_investor_count:** 1.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 1.0
+
+**founders_degree_count_total:** 1.0
+
+**founders_degree_count_max:** 1.0
+
+**founders_degree_count_mean:** 1.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.95
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 4.139278866073778e-05
+
+
+
+## Company 609
+
+**Probability:** 0.8000 ± 0.0000
+
+**uuid_org:** 7b6bf583-02f5-1833-73f2-28de0b564856
+
+**name_org:** Shelfie Robot
+
+**permalink_org:** shelfie-robot
+
+**domain:** shelfierobot.com
+
+**homepage_url:** http://shelfierobot.com/
+
+**country_code:** 12
+
+**state_code:** 0
+
+**region:** 1275
+
+**city:** 12365
+
+**address:** Level 2, 6 The Corso
+
+**postal_code:** 2095
+
+**status:** 3
+
+**short_description:** Shelfie Robot is a Retail Shelf Analytics Platform.
+
+**category_list:** 43699
+
+**category_groups_list:** 13129
+
+**num_funding_rounds:** 2.0
 
 **total_funding_usd:** 0.0
 
@@ -2854,17 +2960,1701 @@
 
 **founded_on:** 2017-01-01
 
-**last_funding_on:** 2021-09-03
+**last_funding_on:** 2020-04-30
 
 **closed_on:** nan
 
 **facebook_url:** 0
 
-**linkedin_url:** https://www.linkedin.com/company/electro-active-technologies-llc/
+**linkedin_url:** https://www.linkedin.com/company/17911114/
 
-**twitter_url:** https://twitter.com/electro_activeT
+**twitter_url:** https://twitter.com/Shelfierobot
 
 **age_months:** 25
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 1.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 15
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 19.0
+
+**investor_countwup:** 1.0
+
+**last_round_investor_count:** 1.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 3.0
+
+**founders_degree_count_max:** 3.0
+
+**founders_degree_count_mean:** 3.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.87
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 3.3166218015253746e-05
+
+
+
+## Company 16094
+
+**Probability:** 0.6200 ± 0.0000
+
+**uuid_org:** 0a1ea5f4-5beb-42e9-ae6b-c2b2ffe0ba20
+
+**name_org:** iXDen
+
+**permalink_org:** ix-den
+
+**domain:** ixden.com
+
+**homepage_url:** https://www.ixden.com
+
+**country_code:** 95
+
+**state_code:** 0
+
+**region:** 1546
+
+**city:** 20557
+
+**address:** 4 Ariel Sharon., Givataim
+
+**postal_code:** 0
+
+**status:** 3
+
+**short_description:** Securing IoT devices of ICS systems. Invented  ''biometric-like'' IoT Device Identity and Authentication using mathematics and AI
+
+**category_list:** 44362
+
+**category_groups_list:** 14990
+
+**num_funding_rounds:** 4.0
+
+**total_funding_usd:** 100000.0
+
+**total_funding:** 100000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 2019-05-01
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/search/top/?q=ixden
+
+**linkedin_url:** https://www.linkedin.com/company/ixden/
+
+**twitter_url:** 0
+
+**age_months:** 25
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 2.0
+
+**raised_amount_usd:** 100000.0
+
+**last_round_investment_type:** 11
+
+**last_round_raised_amount_usd:** 100000.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 13.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 1.0
+
+**founders_degree_count_max:** 1.0
+
+**founders_degree_count_mean:** 1.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.9
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 2.5212178837098256e-05
+
+
+
+## Company 29893
+
+**Probability:** 0.9700 ± 0.0000
+
+**uuid_org:** 947e1586-c94f-9de2-f257-712139077368
+
+**name_org:** Kisan Network
+
+**permalink_org:** kisan-network
+
+**domain:** kisannetwork.com
+
+**homepage_url:** https://www.kisannetwork.com
+
+**country_code:** 89
+
+**state_code:** 0
+
+**region:** 601
+
+**city:** 7947
+
+**address:** 2F, 230 Shankar Chowk Road, Udyog Vihar Phase 1, Sector 20, Gurugram
+
+**postal_code:** 122016
+
+**status:** 3
+
+**short_description:** Kisan Network is a tech-enabled supply chain startup focused on agriculture.
+
+**category_list:** 21018
+
+**category_groups_list:** 7720
+
+**num_funding_rounds:** 3.0
+
+**total_funding_usd:** 3220000.0
+
+**total_funding:** 3220000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2016-01-01
+
+**last_funding_on:** 2020-01-30
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/kisannetwork
+
+**linkedin_url:** https://www.linkedin.com/company/kisan-network
+
+**twitter_url:** https://twitter.com/kisannetwork
+
+**age_months:** 37
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 2.0
+
+**raised_amount_usd:** 220000.0
+
+**last_round_investment_type:** 11
+
+**last_round_raised_amount_usd:** 100000.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 31.0
+
+**investor_countwup:** 1.0
+
+**last_round_investor_count:** 1.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 2.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 1.0
+
+**founders_degree_count_max:** 1.0
+
+**founders_degree_count_mean:** 0.5
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.98
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 1.3616816288378303e-05
+
+
+
+## Company 13590
+
+**Probability:** 0.9800 ± 0.0000
+
+**uuid_org:** b2ad43fb-ea03-485a-b0c9-ca3b4621a75e
+
+**name_org:** InnoSpina
+
+**permalink_org:** innospina
+
+**domain:** innospina.com
+
+**homepage_url:** https://www.innospina.com/
+
+**country_code:** 35
+
+**state_code:** 0
+
+**region:** 700
+
+**city:** 4783
+
+**address:** Switzerland Innovation Park Basel Area | Site Jura, Place des Sciences 2
+
+**postal_code:** CH-2822
+
+**status:** 3
+
+**short_description:** At InnoSpina, we design and develop novel 3d printed implants and unique surgical guiding instruments to treat back pain in less than 30min
+
+**category_list:** 151960
+
+**category_groups_list:** 36753
+
+**num_funding_rounds:** 4.0
+
+**total_funding_usd:** 2192279.0
+
+**total_funding:** 2035000.0
+
+**total_funding_currency_code:** CHF
+
+**founded_on:** 2017-09-01
+
+**last_funding_on:** 2022-08-01
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://www.linkedin.com/company/innospina/
+
+**twitter_url:** 0
+
+**age_months:** 17
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 2
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 1
+
+**AC_vs_Other:** 0
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 1
+
+**FR_vs_Other_Probability:** 0.99
+
+**AC_vs_Other_Prediction:** 0
+
+**AC_vs_Other_Probability:** 2.409733054593158e-05
+
+
+
+
+
+# Acquisition Predictions
+
+## Company 3529
+
+**Probability:** 0.7310 ± 0.0000
+
+**uuid_org:** 57ac5bf0-ea70-2f85-d503-4ce75ed3f2a8
+
+**name_org:** Adventure Projects
+
+**permalink_org:** adventure-projects-inc
+
+**domain:** adventureprojects.net
+
+**homepage_url:** http://adventureprojects.net/
+
+**country_code:** 198
+
+**state_code:** 8
+
+**region:** 367
+
+**city:** 2573
+
+**address:** 2525 Arapahoe Ave. #E4-715
+
+**postal_code:** 80302
+
+**status:** 0
+
+**short_description:** Adventure Projects is a platform connecting people, data, and outdoor passions.
+
+**category_list:** 4216
+
+**category_groups_list:** 39091
+
+**num_funding_rounds:** 0.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** 0
+
+**founded_on:** 2015-01-01
+
+**last_funding_on:** 0
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/AdventureProjects/
+
+**linkedin_url:** https://www.linkedin.com/company/adventure-projects-inc/
+
+**twitter_url:** 0
+
+**age_months:** 49
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 2.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 2.0
+
+**founders_degree_count_max:** 2.0
+
+**founders_degree_count_mean:** 1.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.7743300630941901
+
+
+
+## Company 5436
+
+**Probability:** 0.8252 ± 0.0000
+
+**uuid_org:** df7d8c00-9434-4dd0-8c18-be7628a8cf9a
+
+**name_org:** Betty Labs
+
+**permalink_org:** betty-labs
+
+**domain:** bettylabs.io
+
+**homepage_url:** https://bettylabs.io/
+
+**country_code:** 198
+
+**state_code:** 7
+
+**region:** 279
+
+**city:** 11869
+
+**address:** 0
+
+**postal_code:** 0
+
+**status:** 0
+
+**short_description:** Betty Labs is a developer of a sports trivia application designed to provide life experiences.
+
+**category_list:** 174843
+
+**category_groups_list:** 38185
+
+**num_funding_rounds:** 2.0
+
+**total_funding_usd:** 9300000.0
+
+**total_funding:** 9300000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2018-01-01
+
+**last_funding_on:** 2020-10-27
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://www.linkedin.com/company/bettylabs/
+
+**twitter_url:** 0
+
+**age_months:** 13
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 1.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 11
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 8.0
+
+**investor_countwup:** 1.0
+
+**last_round_investor_count:** 1.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.03
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.08
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.7419667689033397
+
+
+
+## Company 5261
+
+**Probability:** 0.8011 ± 0.0000
+
+**uuid_org:** 2f63e98e-b627-48be-a71f-748e6e1c345a
+
+**name_org:** Fervid Communications
+
+**permalink_org:** fervid-communications
+
+**domain:** fervid.ca
+
+**homepage_url:** https://fervid.ca
+
+**country_code:** 34
+
+**state_code:** 46
+
+**region:** 1162
+
+**city:** 20956
+
+**address:** 555 Richmond Street W. Suite 915
+
+**postal_code:** M5V 3B1
+
+**status:** 0
+
+**short_description:** Fervid Communications is a full service agency specialized in restaurant and tourism marketing and public relations.
+
+**category_list:** 154415
+
+**category_groups_list:** 39047
+
+**num_funding_rounds:** 0.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** 0
+
+**founded_on:** 2016-01-01
+
+**last_funding_on:** 0
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/Fervid-Communications-332189083796328/
+
+**linkedin_url:** https://ca.linkedin.com/company/fervid-communications
+
+**twitter_url:** 0
+
+**age_months:** 37
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.02
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.8057681039689015
+
+
+
+## Company 2722
+
+**Probability:** 0.7775 ± 0.0000
+
+**uuid_org:** 389745e6-d21c-4263-8b04-beedd452f6b4
+
+**name_org:** Easybrain
+
+**permalink_org:** easybrain
+
+**domain:** easybrain.com
+
+**homepage_url:** https://www.easybrain.com
+
+**country_code:** 196
+
+**state_code:** 0
+
+**region:** 811
+
+**city:** 10226
+
+**address:** 0
+
+**postal_code:** 41033
+
+**status:** 0
+
+**short_description:** Easybrain is a developer of best-selling mobile logic puzzle games.
+
+**category_list:** 77227
+
+**category_groups_list:** 11737
+
+**num_funding_rounds:** 0.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** 0
+
+**founded_on:** 2016-01-01
+
+**last_funding_on:** 0
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/EasybrainTeam/
+
+**linkedin_url:** https://www.linkedin.com/company/easybrain
+
+**twitter_url:** https://twitter.com/easybrainteam
+
+**age_months:** 37
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 2.0
+
+**founders_male_count:** 3.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 1.0
+
+**founders_degree_count_max:** 1.0
+
+**founders_degree_count_mean:** 0.3333333333333333
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.7672814673749626
+
+
+
+## Company 3150
+
+**Probability:** 0.7999 ± 0.0000
+
+**uuid_org:** a1fcf606-54ca-4ccf-b63e-c498d0722dca
+
+**name_org:** ELEV8
+
+**permalink_org:** elev8
+
+**domain:** elev8con.com
+
+**homepage_url:** https://www.elev8con.com/
+
+**country_code:** 198
+
+**state_code:** 7
+
+**region:** 279
+
+**city:** 12502
+
+**address:** 0
+
+**postal_code:** 0
+
+**status:** 0
+
+**short_description:** ELEV8 is a platform for connecting corporate and enterprise thought leaders, innovators, and implementers of blockchain.
+
+**category_list:** 167956
+
+**category_groups_list:** 37922
+
+**num_funding_rounds:** 0.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** 0
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 0
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/ELEV8con/
+
+**linkedin_url:** https://www.linkedin.com/company/elev8con
+
+**twitter_url:** https://twitter.com/elev8con
+
+**age_months:** 25
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.794230367423152
+
+
+
+## Company 1927
+
+**Probability:** 0.7229 ± 0.0000
+
+**uuid_org:** 6bbabc7d-1cb2-4bea-b599-60a5ead15e57
+
+**name_org:** Payflex
+
+**permalink_org:** payflex
+
+**domain:** payflex.co.za
+
+**homepage_url:** https://www.payflex.co.za/
+
+**country_code:** 203
+
+**state_code:** 0
+
+**region:** 1035
+
+**city:** 9665
+
+**address:** 0
+
+**postal_code:** 0
+
+**status:** 0
+
+**short_description:** Payflex is an online payment product that enables shoppers to shop now and pay in 4 equal installments.
+
+**category_list:** 123752
+
+**category_groups_list:** 21451
+
+**num_funding_rounds:** 1.0
+
+**total_funding_usd:** 500000.0
+
+**total_funding:** 500000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 2021-04-21
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/PayflexZA/
+
+**linkedin_url:** https://www.linkedin.com/company/payflexza
+
+**twitter_url:** https://twitter.com/PayflexZa
+
+**age_months:** 25
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 1.0
+
+**founders_degree_count_max:** 1.0
+
+**founders_degree_count_mean:** 1.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.17
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.7465507322355794
+
+
+
+## Company 1210
+
+**Probability:** 0.7800 ± 0.0000
+
+**uuid_org:** de1a1329-606b-3ab0-631a-16d7ac378840
+
+**name_org:** flyiin
+
+**permalink_org:** flyiin
+
+**domain:** flyiin.com
+
+**homepage_url:** http://flyiin.com
+
+**country_code:** 50
+
+**state_code:** 0
+
+**region:** 201
+
+**city:** 2004
+
+**address:** Am Karlsbad 16
+
+**postal_code:** 10785
+
+**status:** 0
+
+**short_description:** flyiin is a German airline distribution and booking startup.
+
+**category_list:** 158830
+
+**category_groups_list:** 37455
+
+**num_funding_rounds:** 1.0
+
+**total_funding_usd:** 2727174.0
+
+**total_funding:** 2400000.0
+
+**total_funding_currency_code:** EUR
+
+**founded_on:** 2015-09-01
+
+**last_funding_on:** 2019-01-22
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://www.linkedin.com/company/flyiin
+
+**twitter_url:** https://twitter.com/weareflyiin
+
+**age_months:** 41
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.09
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.8068693192593508
+
+
+
+## Company 5402
+
+**Probability:** 0.7800 ± 0.0000
+
+**uuid_org:** c939b27f-3ec4-42b1-a57a-82794ad2e1fd
+
+**name_org:** LeadOwl
+
+**permalink_org:** leadowl
+
+**domain:** leadowl.com
+
+**homepage_url:** https://leadowl.com
+
+**country_code:** 198
+
+**state_code:** 12
+
+**region:** 507
+
+**city:** 20412
+
+**address:** 19046 Bruce B. Downs Blvd Suite 1227
+
+**postal_code:** 33647
+
+**status:** 0
+
+**short_description:** LeadOwl is a smart phone and web app that allows you to completely manage your digital marketing clients and/or sales team.
+
+**category_list:** 12687
+
+**category_groups_list:** 6609
+
+**num_funding_rounds:** 0.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** 0
+
+**founded_on:** 2017-11-01
+
+**last_funding_on:** 0
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/LeadOwlApp
+
+**linkedin_url:** https://www.linkedin.com/company/leadowl
+
+**twitter_url:** https://twitter.com/leadowlapp
+
+**age_months:** 15
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.7650644782949231
+
+
+
+## Company 4705
+
+**Probability:** 0.8100 ± 0.0000
+
+**uuid_org:** 7641279c-51b7-4c36-9576-d41d940400e3
+
+**name_org:** Kalahari Metals
+
+**permalink_org:** kalahari-metals
+
+**domain:** kalaharimetals.com
+
+**homepage_url:** https://kalaharimetals.com
+
+**country_code:** 33
+
+**state_code:** 0
+
+**region:** 1465
+
+**city:** 7049
+
+**address:** 0
+
+**postal_code:** 502561
+
+**status:** 0
+
+**short_description:** Kalahari Metals is a metal exploration company.
+
+**category_list:** 116957
+
+**category_groups_list:** 38705
+
+**num_funding_rounds:** 0.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** 0
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 0
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** 0
+
+**twitter_url:** 0
+
+**age_months:** 25
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 0
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.8166544891308933
+
+
+
+## Company 4706
+
+**Probability:** 0.7930 ± 0.0000
+
+**uuid_org:** b0bd8f98-a4a7-4b29-be8f-908120d09fca
+
+**name_org:** Bastard Burgers
+
+**permalink_org:** bastard-burgers
+
+**domain:** bastardburgers.com
+
+**homepage_url:** https://bastardburgers.com/
+
+**country_code:** 181
+
+**state_code:** 0
+
+**region:** 1108
+
+**city:** 11974
+
+**address:** 0
+
+**postal_code:** 0
+
+**status:** 0
+
+**short_description:** Bastard Burgers operates a chain of restaurants that provides meat-based burgers.
+
+**category_list:** 145996
+
+**category_groups_list:** 34867
+
+**num_funding_rounds:** 1.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2016-01-01
+
+**last_funding_on:** 2019-12-01
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/bastardburgers.se
+
+**linkedin_url:** https://www.linkedin.com/company/bastard-burgers/
+
+**twitter_url:** https://twitter.com/burgersbastard
+
+**age_months:** 37
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.06
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.7874445947281609
+
+
+
+## Company 627
+
+**Probability:** 0.5392 ± 0.0000
+
+**uuid_org:** cbff906a-3fdf-4b2c-99eb-541a72bb94d2
+
+**name_org:** esVolta
+
+**permalink_org:** esvolta
+
+**domain:** esvolta.com
+
+**homepage_url:** https://www.esvolta.com/
+
+**country_code:** 198
+
+**state_code:** 7
+
+**region:** 279
+
+**city:** 407
+
+**address:** 65 Enterprise 3rd Floor
+
+**postal_code:** 92656
+
+**status:** 0
+
+**short_description:** esVolta is a developer, owner and operator of utility-scale energy storage projects.
+
+**category_list:** 135044
+
+**category_groups_list:** 32488
+
+**num_funding_rounds:** 3.0
+
+**total_funding_usd:** 140000000.0
+
+**total_funding:** 140000000.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 2023-11-09
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://www.linkedin.com/company/esvolta-lp
+
+**twitter_url:** 0
+
+**age_months:** 25
+
+**has_facebook_url:** 0
+
+**has_twitter_url:** 0
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 1.0
+
+**founders_male_count:** 1.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.09
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.07
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.6156842543655164
+
+
+
+## Company 5220
+
+**Probability:** 0.7850 ± 0.0000
+
+**uuid_org:** af8204d8-b630-4308-98ff-77c47a5f5803
+
+**name_org:** Steel Root
+
+**permalink_org:** steel-root
+
+**domain:** steelroot.us
+
+**homepage_url:** https://www.steelroot.us
+
+**country_code:** 198
+
+**state_code:** 22
+
+**region:** 939
+
+**city:** 18037
+
+**address:** 16 Front Street, Suite 202
+
+**postal_code:** 01970
+
+**status:** 0
+
+**short_description:** Cybersecurity, compliance, and IT managed services
+
+**category_list:** 94684
+
+**category_groups_list:** 35594
+
+**num_funding_rounds:** 1.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** USD
+
+**founded_on:** 2016-03-07
+
+**last_funding_on:** 2022-11-16
+
+**closed_on:** nan
+
+**facebook_url:** 0
+
+**linkedin_url:** https://www.linkedin.com/company/steel-root
+
+**twitter_url:** https://www.twitter.com/steel_root
+
+**age_months:** 35
 
 **has_facebook_url:** 0
 
@@ -2900,322 +4690,6 @@
 
 **founders_degree_count_mean:** 2.0
 
-**outcome:** 2
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 1
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 1
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 8910
-
-**uuid_org:** 39b1f397-b44a-4a2d-9f3b-9ccf35b71d87
-
-**name_org:** Garden
-
-**permalink_org:** garden-io
-
-**domain:** garden.io
-
-**homepage_url:** https://garden.io/
-
-**country_code:** 50
-
-**state_code:** 0
-
-**region:** 201
-
-**city:** 2004
-
-**address:** Hermannstrasse 257
-
-**postal_code:** 12049
-
-**status:** 3
-
-**short_description:** Garden is a DevOps platform providing production-like environments to build, manage and test cloud-native apps.
-
-**category_list:** 82857
-
-**category_groups_list:** 37350
-
-**num_funding_rounds:** 3.0
-
-**total_funding_usd:** 20833374.0
-
-**total_funding:** 18490000.0
-
-**total_funding_currency_code:** EUR
-
-**founded_on:** 2018-01-01
-
-**last_funding_on:** 2022-03-01
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/garden-io/
-
-**twitter_url:** https://twitter.com/garden_io
-
-**age_months:** 13
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 1.0
-
-**raised_amount_usd:** 1225460.0
-
-**last_round_investment_type:** 15
-
-**last_round_raised_amount_usd:** 1225460.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 5.0
-
-**investor_countwup:** 2.0
-
-**last_round_investor_count:** 1.0
-
-**founders_dif_country_count:** 2.0
-
-**founders_male_count:** 3.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 2
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 1
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 1
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-## Company 4270
-
-**uuid_org:** 33dabe0d-490e-42fa-909a-d7aea083f311
-
-**name_org:** Medipresso
-
-**permalink_org:** medipresso
-
-**domain:** mediespresso.com
-
-**homepage_url:** http://www.mediespresso.com/
-
-**country_code:** 106
-
-**state_code:** 0
-
-**region:** 804
-
-**city:** 7186
-
-**address:** 0
-
-**postal_code:** 0
-
-**status:** 3
-
-**short_description:** Medipresso produces coffee and tea capsule machine.
-
-**category_list:** 165768
-
-**category_groups_list:** 38193
-
-**num_funding_rounds:** 9.0
-
-**total_funding_usd:** 843253.0
-
-**total_funding:** 1000000000.0
-
-**total_funding_currency_code:** KRW
-
-**founded_on:** 2016-07-01
-
-**last_funding_on:** 2021-12-07
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/medipresso/
-
-**linkedin_url:** 0
-
-**twitter_url:** 0
-
-**age_months:** 31
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 0
-
-**round_count:** 1.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 1
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 1.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 2
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 1
-
-**AC_vs_Other:** 0
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 1
-
-**AC_vs_Other_Prediction:** 0
-
-
-
-
-
-# Acquisition Predictions
-
-## Company 5476
-
-**uuid_org:** 6a172e99-8f1f-49d9-ac1c-aae21dc0fae0
-
-**name_org:** Stryx
-
-**permalink_org:** stryx-fae0
-
-**domain:** stryx.co.kr
-
-**homepage_url:** https://www.stryx.co.kr/
-
-**country_code:** 106
-
-**state_code:** 0
-
-**region:** 1404
-
-**city:** 18866
-
-**address:** 70, Donggyo-ro 25gil Mapo-gu, Seoul
-
-**postal_code:** 03991
-
-**status:** 0
-
-**short_description:** Stryx builds Digital twin data platform by High-Precision HD map with cloud-based full stack HD Mapping Solution.
-
-**category_list:** 1137
-
-**category_groups_list:** 29439
-
-**num_funding_rounds:** 2.0
-
-**total_funding_usd:** 1431940.0
-
-**total_funding:** 1431940.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2017-10-30
-
-**last_funding_on:** 2020-07-01
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/stryxhdmap/
-
-**linkedin_url:** https://www.linkedin.com/company/stryx-inc/
-
-**twitter_url:** 0
-
-**age_months:** 15
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 1.0
-
-**raised_amount_usd:** 505390.0
-
-**last_round_investment_type:** 11
-
-**last_round_raised_amount_usd:** 505390.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 3.0
-
-**investor_countwup:** 1.0
-
-**last_round_investor_count:** 1.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
 **outcome:** 0
 
 **IPO_vs_Other:** 0
@@ -3226,65 +4700,73 @@
 
 **IPO_vs_Other_Prediction:** 0
 
+**IPO_vs_Other_Probability:** 0.0
+
 **FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.11
 
 **AC_vs_Other_Prediction:** 1
 
+**AC_vs_Other_Probability:** 0.7907601597911025
 
 
-## Company 4680
 
-**uuid_org:** c294d22d-5393-4aa6-bc68-3b1f496177b0
+## Company 2782
 
-**name_org:** Rewatt
+**Probability:** 0.8634 ± 0.0000
 
-**permalink_org:** rewatt-77b0
+**uuid_org:** 237ba901-717c-41c4-bca8-5612b2de992e
 
-**domain:** rewatt.pt
+**name_org:** Lua
 
-**homepage_url:** https://www.rewatt.pt
+**permalink_org:** whispr
 
-**country_code:** 158
+**domain:** lua.work
+
+**homepage_url:** https://www.lua.work
+
+**country_code:** 53
 
 **state_code:** 0
 
-**region:** 1248
+**region:** 631
 
-**city:** 21847
+**city:** 4659
 
-**address:** Rua do Galhano, 15
+**address:** Kuglegårdsvej 11, Level 2 Copenhagen
 
-**postal_code:** 4480-089
+**postal_code:** 1436
 
 **status:** 0
 
-**short_description:** Rewatt provides renewables are the primary source of energy.
+**short_description:** Lua is a workflow tool helping Hospitality teams perform better through on-demand information and guidance.
 
-**category_list:** 135843
+**category_list:** 56047
 
-**category_groups_list:** 33249
+**category_groups_list:** 38892
 
-**num_funding_rounds:** 0.0
+**num_funding_rounds:** 1.0
 
 **total_funding_usd:** 0.0
 
 **total_funding:** 0.0
 
-**total_funding_currency_code:** 0
+**total_funding_currency_code:** USD
 
-**founded_on:** 2018-01-01
+**founded_on:** 2018-08-01
 
-**last_funding_on:** 0
+**last_funding_on:** 2019-03-14
 
 **closed_on:** nan
 
 **facebook_url:** 0
 
-**linkedin_url:** https://www.linkedin.com/company/rewatt-renewable-developpers
+**linkedin_url:** https://ie.linkedin.com/company/lua-tech
 
 **twitter_url:** 0
 
-**age_months:** 13
+**age_months:** 6
 
 **has_facebook_url:** 0
 
@@ -3330,43 +4812,163 @@
 
 **IPO_vs_Other_Prediction:** 0
 
+**IPO_vs_Other_Probability:** 0.0
+
 **FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.11
 
 **AC_vs_Other_Prediction:** 1
 
+**AC_vs_Other_Probability:** 0.8581985261850134
 
 
-## Company 3261
 
-**uuid_org:** 3d9e80aa-900c-45b3-a6d1-5b00b932a07d
+## Company 5654
 
-**name_org:** Igloo Creative House
+**Probability:** 0.7860 ± 0.0000
 
-**permalink_org:** igloo-creative-house
+**uuid_org:** df455fc4-5ef9-452d-96b7-4092adc31603
 
-**domain:** igloocreative.co
+**name_org:** Barletta Boats
 
-**homepage_url:** https://www.igloocreative.co/
+**permalink_org:** barletta-boats
 
-**country_code:** 95
+**domain:** barlettapontoonboats.com
 
-**state_code:** 0
+**homepage_url:** https://www.barlettapontoonboats.com/
 
-**region:** 1546
+**country_code:** 198
 
-**city:** 20557
+**state_code:** 18
 
-**address:** Soncino 13 Tel-Aviv, IL
+**region:** 654
 
-**postal_code:** 6721028
+**city:** 2785
+
+**address:** 51687 County Road 133
+
+**postal_code:** 46507
 
 **status:** 0
 
-**short_description:** Igloo Creative House provides marketing and advertising services with animated videos.
+**short_description:** Barletta Boats manufacturing the luxurious Barletta Pontoon Boat L-Class.
 
-**category_list:** 6024
+**category_list:** 165768
 
-**category_groups_list:** 5483
+**category_groups_list:** 38193
+
+**num_funding_rounds:** 0.0
+
+**total_funding_usd:** 0.0
+
+**total_funding:** 0.0
+
+**total_funding_currency_code:** 0
+
+**founded_on:** 2017-01-01
+
+**last_funding_on:** 0
+
+**closed_on:** nan
+
+**facebook_url:** https://www.facebook.com/BarlettaPontoonBoats
+
+**linkedin_url:** https://www.linkedin.com/company/barletta-boat-company-llc
+
+**twitter_url:** https://twitter.com/BarlettaBoats
+
+**age_months:** 25
+
+**has_facebook_url:** 1
+
+**has_twitter_url:** 1
+
+**has_linkedin_url:** 1
+
+**round_count:** 0.0
+
+**raised_amount_usd:** 0.0
+
+**last_round_investment_type:** 0
+
+**last_round_raised_amount_usd:** 0.0
+
+**last_round_post_money_valuation:** 0.0
+
+**last_round_timelapse_months:** 0.0
+
+**investor_countwup:** 0.0
+
+**last_round_investor_count:** 0.0
+
+**founders_dif_country_count:** 0.0
+
+**founders_male_count:** 0.0
+
+**founders_female_count:** 0.0
+
+**founders_degree_count_total:** 0.0
+
+**founders_degree_count_max:** 0.0
+
+**founders_degree_count_mean:** 0.0
+
+**outcome:** 0
+
+**IPO_vs_Other:** 0
+
+**FR_vs_Other:** 0
+
+**AC_vs_Other:** 1
+
+**IPO_vs_Other_Prediction:** 0
+
+**IPO_vs_Other_Probability:** 0.0
+
+**FR_vs_Other_Prediction:** 0
+
+**FR_vs_Other_Probability:** 0.0
+
+**AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.7829632433301174
+
+
+
+## Company 5685
+
+**Probability:** 0.8361 ± 0.0000
+
+**uuid_org:** ee8c793c-c286-4d05-8774-91cf56ca4cad
+
+**name_org:** SkySail Rx
+
+**permalink_org:** skysail-rx
+
+**domain:** skysailrx.com
+
+**homepage_url:** http://www.skysailrx.com
+
+**country_code:** 198
+
+**state_code:** 17
+
+**region:** 649
+
+**city:** 14933
+
+**address:** 29425 Chagrin Blvd, STE 140 Pepper Pike
+
+**postal_code:** 44122
+
+**status:** 0
+
+**short_description:** SkySail Rx is a pharmacy benefit technology firm that specializes in leveraging data for all aspects of pharmacy benefit pricing.
+
+**category_list:** 150974
+
+**category_groups_list:** 36753
 
 **num_funding_rounds:** 0.0
 
@@ -3382,1054 +4984,14 @@
 
 **closed_on:** nan
 
-**facebook_url:** https://www.facebook.com/Igloocreativehouse
+**facebook_url:** 0
 
-**linkedin_url:** https://www.linkedin.com/company/igloo-creative-house/
+**linkedin_url:** https://www.linkedin.com/company/skysail-rx/
 
 **twitter_url:** 0
 
 **age_months:** 49
 
-**has_facebook_url:** 1
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 1.0
-
-**founders_male_count:** 1.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 1.0
-
-**founders_degree_count_max:** 1.0
-
-**founders_degree_count_mean:** 1.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 2292
-
-**uuid_org:** ac31a494-66c4-4726-9367-abccf25d9049
-
-**name_org:** ALPHAPLEX
-
-**permalink_org:** alphaplex-9049
-
-**domain:** alphaplex.de
-
-**homepage_url:** https://www.alphaplex.de
-
-**country_code:** 50
-
-**state_code:** 0
-
-**region:** 1106
-
-**city:** 9116
-
-**address:** Industriestrasse 18
-
-**postal_code:** 32609
-
-**status:** 0
-
-**short_description:** ALPHAPLEX delivers plastic sheets for printing, display and design, advertising, industry, and construction.
-
-**category_list:** 116034
-
-**category_groups_list:** 3502
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2016-01-01
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** 0
-
-**twitter_url:** 0
-
-**age_months:** 37
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 0
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 3177
-
-**uuid_org:** 3af10bf9-18c9-4dfb-8758-595e292cf507
-
-**name_org:** PurplePhish
-
-**permalink_org:** purplephish
-
-**domain:** purplephish.com
-
-**homepage_url:** https://www.purplephish.com/
-
-**country_code:** 66
-
-**state_code:** 0
-
-**region:** 915
-
-**city:** 12313
-
-**address:** 3 Hardman Square, Spinningfields
-
-**postal_code:** M3 3EB
-
-**status:** 0
-
-**short_description:** PurplePhish is a platform that provides security awareness training and phishing simulations to prevent cyber attacks.
-
-**category_list:** 113458
-
-**category_groups_list:** 32126
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2017-01-01
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/purplephishltd
-
-**linkedin_url:** https://www.linkedin.com/company/purplephish/
-
-**twitter_url:** 0
-
-**age_months:** 25
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 2689
-
-**uuid_org:** e273e500-ee23-4560-9d73-c3bcc7ee085a
-
-**name_org:** Playgorithm
-
-**permalink_org:** playgorithm
-
-**domain:** playgorithm.com
-
-**homepage_url:** https://playgorithm.com
-
-**country_code:** 95
-
-**state_code:** 0
-
-**region:** 1546
-
-**city:** 20557
-
-**address:** 38 Habarzel street
-
-**postal_code:** 0
-
-**status:** 0
-
-**short_description:** Playgorithm developed an interactive content gamification SaaS platform that creates new monetization e-commerce and distribution.
-
-**category_list:** 4777
-
-**category_groups_list:** 5042
-
-**num_funding_rounds:** 2.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2017-01-01
-
-**last_funding_on:** 2018-07-20
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/Playgorithm/
-
-**linkedin_url:** https://www.linkedin.com/company/playgorithm/
-
-**twitter_url:** 0
-
-**age_months:** 25
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 2.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 11
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 11.0
-
-**investor_countwup:** 1.0
-
-**last_round_investor_count:** 1.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 4096
-
-**uuid_org:** 0fde57ce-aca0-4200-a4a5-1e646810f7a6
-
-**name_org:** Early Morning Studio
-
-**permalink_org:** early-morning-studio
-
-**domain:** earlymorningstudio.com
-
-**homepage_url:** http://earlymorningstudio.com
-
-**country_code:** 181
-
-**state_code:** 0
-
-**region:** 527
-
-**city:** 7989
-
-**address:** Drottninggatan 18
-
-**postal_code:** 803 20
-
-**status:** 0
-
-**short_description:** Indie Game Developer
-
-**category_list:** 174624
-
-**category_groups_list:** 35192
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2018-10-18
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/early-morning-studio/about/
-
-**twitter_url:** 0
-
-**age_months:** 3
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 2.0
-
-**founders_male_count:** 2.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 3756
-
-**uuid_org:** 25cbf317-02a6-8435-435f-a91c27451ef3
-
-**name_org:** TalentWall
-
-**permalink_org:** talentwall
-
-**domain:** talentwall.io
-
-**homepage_url:** https://www.talentwall.io
-
-**country_code:** 198
-
-**state_code:** 7
-
-**region:** 279
-
-**city:** 18160
-
-**address:** 0
-
-**postal_code:** 0
-
-**status:** 0
-
-**short_description:** TalentWall is a hiring management platform that allows companies to hire more efficiently and with greater transparency.
-
-**category_list:** 134491
-
-**category_groups_list:** 3416
-
-**num_funding_rounds:** 1.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2016-08-01
-
-**last_funding_on:** 2019-04-15
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/talentwall/
-
-**twitter_url:** https://twitter.com/TheTalentWall
-
-**age_months:** 30
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 1.0
-
-**founders_male_count:** 2.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 1457
-
-**uuid_org:** 79fe2c55-41ca-4fad-bede-42642ee26f36
-
-**name_org:** Aspira
-
-**permalink_org:** aspira-6f36
-
-**domain:** aspiraconnect.com
-
-**homepage_url:** https://aspiraconnect.com/
-
-**country_code:** 198
-
-**state_code:** 56
-
-**region:** 1556
-
-**city:** 5071
-
-**address:** 717 N. HARWOOD ST., SUITE 2400
-
-**postal_code:** 75201
-
-**status:** 0
-
-**short_description:** Aspira's technology helps you manage campground reservations, hunting/fishing licenses, and more.
-
-**category_list:** 89356
-
-**category_groups_list:** 24142
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2017-01-01
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/aspira-connect/
-
-**twitter_url:** https://twitter.com/aspiraconnect
-
-**age_months:** 25
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 4127
-
-**uuid_org:** 5afacc85-ea36-48b8-8805-cd8586b0dc79
-
-**name_org:** SEGMENTECH
-
-**permalink_org:** segmentech
-
-**domain:** segmentech.com
-
-**homepage_url:** https://www.segmentech.com
-
-**country_code:** 34
-
-**state_code:** 46
-
-**region:** 1162
-
-**city:** 1119
-
-**address:** 235 Industrial Pkwy S Unit 3
-
-**postal_code:** L4G 3V5
-
-**status:** 0
-
-**short_description:** SEGMENTECH is a cyber-security Services consultancy focusing on the design, implementation, and operations of secure IT solutions.
-
-**category_list:** 94651
-
-**category_groups_list:** 37790
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2015-07-31
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/segmentech
-
-**twitter_url:** https://twitter.com/segmentech_inc
-
-**age_months:** 42
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 5742
-
-**uuid_org:** 2f04ca18-16e8-4082-922a-71ca86ff5b4c
-
-**name_org:** Prospect
-
-**permalink_org:** prospect-5b4c
-
-**domain:** prospect.fyi
-
-**homepage_url:** https://www.prospect.fyi
-
-**country_code:** 34
-
-**state_code:** 46
-
-**region:** 1162
-
-**city:** 20956
-
-**address:** 20 Maud St, Toronto, Ontario M5V
-
-**postal_code:** 0
-
-**status:** 0
-
-**short_description:** Prospect is an employment hub for the Canadian tech startup industry that connects job seekers with the employers.
-
-**category_list:** 85432
-
-**category_groups_list:** 2473
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2018-01-01
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/prospect.fyi/
-
-**linkedin_url:** https://www.linkedin.com/company/prospectfyi
-
-**twitter_url:** https://twitter.com/prospectfyi
-
-**age_months:** 13
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 1
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 3354
-
-**uuid_org:** 3f5f4f0d-309f-42e2-a1f4-b02d51c896d0
-
-**name_org:** SENSR.IT
-
-**permalink_org:** sensr-it
-
-**domain:** sensrit.com.br
-
-**homepage_url:** http://www.sensrit.com.br
-
-**country_code:** 29
-
-**state_code:** 0
-
-**region:** 1389
-
-**city:** 20263
-
-**address:** Avenida Paulista 967, 8th floor, São Paulo, São Paulo , BR
-
-**postal_code:** 01311-918
-
-**status:** 0
-
-**short_description:** SENSR.IT is a company that provides integrated IT governance and services management solutions.
-
-**category_list:** 160836
-
-**category_groups_list:** 37875
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2017-01-01
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** https://www.facebook.com/Sensr.IT/
-
-**linkedin_url:** https://www.linkedin.com/company/sensrit/
-
-**twitter_url:** 0
-
-**age_months:** 25
-
-**has_facebook_url:** 1
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 4471
-
-**uuid_org:** 7e7e01fc-5530-4b1c-a94e-a3f03240c371
-
-**name_org:** Brief
-
-**permalink_org:** brief-c371
-
-**domain:** brief.news
-
-**homepage_url:** https://brief.news/
-
-**country_code:** 198
-
-**state_code:** 7
-
-**region:** 279
-
-**city:** 18160
-
-**address:** 0
-
-**postal_code:** 0
-
-**status:** 0
-
-**short_description:** Brief is to foster healthy discourse by rethinking the way we read the news.
-
-**category_list:** 162829
-
-**category_groups_list:** 27917
-
-**num_funding_rounds:** 1.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2018-01-01
-
-**last_funding_on:** 2019-01-01
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/broadsheet
-
-**twitter_url:** 0
-
-**age_months:** 13
-
 **has_facebook_url:** 0
 
 **has_twitter_url:** 0
@@ -4474,217 +5036,15 @@
 
 **IPO_vs_Other_Prediction:** 0
 
-**FR_vs_Other_Prediction:** 0
-
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 1129
-
-**uuid_org:** 863fddc1-87b7-4a61-9991-d30d4cc1f91a
-
-**name_org:** Instinctive BI
-
-**permalink_org:** instinctive-bi
-
-**domain:** instinctivebi.com
-
-**homepage_url:** https://www.instinctivebi.com
-
-**country_code:** 66
-
-**state_code:** 0
-
-**region:** 543
-
-**city:** 7412
-
-**address:** 0
-
-**postal_code:** 0
-
-**status:** 0
-
-**short_description:** Instinctive BI is an information technology company that provides heroic data solutions.
-
-**category_list:** 74032
-
-**category_groups_list:** 29872
-
-**num_funding_rounds:** 0.0
-
-**total_funding_usd:** 0.0
-
-**total_funding:** 0.0
-
-**total_funding_currency_code:** 0
-
-**founded_on:** 2016-01-01
-
-**last_funding_on:** 0
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/instinctive-bi
-
-**twitter_url:** 0
-
-**age_months:** 37
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 0.0
-
-**raised_amount_usd:** 0.0
-
-**last_round_investment_type:** 0
-
-**last_round_raised_amount_usd:** 0.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 0.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
+**IPO_vs_Other_Probability:** 0.0
 
 **FR_vs_Other_Prediction:** 0
 
-**AC_vs_Other_Prediction:** 1
-
-
-
-## Company 4654
-
-**uuid_org:** 8151247a-5ba8-478e-a6e0-2ec8d4a7c8af
-
-**name_org:** Trip Ka Baap
-
-**permalink_org:** trip-ka-baap
-
-**domain:** tripkabaap.com
-
-**homepage_url:** https://tripkabaap.com
-
-**country_code:** 89
-
-**state_code:** 0
-
-**region:** 906
-
-**city:** 13724
-
-**address:** Cyber One, Opp CIDCO Exhibition Centre Sector 30, Vashi
-
-**postal_code:** 400703
-
-**status:** 0
-
-**short_description:** TripKaBaap is an online travel agency that offers flight tickets, hotel deals, and holiday packages to various countries
-
-**category_list:** 174578
-
-**category_groups_list:** 39091
-
-**num_funding_rounds:** 2.0
-
-**total_funding_usd:** 2650000.0
-
-**total_funding:** 2650000.0
-
-**total_funding_currency_code:** USD
-
-**founded_on:** 2015-04-11
-
-**last_funding_on:** 2020-06-21
-
-**closed_on:** nan
-
-**facebook_url:** 0
-
-**linkedin_url:** https://www.linkedin.com/company/tripkabaap
-
-**twitter_url:** 0
-
-**age_months:** 46
-
-**has_facebook_url:** 0
-
-**has_twitter_url:** 0
-
-**has_linkedin_url:** 1
-
-**round_count:** 1.0
-
-**raised_amount_usd:** 2500000.0
-
-**last_round_investment_type:** 16
-
-**last_round_raised_amount_usd:** 2500000.0
-
-**last_round_post_money_valuation:** 0.0
-
-**last_round_timelapse_months:** 14.0
-
-**investor_countwup:** 0.0
-
-**last_round_investor_count:** 0.0
-
-**founders_dif_country_count:** 0.0
-
-**founders_male_count:** 0.0
-
-**founders_female_count:** 0.0
-
-**founders_degree_count_total:** 0.0
-
-**founders_degree_count_max:** 0.0
-
-**founders_degree_count_mean:** 0.0
-
-**outcome:** 0
-
-**IPO_vs_Other:** 0
-
-**FR_vs_Other:** 0
-
-**AC_vs_Other:** 1
-
-**IPO_vs_Other_Prediction:** 0
-
-**FR_vs_Other_Prediction:** 0
+**FR_vs_Other_Probability:** 0.0
 
 **AC_vs_Other_Prediction:** 1
+
+**AC_vs_Other_Probability:** 0.8211545962521858
 
 
 
