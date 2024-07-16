@@ -6,3 +6,5 @@ pytest-asyncio
 aiofiles
 pandas
 fastapi
+ipywidgets
+ipython
