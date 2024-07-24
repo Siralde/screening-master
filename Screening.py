@@ -1,7 +1,7 @@
 import numpy as np
 from sklearn.model_selection import StratifiedKFold, cross_val_score
 from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_score, recall_score
 import pickle
 import pandas as pd
@@ -13,7 +13,7 @@ def train_model(data):
     # Encode categorical variables
     categorical_columns = [
         'country_code', 'region', 'city', 
-        'category_list', 'category_groups_list', 'last_round_investment_type'
+        'category_list', 'last_round_investment_type'
     ]
 
     encoders = {}
@@ -32,75 +32,62 @@ def train_model(data):
         'address', 'postal_code', 'short_description', 'facebook_url', 
         'linkedin_url', 'twitter_url', 'founded_on', 'last_funding_on', 
         'closed_on', 'total_funding_currency_code', 'outcome', 'state_code', 
-        'status', 'total_funding', 'category_groups_list'
+        'status', 'total_funding', 'category_groups_list', 'founders_degree_count_mean'
     ]
     X = data.drop(columns=excluded_features)
 
     # Save the column names
     column_names = X.columns.tolist()
 
-    # Binary targets for specified classifications
-    data['IPO_vs_Other'] = (data['outcome'] == target_encoder.transform(['IP'])[0]).astype(int)
-    data['FR_vs_Other'] = (data['outcome'] == target_encoder.transform(['FR'])[0]).astype(int)
-    data['NE_vs_Other'] = (data['outcome'] == target_encoder.transform(['NE'])[0]).astype(int)
-    data['AC_vs_Other'] = (data['outcome'] == target_encoder.transform(['AC'])[0]).astype(int)
-    data['CL_vs_Other'] = (data['outcome'] == target_encoder.transform(['CL'])[0]).astype(int)
+    # Binary target for the specified classification
+    data['CL/NE_vs_FR/AC/IP'] = data['outcome'].apply(lambda x: 1 if x in target_encoder.transform(['FR', 'AC', 'IP']) else 0)
 
-    # Define classifiers
-    classifiers = {
-        'IPO_vs_Other_RF': RandomForestClassifier(),
-        'FR_vs_Other_RF': RandomForestClassifier(),
-        'NE_vs_Other_RF': RandomForestClassifier(),
-        'CL_vs_Other_RF': RandomForestClassifier(),
-        'AC_vs_Other_GB': GradientBoostingClassifier()
-    }
+    # Define classifier
+    classifier = RandomForestClassifier()
 
-    # Train and evaluate classifiers
+    # Train and evaluate classifier
     results = {}
-    positive_predictions = {
-        'IPO_vs_Other_RF': {}, 'FR_vs_Other_RF': {}, 'NE_vs_Other_RF': {}, 'CL_vs_Other_RF': {}, 'AC_vs_Other_GB': {}
+    positive_predictions = {}
+
+    target = 'CL/NE_vs_FR/AC/IP'
+    y = data[target]
+    skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    precision_scores = []
+    recall_scores = []
+    
+    for train_index, test_index in skf.split(X, y):
+        X_train, X_test = X.iloc[train_index], X.iloc[test_index]
+        y_train, y_test = y.iloc[train_index], y.iloc[test_index]
+        
+        classifier.fit(X_train, y_train)
+        y_pred = classifier.predict(X_test)
+        y_proba = classifier.predict_proba(X_test)[:, 1]  # Probability of the positive class
+        
+        precision_scores.append(precision_score(y_test, y_pred, zero_division=0))
+        recall_scores.append(recall_score(y_test, y_pred, zero_division=0))
+        
+        # Identify true positive predictions with their probabilities
+        for i in range(len(y_test)):
+            if y_pred[i] == 1 and y_test.iloc[i] == y_pred[i]:
+                index = X_test.index[i]
+                if index not in positive_predictions:
+                    positive_predictions[index] = {}
+                positive_predictions[index][target] = y_proba[i]
+    
+    results = {
+        'mean_precision': np.mean(precision_scores),
+        'std_precision': np.std(precision_scores),
+        'mean_recall': np.mean(recall_scores),
+        'std_recall': np.std(recall_scores)
     }
+    
+    # Train on the full dataset for predictions
+    classifier.fit(X, y)
+    data[f'{target}_Prediction'] = classifier.predict(X)
+    data[f'{target}_Confidence'] = classifier.predict_proba(X)[:, 1]
 
-    for target, clf in classifiers.items():
-        outcome, model_type = target.rsplit('_', 1)
-        y = data[outcome]
-        skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
-        precision_scores = []
-        recall_scores = []
-        
-        for train_index, test_index in skf.split(X, y):
-            X_train, X_test = X.iloc[train_index], X.iloc[test_index]
-            y_train, y_test = y.iloc[train_index], y.iloc[test_index]
-            
-            clf.fit(X_train, y_train)
-            y_pred = clf.predict(X_test)
-            y_proba = clf.predict_proba(X_test)[:, 1]  # Probability of the positive class
-            
-            precision_scores.append(precision_score(y_test, y_pred, zero_division=0))
-            recall_scores.append(recall_score(y_test, y_pred, zero_division=0))
-            
-            # Identify true positive predictions with their probabilities
-            for i in range(len(y_test)):
-                if y_pred[i] == 1 and y_test.iloc[i] == y_pred[i]:
-                    index = X_test.index[i]
-                    if index not in positive_predictions[target]:
-                        positive_predictions[target][index] = {}
-                    positive_predictions[target][index][outcome] = y_proba[i]
-        
-        results[target] = {
-            'mean_precision': np.mean(precision_scores),
-            'std_precision': np.std(precision_scores),
-            'mean_recall': np.mean(recall_scores),
-            'std_recall': np.std(recall_scores)
-        }
-        
-        # Train on the full dataset for predictions
-        clf.fit(X, y)
-        data[f'{outcome}_{model_type}_Prediction'] = clf.predict(X)
-        data[f'{outcome}_{model_type}_Probability'] = clf.predict_proba(X)[:, 1]
-
-        print(f"{target}: Mean precision = {np.mean(precision_scores):.4f}, Std = {np.std(precision_scores):.4f}")
-        print(f"{target}: Mean recall = {np.mean(recall_scores):.4f}, Std = {np.std(recall_scores):.4f}")
+    print(f"{target}: Mean precision = {np.mean(precision_scores):.4f}, Std = {np.std(precision_scores):.4f}")
+    print(f"{target}: Mean recall = {np.mean(recall_scores):.4f}, Std = {np.std(recall_scores):.4f}")
 
     # Save training and evaluation results to a file
     with open('model_results.pkl', 'wb') as file:
@@ -109,9 +96,9 @@ def train_model(data):
             'positive_predictions': positive_predictions
         }, file)
 
-    # Save the trained classifiers
-    with open('final_models.pkl', 'wb') as file:
-        pickle.dump(classifiers, file)
+    # Save the trained classifier
+    with open('final_model.pkl', 'wb') as file:
+        pickle.dump(classifier, file)
 
     # Save the label encoders
     with open('label_encoders.pkl', 'wb') as file:
@@ -135,7 +122,6 @@ def test_novel_datapoint():
                 'region': request.form['region'],
                 'city': request.form['city'],
                 'category_list': request.form['category_list'],
-                'category_groups_list': request.form['category_groups_list'],
                 'last_round_investment_type': request.form['last_round_investment_type'],
                 'num_funding_rounds': int(request.form['num_funding_rounds']),
                 'total_funding_usd': float(request.form['total_funding_usd']),
@@ -154,16 +140,15 @@ def test_novel_datapoint():
                 'founders_male_count': int(request.form['founders_male_count']),
                 'founders_female_count': int(request.form['founders_female_count']),
                 'founders_degree_count_total': int(request.form['founders_degree_count_total']),
-                'founders_degree_count_max': int(request.form['founders_degree_count_max']),
-                'founders_degree_count_mean': float(request.form['founders_degree_count_mean'])
+                'founders_degree_count_max': int(request.form['founders_degree_count_max'])
             }
 
             print("New company info collected:")
             print(new_company_info)
 
-            with open('./final_models.pkl', 'rb') as file:
-                classifiers = pickle.load(file)
-                print("Classifiers loaded")
+            with open('./final_model.pkl', 'rb') as file:
+                classifier = pickle.load(file)
+                print("Classifier loaded")
             
             with open('./label_encoders.pkl', 'rb') as file:
                 encoders = pickle.load(file)
@@ -185,7 +170,7 @@ def test_novel_datapoint():
 
             categorical_columns = [
                 'country_code', 'region', 'city', 'category_list',
-                'category_groups_list', 'last_round_investment_type'
+                'last_round_investment_type'
             ]
             for col in categorical_columns:
                 new_company_df[col] = new_company_df[col].apply(lambda x: encode_and_handle_unseen(col, x))
@@ -196,21 +181,16 @@ def test_novel_datapoint():
             print("Reindexed DataFrame:")
             print(new_company_df)
 
-            predictions = {}
-            probabilities = {}
-
-            for target, clf in classifiers.items():
-                predictions[target] = int(clf.predict(new_company_df)[0])
-                probabilities[target] = float(clf.predict_proba(new_company_df)[:, 1][0])
-                print(f"Predictions for {target}: {predictions[target]}")
-                print(f"Probabilities for {target}: {probabilities[target]}")
+            prediction = int(classifier.predict(new_company_df)[0])
+            confidence = float(classifier.predict_proba(new_company_df)[:, 1][0])
+            if prediction == 0:
+                confidence = 1 - confidence
+            confidence = confidence * 100
+            print(f"Prediction: {prediction}")
+            print(f"Confidence: {confidence}")
 
             results = {
-                "IPO Prediction": (predictions['IPO_vs_Other_RF'], probabilities['IPO_vs_Other_RF']),
-                "FR Prediction": (predictions['FR_vs_Other_RF'], probabilities['FR_vs_Other_RF']),
-                "NE Prediction": (predictions['NE_vs_Other_RF'], probabilities['NE_vs_Other_RF']),
-                "CL Prediction": (predictions['CL_vs_Other_RF'], probabilities['CL_vs_Other_RF']),
-                "AC Prediction": (predictions['AC_vs_Other_GB'], probabilities['AC_vs_Other_GB'])
+                "CL/NE_vs_FR/AC/IP Prediction": (prediction, confidence)
             }
 
             print("Results calculated")
@@ -221,17 +201,15 @@ def test_novel_datapoint():
             return jsonify(error=str(e))
 
     return render_template("index.html")
-    
 
 def main():
     print("Main function")
-    # data = pd.read_csv('unique_filtered_final_with_target_variable.csv')
-    # data_column_names = data.columns
-    # print("Data loaded")    
-    # train_model(data)
-
+    data = pd.read_csv('unique_filtered_final_with_target_variable.csv')
+    data_column_names = data.columns
+    print("Data loaded")    
+    train_model(data)
 
 if __name__ == "__main__":
     main()
     print("Starting Flask app")
-    app.run(debug=True, host='0.0.0.0', port=8080)
+    app.run(debug=True, host='0.0.0.0', port=8080, use_reloader=False)
