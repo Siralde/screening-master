@@ -6,13 +6,9 @@ Screening project of my master
 
 - Open a terminal:
 
-- Change directory into the src folder:
-
-  - cd src
-
 - Create a virtual environment:
 
-  - python -m venv .venv
+  - python -m venv venv
 
 - Run the virtual environment:
 
@@ -20,16 +16,14 @@ Screening project of my master
 
 - Then install necessary packages:
 
-  - pip install -r ../requirements.txt
+  - pip install -r requirements.txt
 
-- Finally, run the backend:
+- Finally, run the server:
 
-  - uvicorn main:app (add "--reload" in order to enable development mode)
-
+  - python Screening.py
+  - The server will be running on: http://192.168.68.157:8080/
+  - If not, check the terminal if the address was updated.
 - Press CTRL+C to quit and shutdown the server
 
 - type 'deactivate' in terminal to exit the virtual environment
 
-## Running tests
-
-- instead of running "uvicorn main:app" instead run "pytest test.py"
