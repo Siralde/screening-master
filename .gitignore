@@ -1,5 +1,6 @@
 src/.venv
 src/data/filtered_CB_data.csv
+venv
 .pytest_cache
 __pycache__
 filtered400k.csv

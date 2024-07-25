@@ -101,7 +101,7 @@ def train_model(data):
     data[f'{target}_Confidence'] = classifier.predict_proba(X)[:, 1]
 
     # Save training and evaluation results to a file
-    with open('model_results.pkl', 'wb') as file:
+    with open('results/model_results.pkl', 'wb') as file:
         pickle.dump({
             'results': results,
             'positive_predictions': positive_predictions,
@@ -109,30 +109,30 @@ def train_model(data):
         }, file)
 
     # Save the trained classifier
-    with open('final_model.pkl', 'wb') as file:
+    with open('backend_files/final_model.pkl', 'wb') as file:
         pickle.dump(classifier, file)
 
     # Save the label encoders
-    with open('label_encoders.pkl', 'wb') as file:
+    with open('backend_files/label_encoders.pkl', 'wb') as file:
         pickle.dump(encoders, file)
 
     # Save the column names
-    with open('column_names.pkl', 'wb') as file:
+    with open('backend_files/column_names.pkl', 'wb') as file:
         pickle.dump(column_names, file)
 
     # Save the target encoder
-    with open('target_encoder.pkl', 'wb') as file:
+    with open('backend_files/target_encoder.pkl', 'wb') as file:
         pickle.dump(target_encoder, file)
 
 def analyze_numerical_features():
-    with open('final_model.pkl', 'rb') as file:
+    with open('backend_files/final_model.pkl', 'rb') as file:
         classifier = pickle.load(file)
 
-    with open('column_names.pkl', 'rb') as file:
+    with open('backend_files/column_names.pkl', 'rb') as file:
         column_names = pickle.load(file)
 
     # Assuming data is loaded from the same file and preprocessed in the same way
-    data = pd.read_csv('unique_filtered_final_with_target_variable.csv')
+    data = pd.read_csv('backend_files/unique_filtered_final_with_target_variable.csv')
 
     # Encode categorical variables
     categorical_columns = [
@@ -185,7 +185,7 @@ def analyze_numerical_features():
         plt.title(f'Effect of {feature} on Positive Classification')
         plt.xlabel(f'{feature}')
         plt.ylabel('Probability of Positive Classification')
-        plt.savefig(f'{feature}_effect.png')
+        plt.savefig(f'statistics/{feature}_effect.png')
         plt.close()
 
 @app.route("/", methods=["GET", "POST"])
@@ -221,15 +221,15 @@ def test_novel_datapoint():
             print("New company info collected:")
             print(new_company_info)
 
-            with open('./final_model.pkl', 'rb') as file:
+            with open('backend_files/final_model.pkl', 'rb') as file:
                 classifier = pickle.load(file)
                 print("Classifier loaded")
             
-            with open('./label_encoders.pkl', 'rb') as file:
+            with open('backend_files/label_encoders.pkl', 'rb') as file:
                 encoders = pickle.load(file)
                 print("Encoders loaded")
             
-            with open('./column_names.pkl', 'rb') as file:
+            with open('backend_files/column_names.pkl', 'rb') as file:
                 column_names = pickle.load(file)
                 print("Column names loaded")
 
@@ -279,7 +279,8 @@ def test_novel_datapoint():
 
 def main():
     print("Main function")
-    data = pd.read_csv('unique_filtered_final_with_target_variable.csv')
+    data = pd.read_csv('backend_files/unique_filtered_final_with_target_variable.csv')
+    #train_model(data)
     data_column_names = data.columns
     print("Data loaded")
     analyze_numerical_features()
