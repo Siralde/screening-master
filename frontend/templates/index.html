@@ -12,57 +12,95 @@
             font-family: Arial, sans-serif;
             display: flex;
             flex-direction: column;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
         }
         .header {
             width: 100%;
-            padding: 20px;
-            background-color: #f8f8f8;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #ffffff;
             text-align: center;
             font-size: 24px;
             font-weight: bold;
             border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .header small {
+            font-size: 14px;
+            font-weight: normal;
+            color: #e0e0e0;
+            margin-left: 10px;
+        }
+        .description {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #e8f5e9;
+            border-radius: 8px;
+            border: 1px solid #ccc;
         }
         .content {
-            display: flex; 
-            flex: 1;
-            overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
         .form-container {
-            flex: 1;
-            overflow-y: auto;
-            padding: 10px 20px;
-            border-right: 1px solid #ccc;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
         }
-        .form-container form label {
+        .form-container h1 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 10px;
+        }
+        .form-group label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
-        .form-container form input[type="text"],
-        .form-container form input[type="number"],
-        .form-container form input[type="checkbox"],
-        .form-container form select {
-            width: calc(100% - 10px);
+        .form-control {
+            width: calc(100% - 5px);
             padding: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-check {
             margin-bottom: 10px;
         }
-        .form-container form input[type="submit"] {
-            margin-top: 10px;
-            padding: 10px;
-            width: 100%;
+        .form-check-input {
+            margin-right: 5px;
+        }
+        .btn {
+            padding: 5px 10px;
             background-color: #4CAF50;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
         }
+        .btn:hover {
+            background-color: #45a049;
+        }
         .results-container {
-            flex: 1;
-            padding: 20px;
+            padding: 10px;
+            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
         }
         .results-container h2 {
             margin-top: 0;
@@ -86,21 +124,150 @@
             width: 2px;
             position: absolute;
         }
-        .description {
-            margin-top: 20px;
-            text-align: center;
-        }
-        .description p {
-            margin-bottom: 10px;
-        }
     </style>
+</head>
+<body>
+    <div class="header">StartupHealthScore <small>by Plug&Play</small></div>
+    <div class="container">
+        <div class="description">
+            <h2>About the Score</h2>
+            <p>The StartupHealthScore predicts the potential success of a startup within the next 5 years based on various metrics and classifications.</p>
+            <p><strong>Metrics Explained:</strong></p>
+            <ul>
+                <li><strong>Prediction:</strong> Indicates whether the startup is more likely to succeed (Funding Round/Acquisition/IPO) or not (Closed/No Event).</li>
+                <li><strong>Confidence:</strong> Shows the confidence level of the prediction as a percentage, ranging from red (low confidence) to green (high confidence).</li>
+            </ul>
+            <p><strong>Classifications:</strong></p>
+            <ul>
+                <li><strong>Closed (CL):</strong> Indicates the startup has closed.</li>
+                <li><strong>No Event (NE):</strong> Indicates no significant event; these startups are likely to close in the future.</li>
+                <li><strong>IPO (IP):</strong> Indicates the startup has gone public.</li>
+                <li><strong>Acquisition (AC):</strong> Indicates the startup has been acquired.</li>
+                <li><strong>Funding Round (FR):</strong> Indicates the startup has had a funding round.</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="form-container">
+                <h1>Enter Company Information</h1>
+                <form method="post" onsubmit="calculatePrediction(event)" autocomplete="off">
+                    <!-- Hidden dummy fields to prevent autofill -->
+                    <input type="text" name="fakeusernameremembered" style="display:none;">
+                    <input type="password" name="fakepasswordremembered" style="display:none;">
+
+                    <div class="form-group">
+                        <label for="country_code">Country Code:</label>
+                        <input id="country_code" name="company_country_code" value="USA" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="region">Region:</label>
+                        <input id="region" name="company_region" value="California" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input id="city" name="company_city" value="San Francisco" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="category_list">Category List:</label>
+                        <input id="category_list" name="company_category_list" value="Software,Artificial Intelligence (AI)" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_round_investment_type">Last Round Investment Type:</label>
+                        <select id="last_round_investment_type" name="company_last_round_investment_type" autocomplete="new-password" class="form-control">
+                            <option value="seed">Seed</option>
+                            <option value="series_a">Series A</option>
+                            <option value="series_b">Series B</option>
+                            <option value="series_c">Series C</option>
+                            <option value="series_d">Series D</option>
+                            <option value="series_e">Series E</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="num_funding_rounds">Number of Funding Rounds:</label>
+                        <input type="number" id="num_funding_rounds" name="company_num_funding_rounds" value="3" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="total_funding_usd">Total Funding USD:</label>
+                        <input type="text" id="total_funding_usd" name="company_total_funding_usd" value="5,000,000" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="age_months">Age in Months:</label>
+                        <input type="number" id="age_months" name="company_age_months" value="24" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="has_facebook_url" name="company_has_facebook_url" value="1" checked autocomplete="new-password" class="form-check-input">
+                        <label for="has_facebook_url" class="form-check-label">Has Facebook URL</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="has_twitter_url" name="company_has_twitter_url" value="1" checked autocomplete="new-password" class="form-check-input">
+                        <label for="has_twitter_url" class="form-check-label">Has Twitter URL</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="has_linkedin_url" name="company_has_linkedin_url" value="1" checked autocomplete="new-password" class="form-check-input">
+                        <label for="has_linkedin_url" class="form-check-label">Has LinkedIn URL</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="round_count">Round Count:</label>
+                        <input type="number" id="round_count" name="company_round_count" value="3" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="raised_amount_usd">Raised Amount USD:</label>
+                        <input type="text" id="raised_amount_usd" name="company_raised_amount_usd" value="2,000,000" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_round_raised_amount_usd">Last Round Raised Amount USD:</label>
+                        <input type="text" id="last_round_raised_amount_usd" name="company_last_round_raised_amount_usd" value="1,000,000" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_round_post_money_valuation">Last Round Post Money Valuation:</label>
+                        <input type="text" id="last_round_post_money_valuation" name="company_last_round_post_money_valuation" value="10,000,000" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_round_timelapse_months">Last Round Timelapse Months:</label>
+                        <input type="number" id="last_round_timelapse_months" name="company_last_round_timelapse_months" value="12" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="last_round_investor_count">Last Round Investor Count:</label>
+                        <input type="number" id="last_round_investor_count" name="company_last_round_investor_count" value="5" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="founders_dif_country_count">Founders Different Country Count:</label>
+                        <input type="number" id="founders_dif_country_count" name="company_founders_dif_country_count" value="2" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="founders_male_count">Founders Male Count:</label>
+                        <input type="number" id="founders_male_count" name="company_founders_male_count" value="3" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="founders_female_count">Founders Female Count:</label>
+                        <input type="number" id="founders_female_count" name="company_founders_female_count" value="1" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="founders_degree_count_total">Founders Degree Count Total:</label>
+                        <input type="number" id="founders_degree_count_total" name="company_founders_degree_count_total" value="6" autocomplete="new-password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="founders_degree_count_max">Founders Degree Count Max:</label>
+                        <input type="number" id="founders_degree_count_max" name="company_founders_degree_count_max" value="2" autocomplete="new-password" class="form-control">
+                    </div>
+                    <button type="submit" class="btn">Calculate</button>
+                </form>
+            </div>
+            <div class="results-container">
+                <h2>Results</h2>
+                <div id="results"></div>
+                <div class="confidence-bar">
+                    <div class="indicator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.min.js"></script>
     <script>
         function calculatePrediction(event) {
             event.preventDefault();
-    
+
             const formData = new FormData(event.target);
-    
+
             fetch('/', {
                 method: 'POST',
                 body: formData
@@ -116,18 +283,11 @@
                 } else {
                     const resultItem = document.createElement('div');
                     resultItem.className = 'results-item';
-                    resultItem.innerHTML = `<strong>Prediction:</strong> ${data.Prediction}, <strong>Confidence:</strong> ${data.Confidence}%`;
-    
-                    const confidenceBar = document.createElement('div');
-                    confidenceBar.className = 'confidence-bar';
-    
-                    const indicator = document.createElement('div');
-                    indicator.className = 'indicator';
+                    resultItem.innerHTML = `<strong>Prediction:</strong> ${data.Prediction}, <strong>Confidence:</strong> ${data.Confidence}`;
+
+                    const indicator = document.querySelector('.confidence-bar .indicator');
                     indicator.style.left = `${parseFloat(data.Confidence)}%`;
-    
-                    confidenceBar.appendChild(indicator);
-                    resultItem.appendChild(confidenceBar);
-    
+
                     resultsContainer.appendChild(resultItem);
                 }
             })
@@ -135,14 +295,14 @@
                 console.error('Error:', error);
             });
         }
-    
+
         function formatNumberInput(event) {
             let value = event.target.value.replace(/,/g, '');
             if (!isNaN(value) && value !== '') {
                 event.target.value = Number(value).toLocaleString();
             }
         }
-    
+
         document.addEventListener("DOMContentLoaded", function() {
             const numberInputs = document.querySelectorAll('input[type="text"]');
             numberInputs.forEach(input => {
@@ -152,7 +312,7 @@
                 });
                 input.addEventListener('blur', formatNumberInput);
             });
-    
+
             new Awesomplete(document.getElementById("country_code"), {
                 list: ["USA", "CAN", "GBR", "DEU", "FRA"]
             });
@@ -166,93 +326,6 @@
                 list: ["Software", "Artificial Intelligence (AI)", "E-Commerce", "Healthcare", "FinTech"]
             });
         });
-    </script>    
-</head>
-<body>
-    <div class="header">StartupHealthScore</div>
-    <div class="content">
-        <div class="form-container">
-            <h1>Enter Company Information</h1>
-            <form method="post" onsubmit="calculatePrediction(event)" autocomplete="off">
-                <!-- Hidden dummy fields to prevent autofill -->
-                <input type="text" name="fakeusernameremembered" style="display:none;">
-                <input type="password" name="fakepasswordremembered" style="display:none;">
-
-                <label for="country_code">Country Code:</label>
-                <input id="country_code" name="company_country_code" value="USA" autocomplete="new-password">
-                <label for="region">Region:</label>
-                <input id="region" name="company_region" value="California" autocomplete="new-password">
-                <label for="city">City:</label>
-                <input id="city" name="company_city" value="San Francisco" autocomplete="new-password">
-                <label for="category_list">Category List:</label>
-                <input id="category_list" name="company_category_list" value="Software,Artificial Intelligence (AI)" autocomplete="new-password">
-                <label for="last_round_investment_type">Last Round Investment Type:</label>
-                <select id="last_round_investment_type" name="company_last_round_investment_type" autocomplete="new-password">
-                    <option value="seed">Seed</option>
-                    <option value="series_a">Series A</option>
-                    <option value="series_b">Series B</option>
-                    <option value="series_c">Series C</option>
-                    <option value="series_d">Series D</option>
-                    <option value="series_e">Series E</option>
-                </select>
-                <label for="num_funding_rounds">Number of Funding Rounds:</label>
-                <input type="number" id="num_funding_rounds" name="company_num_funding_rounds" value="3" autocomplete="new-password">
-                <label for="total_funding_usd">Total Funding USD:</label>
-                <input type="text" id="total_funding_usd" name="company_total_funding_usd" value="5,000,000" autocomplete="new-password">
-                <label for="age_months">Age in Months:</label>
-                <input type="number" id="age_months" name="company_age_months" value="24" autocomplete="new-password">
-                <label for="has_facebook_url">Has Facebook URL:</label>
-                <input type="checkbox" id="has_facebook_url" name="company_has_facebook_url" value="1" checked autocomplete="new-password">
-                <label for="has_twitter_url">Has Twitter URL:</label>
-                <input type="checkbox" id="has_twitter_url" name="company_has_twitter_url" value="1" checked autocomplete="new-password">
-                <label for="has_linkedin_url">Has LinkedIn URL:</label>
-                <input type="checkbox" id="has_linkedin_url" name="company_has_linkedin_url" value="1" checked autocomplete="new-password">
-                <label for="round_count">Round Count:</label>
-                <input type="number" id="round_count" name="company_round_count" value="3" autocomplete="new-password">
-                <label for="raised_amount_usd">Raised Amount USD:</label>
-                <input type="text" id="raised_amount_usd" name="company_raised_amount_usd" value="2,000,000" autocomplete="new-password">
-                <label for="last_round_raised_amount_usd">Last Round Raised Amount USD:</label>
-                <input type="text" id="last_round_raised_amount_usd" name="company_last_round_raised_amount_usd" value="1,000,000" autocomplete="new-password">
-                <label for="last_round_post_money_valuation">Last Round Post Money Valuation:</label>
-                <input type="text" id="last_round_post_money_valuation" name="company_last_round_post_money_valuation" value="10,000,000" autocomplete="new-password">
-                <label for="last_round_timelapse_months">Last Round Timelapse Months:</label>
-                <input type="number" id="last_round_timelapse_months" name="company_last_round_timelapse_months" value="12" autocomplete="new-password">
-                <label for="last_round_investor_count">Last Round Investor Count:</label>
-                <input type="number" id="last_round_investor_count" name="company_last_round_investor_count" value="5" autocomplete="new-password">
-                <label for="founders_dif_country_count">Founders Different Country Count:</label>
-                <input type="number" id="founders_dif_country_count" name="company_founders_dif_country_count" value="2" autocomplete="new-password">
-                <label for="founders_male_count">Founders Male Count:</label>
-                <input type="number" id="founders_male_count" name="company_founders_male_count" value="3" autocomplete="new-password">
-                <label for="founders_female_count">Founders Female Count:</label>
-                <input type="number" id="founders_female_count" name="company_founders_female_count" value="1" autocomplete="new-password">
-                <label for="founders_degree_count_total">Founders Degree Count Total:</label>
-                <input type="number" id="founders_degree_count_total" name="company_founders_degree_count_total" value="6" autocomplete="new-password">
-                <label for="founders_degree_count_max">Founders Degree Count Max:</label>
-                <input type="number" id="founders_degree_count_max" name="company_founders_degree_count_max" value="2" autocomplete="new-password">
-                <input type="submit" value="Calculate">
-            </form>
-        </div>
-        <div class="results-container">
-            <h2>Results</h2>
-            <div id="results"></div>
-            <div class="description">
-                <h3>About the Score</h3>
-                <p>The StartupHealthScore predicts the potential success of a startup within the next 5 years based on various metrics and classifications.</p>
-                <p><strong>Metrics Explained:</strong></p>
-                <ul>
-                    <li><strong>Prediction:</strong> Indicates whether the startup is more likely to succeed (Funding Round/Acquisition/IPO) or not (Closed/No Event).</li>
-                    <li><strong>Confidence:</strong> Shows the confidence level of the prediction as a percentage, ranging from red (low confidence) to green (high confidence).</li>
-                </ul>
-                <p><strong>Classifications:</strong></p>
-                <ul>
-                    <li><strong>Closed (CL):</strong> Indicates the startup has closed.</li>
-                    <li><strong>No Event (NE):</strong> Indicates no significant event; these startups are likely to close in the future.</li>
-                    <li><strong>IPO (IP):</strong> Indicates the startup has gone public.</li>
-                    <li><strong>Acquisition (AC):</strong> Indicates the startup has been acquired.</li>
-                    <li><strong>Funding Round (FR):</strong> Indicates the startup has had a funding round.</li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    </script>
 </body>
 </html>
