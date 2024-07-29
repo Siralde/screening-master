@@ -288,4 +288,4 @@ def main():
 if __name__ == "__main__":
     main()
     print("Starting Flask app")
-    app.run(debug=True, host='0.0.0.0', port=8080, use_reloader=False)
+    app.run(debug=True, host='0.0.0.0', port=8000, use_reloader=False)
