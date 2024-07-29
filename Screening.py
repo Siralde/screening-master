@@ -282,6 +282,7 @@ def main():
     data = pd.read_csv('unique_filtered_final_with_target_variable.csv')
     data_column_names = data.columns
     print("Data loaded")
+    train_model(data)
     analyze_numerical_features()
 
 if __name__ == "__main__":
