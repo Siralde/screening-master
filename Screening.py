@@ -7,8 +7,17 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_score, recall_score
 import pickle
 from flask import Flask, render_template, request, jsonify
+from flask_restx import Api, Resource, fields
+import json
+
 
 app = Flask(__name__)
+api = Api(app, version='1.0', title='Screening API',
+          description='A simple API for screening operations')
+
+ns = api.namespace('screening', description='Screening operations')
+
+
 
 def train_model(data):
     # Encode categorical variables
@@ -285,7 +294,19 @@ def main():
     print("Data loaded")
     analyze_numerical_features()
 
+api.add_namespace(ns)
+
+def save_openapi_spec():
+    with app.test_request_context():
+        # Get the OpenAPI specification as a dictionary
+        spec = api.__schema__
+        # Save it to a JSON file
+        with open('swagger.json', 'w') as f:
+            json.dump(spec, f, indent=2)
+        print("swagger.json file saved")
+
 if __name__ == "__main__":
+    save_openapi_spec()
     main()
     print("Starting Flask app")
     app.run(debug=True, host='0.0.0.0', port=8000, use_reloader=False)
