@@ -288,6 +288,7 @@ def test_novel_datapoint():
 def main():
     print("Main function")
     data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
+    #train_model(data=data)
     data_column_names = data.columns
     print("Data loaded")
     analyze_numerical_features()
@@ -295,4 +296,4 @@ def main():
 if __name__ == "__main__":
     main()
     print("Starting Flask app")
-    app.run(debug=True, host='0.0.0.0', port=8080, use_reloader=False)
+    app.run(debug=True, host='0.0.0.0', port=8000, use_reloader=False)

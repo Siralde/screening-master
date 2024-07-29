@@ -124,6 +124,49 @@
             width: 2px;
             position: absolute;
         }
+         /* Tooltip container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        /* Tooltip text */
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 200px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 50%;
+            margin-left: -100px; /* Center the tooltip */
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        /* Tooltip arrow */
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%; /* At the bottom of the tooltip */
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        /* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -155,19 +198,35 @@
                     <input type="password" name="fakepasswordremembered" style="display:none;">
 
                     <div class="form-group">
-                        <label for="country_code">Country Code:</label>
+                        <label for="country_code">Country Code:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the ISO country code.</span>
+                            </span>
+                        </label>
                         <input id="country_code" name="company_country_code" value="USA" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="region">Region:</label>
+                        <label for="region">Region:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the state or region.</span>
+                            </span>
+                        </label>
                         <input id="region" name="company_region" value="California" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="city">City:</label>
+                        <label for="city">City: 
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the city name.</span>
+                            </span>
+                        </label>
                         <input id="city" name="company_city" value="San Francisco" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="category_list">Category List:</label>
+                        <label for="category_list">Category List: 
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter categories separated by commas</span>
+                            </span>
+                        </label>
                         <input id="category_list" name="company_category_list" value="Software,Artificial Intelligence (AI)" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
@@ -182,15 +241,25 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="num_funding_rounds">Number of Funding Rounds:</label>
+                        <label for="num_funding_rounds">Number of Funding Rounds: 
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Sum of all funding rounds associated with the organization.</span>
+                            </span>
+                        </label>
                         <input type="number" id="num_funding_rounds" name="company_num_funding_rounds" value="3" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="total_funding_usd">Total Funding USD:</label>
+                        <span class="tooltip">ℹ
+                            <span class="tooltiptext">Total funding amount raised across all funding rounds.</span>
+                        </span>
                         <input type="text" id="total_funding_usd" name="company_total_funding_usd" value="5,000,000" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
                         <label for="age_months">Age in Months:</label>
+                        <span class="tooltip">ℹ
+                            <span class="tooltiptext">Enter the age of the company in months.</span>
+                        </span>
                         <input type="number" id="age_months" name="company_age_months" value="24" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-check">
@@ -206,47 +275,91 @@
                         <label for="has_linkedin_url" class="form-check-label">Has LinkedIn URL</label>
                     </div>
                     <div class="form-group">
-                        <label for="round_count">Round Count:</label>
+                        <label for="round_count">Round Count:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">The number of funding rounds the company went through during the simulation window.</span>
+                            </span>
+                        </label>
                         <input type="number" id="round_count" name="company_round_count" value="3" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="raised_amount_usd">Raised Amount USD:</label>
+                        <label for="raised_amount_usd">Raised Amount USD:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Money raised in the funding round.</span>
+                            </span>
+                        </label>
                         <input type="text" id="raised_amount_usd" name="company_raised_amount_usd" value="2,000,000" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="last_round_raised_amount_usd">Last Round Raised Amount USD:</label>
+                        <label for="last_round_raised_amount_usd">Last Round Raised Amount USD:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the raised amount in the last round in USD.</span>
+                            </span>
+                        </label>
                         <input type="text" id="last_round_raised_amount_usd" name="company_last_round_raised_amount_usd" value="1,000,000" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="last_round_post_money_valuation">Last Round Post Money Valuation:</label>
+                        <label for="last_round_post_money_valuation">Last Round Post Money Valuation:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the post-money valuation after the last round.</span>
+                            </span>
+                        </label>
                         <input type="text" id="last_round_post_money_valuation" name="company_last_round_post_money_valuation" value="10,000,000" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="last_round_timelapse_months">Last Round Timelapse Months:</label>
+                        <label for="last_round_timelapse_months">Last Round Timelapse Months:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the number of months since the last round.</span>
+                            </span>
+                        </label>
                         <input type="number" id="last_round_timelapse_months" name="company_last_round_timelapse_months" value="12" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="last_round_investor_count">Last Round Investor Count:</label>
+                        <label for="last_round_investor_count">Last Round Investor Count:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the number of investors in the last round.</span>
+                            </span>
+                        </label>
                         <input type="number" id="last_round_investor_count" name="company_last_round_investor_count" value="5" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="founders_dif_country_count">Founders Different Country Count:</label>
+                        <label for="founders_dif_country_count">Founders Different Country Count:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the number of founders from different countries.</span>
+                            </span>
+                        </label>
                         <input type="number" id="founders_dif_country_count" name="company_founders_dif_country_count" value="2" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="founders_male_count">Founders Male Count:</label>
+                        <label for="founders_male_count">Founders Male Count:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the number of male founders.</span>
+                            </span>
+                        </label>
                         <input type="number" id="founders_male_count" name="company_founders_male_count" value="3" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="founders_female_count">Founders Female Count:</label>
+                        <label for="founders_female_count">Founders Female Count:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the number of female founders.</span>
+                            </span>
+                        </label>
                         <input type="number" id="founders_female_count" name="company_founders_female_count" value="1" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="founders_degree_count_total">Founders Degree Count Total:</label>
+                        <label for="founders_degree_count_total">Founders Degree Count Total:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the total number of degrees among the founders.</span>
+                            </span>
+                        </label>
                         <input type="number" id="founders_degree_count_total" name="company_founders_degree_count_total" value="6" autocomplete="new-password" class="form-control">
                     </div>
                     <div class="form-group">
-                        <label for="founders_degree_count_max">Founders Degree Count Max:</label>
+                        <label for="founders_degree_count_max">Founders Degree Count Max:
+                            <span class="tooltip">ℹ
+                                <span class="tooltiptext">Enter the highest number of degrees held by a single founder.</span>
+                            </span>
+                        </label>
                         <input type="number" id="founders_degree_count_max" name="company_founders_degree_count_max" value="2" autocomplete="new-password" class="form-control">
                     </div>
                     <button type="submit" class="btn">Calculate</button>
