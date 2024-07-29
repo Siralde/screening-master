@@ -1,3 +1,4 @@
+import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -8,7 +9,12 @@ from sklearn.metrics import precision_score, recall_score
 import pickle
 from flask import Flask, render_template, request, jsonify
 
-app = Flask(__name__)
+base_path = os.path.dirname(os.path.abspath(__file__))
+data_path = os.path.join(base_path, '../data/csvs')
+pkl_path = os.path.join(base_path, '../data/pkls')
+template_path = os.path.join(base_path, '../frontend/templates')
+
+app = Flask(__name__, template_folder=template_path)
 
 def train_model(data):
     # Encode categorical variables
@@ -101,7 +107,7 @@ def train_model(data):
     data[f'{target}_Confidence'] = classifier.predict_proba(X)[:, 1]
 
     # Save training and evaluation results to a file
-    with open('model_results.pkl', 'wb') as file:
+    with open(os.path.join(pkl_path, 'model_results.pkl'), 'wb') as file:
         pickle.dump({
             'results': results,
             'positive_predictions': positive_predictions,
@@ -109,30 +115,30 @@ def train_model(data):
         }, file)
 
     # Save the trained classifier
-    with open('final_model.pkl', 'wb') as file:
+    with open(os.path.join(pkl_path, 'final_model.pkl'), 'wb') as file:
         pickle.dump(classifier, file)
 
     # Save the label encoders
-    with open('label_encoders.pkl', 'wb') as file:
+    with open(os.path.join(pkl_path, 'label_encoders.pkl'), 'wb') as file:
         pickle.dump(encoders, file)
 
     # Save the column names
-    with open('column_names.pkl', 'wb') as file:
+    with open(os.path.join(pkl_path, 'column_names.pkl'), 'wb') as file:
         pickle.dump(column_names, file)
 
     # Save the target encoder
-    with open('target_encoder.pkl', 'wb') as file:
+    with open(os.path.join(pkl_path, 'target_encoder.pkl'), 'wb') as file:
         pickle.dump(target_encoder, file)
 
 def analyze_numerical_features():
-    with open('final_model.pkl', 'rb') as file:
+    with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
         classifier = pickle.load(file)
 
-    with open('column_names.pkl', 'rb') as file:
+    with open(os.path.join(pkl_path, 'column_names.pkl'), 'rb') as file:
         column_names = pickle.load(file)
 
     # Assuming data is loaded from the same file and preprocessed in the same way
-    data = pd.read_csv('unique_filtered_final_with_target_variable.csv')
+    data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
 
     # Encode categorical variables
     categorical_columns = [
@@ -185,51 +191,50 @@ def analyze_numerical_features():
         plt.title(f'Effect of {feature} on Positive Classification')
         plt.xlabel(f'{feature}')
         plt.ylabel('Probability of Positive Classification')
-        plt.savefig(f'{feature}_effect.png')
+        plt.savefig(os.path.join(base_path, f'../data/pngs/{feature}_effect.png'))
         plt.close()
 
 @app.route("/", methods=["GET", "POST"])
 def test_novel_datapoint():
-    print("Index route accessed")
     if request.method == "POST":
         try:
             new_company_info = {
-                'country_code': request.form['country_code'],
-                'region': request.form['region'],
-                'city': request.form['city'],
-                'category_list': request.form['category_list'],
-                'last_round_investment_type': request.form['last_round_investment_type'],
-                'num_funding_rounds': int(request.form['num_funding_rounds']),
-                'total_funding_usd': float(request.form['total_funding_usd']),
-                'age_months': int(request.form['age_months']),
-                'has_facebook_url': int(request.form.get('has_facebook_url', 0)),
-                'has_twitter_url': int(request.form.get('has_twitter_url', 0)),
-                'has_linkedin_url': int(request.form.get('has_linkedin_url', 0)),
-                'round_count': int(request.form['round_count']),
-                'raised_amount_usd': float(request.form['raised_amount_usd']),
-                'last_round_raised_amount_usd': float(request.form['last_round_raised_amount_usd']),
-                'last_round_post_money_valuation': float(request.form['last_round_post_money_valuation']),
-                'last_round_timelapse_months': int(request.form['last_round_timelapse_months']),
-                'last_round_investor_count': int(request.form['last_round_investor_count']),
-                'founders_dif_country_count': int(request.form['founders_dif_country_count']),
-                'founders_male_count': int(request.form['founders_male_count']),
-                'founders_female_count': int(request.form['founders_female_count']),
-                'founders_degree_count_total': int(request.form['founders_degree_count_total']),
-                'founders_degree_count_max': int(request.form['founders_degree_count_max'])
+                'country_code': request.form['company_country_code'],
+                'region': request.form['company_region'],
+                'city': request.form['company_city'],
+                'category_list': request.form['company_category_list'],
+                'last_round_investment_type': request.form['company_last_round_investment_type'],
+                'num_funding_rounds': int(request.form['company_num_funding_rounds']),
+                'total_funding_usd': float(request.form['company_total_funding_usd'].replace(',', '')),
+                'age_months': int(request.form['company_age_months']),
+                'has_facebook_url': int(request.form.get('company_has_facebook_url', 0)),
+                'has_twitter_url': int(request.form.get('company_has_twitter_url', 0)),
+                'has_linkedin_url': int(request.form.get('company_has_linkedin_url', 0)),
+                'round_count': int(request.form['company_round_count']),
+                'raised_amount_usd': float(request.form['company_raised_amount_usd'].replace(',', '')),
+                'last_round_raised_amount_usd': float(request.form['company_last_round_raised_amount_usd'].replace(',', '')),
+                'last_round_post_money_valuation': float(request.form['company_last_round_post_money_valuation'].replace(',', '')),
+                'last_round_timelapse_months': int(request.form['company_last_round_timelapse_months']),
+                'last_round_investor_count': int(request.form['company_last_round_investor_count']),
+                'founders_dif_country_count': int(request.form['company_founders_dif_country_count']),
+                'founders_male_count': int(request.form['company_founders_male_count']),
+                'founders_female_count': int(request.form['company_founders_female_count']),
+                'founders_degree_count_total': int(request.form['company_founders_degree_count_total']),
+                'founders_degree_count_max': int(request.form['company_founders_degree_count_max'])
             }
 
             print("New company info collected:")
             print(new_company_info)
 
-            with open('./final_model.pkl', 'rb') as file:
+            with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
                 classifier = pickle.load(file)
                 print("Classifier loaded")
             
-            with open('./label_encoders.pkl', 'rb') as file:
+            with open(os.path.join(pkl_path, 'label_encoders.pkl'), 'rb') as file:
                 encoders = pickle.load(file)
                 print("Encoders loaded")
             
-            with open('./column_names.pkl', 'rb') as file:
+            with open(os.path.join(pkl_path, 'column_names.pkl'), 'rb') as file:
                 column_names = pickle.load(file)
                 print("Column names loaded")
 
@@ -258,18 +263,20 @@ def test_novel_datapoint():
 
             prediction = int(classifier.predict(new_company_df)[0])
             confidence = float(classifier.predict_proba(new_company_df)[:, 1][0])
-            if prediction == 0:
-                confidence = 1 - confidence
             confidence = confidence * 100
-            print(f"Prediction: {prediction}")
-            print(f"Confidence: {confidence}")
+            if prediction == 0:
+                confidence = 100 - confidence
+            prediction_name = "Closed/No Event" if prediction == 0 else "Funding Round/Acquisition/IPO"
+            print(f"Prediction: {prediction_name}")
+            print(f"Confidence: {confidence:.2f}%")
 
             results = {
-                "CL/NE_vs_FR/AC/IP Prediction": (prediction, confidence)
+                "Prediction": prediction_name,
+                "Confidence": f"{confidence:.2f}"
             }
 
             print("Results calculated")
-            return jsonify(results=results)
+            return jsonify(results)
 
         except Exception as e:
             print(f"An error occurred: {e}")
@@ -277,12 +284,12 @@ def test_novel_datapoint():
 
     return render_template("index.html")
 
+
 def main():
     print("Main function")
-    data = pd.read_csv('unique_filtered_final_with_target_variable.csv')
+    data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
     data_column_names = data.columns
     print("Data loaded")
-    train_model(data)
     analyze_numerical_features()
 
 if __name__ == "__main__":
