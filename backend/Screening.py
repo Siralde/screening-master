@@ -8,6 +8,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_score, recall_score
 import pickle
 from flask import Flask, render_template, request, jsonify
+from flasgger import Swagger, swag_from
+
 
 base_path = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(base_path, '../data/csvs')
@@ -15,6 +17,7 @@ pkl_path = os.path.join(base_path, '../data/pkls')
 template_path = os.path.join(base_path, '../frontend/templates')
 
 app = Flask(__name__, template_folder=template_path)
+swagger = Swagger(app)
 
 def train_model(data):
     # Encode categorical variables
@@ -194,8 +197,186 @@ def analyze_numerical_features():
         plt.savefig(os.path.join(base_path, f'../data/pngs/{feature}_effect.png'))
         plt.close()
 
-@app.route("/", methods=["GET", "POST"])
-def test_novel_datapoint():
+
+@app.route("/", methods=["GET"])
+def home():
+    return render_template("home.html")
+
+
+@app.route("/predict", methods=["GET", "POST"])
+@swag_from({
+    'tags': ['Prediction Endpoints'],
+    'description': 'Enter company information and receive a rating describing its ',
+    'parameters': [
+        {
+            'name': 'company_country_code',
+            'in': 'formData',
+            'type': 'string',
+            'required': True
+        },
+        {
+            'name': 'company_region',
+            'in': 'formData',
+            'type': 'string',
+            'required': True
+        },
+        {
+            'name': 'company_city',
+            'in': 'formData',
+            'type': 'string',
+            'required': True
+        },
+        {
+            'name': 'company_category_list',
+            'in': 'formData',
+            'type': 'string',
+            'required': True
+        },
+        {
+            'name': 'company_last_round_investment_type',
+            'in': 'formData',
+            'type': 'string',
+            'required': True
+        },
+        {
+            'name': 'company_num_funding_rounds',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        },
+        {
+            'name': 'company_total_funding_usd',
+            'in': 'formData',
+            'type': 'number',
+            'required': True
+        },
+        {
+            'name': 'company_age_months',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        },
+        {
+            'name': 'company_has_facebook_url',
+            'in': 'formData',
+            'type': 'integer',
+            'required': False
+        },
+        {
+            'name': 'company_has_twitter_url',
+            'in': 'formData',
+            'type': 'integer',
+            'required': False
+        },
+        {
+            'name': 'company_has_linkedin_url',
+            'in': 'formData',
+            'type': 'integer',
+            'required': False
+        },
+        {
+            'name': 'company_round_count',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        },
+        {
+            'name': 'company_raised_amount_usd',
+            'in': 'formData',
+            'type': 'number',
+            'required': True
+        },
+        {
+            'name': 'company_last_round_raised_amount_usd',
+            'in': 'formData',
+            'type': 'number',
+            'required': True
+        },
+        {
+            'name': 'company_last_round_post_money_valuation',
+            'in': 'formData',
+            'type': 'number',
+            'required': True
+        },
+        {
+            'name': 'company_last_round_timelapse_months',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        },
+        {
+            'name': 'company_last_round_investor_count',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        },
+        {
+            'name': 'company_founders_dif_country_count',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        },
+        {
+            'name': 'company_founders_male_count',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        },
+        {
+            'name': 'company_founders_female_count',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        },
+        {
+            'name': 'company_founders_degree_count_total',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        },
+        {
+            'name': 'company_founders_degree_count_max',
+            'in': 'formData',
+            'type': 'integer',
+            'required': True
+        }
+    ],
+    'responses': {
+        '200': {
+            'description': 'Prediction result',
+            'schema': {
+                'type': 'object',
+                'properties': {
+                    'Prediction': {
+                        'type': 'string'
+                    },
+                    'Confidence': {
+                        'type': 'string'
+                    }
+                },
+                'example': {
+                    'Prediction': 'Funding Round/Acquisition/IPO',
+                    'Confidence': '85.00'
+                }
+            }
+        },
+        '400': {
+            'description': 'Bad Request',
+            'schema': {
+                'type': 'object',
+                'properties': {
+                    'error': {
+                        'type': 'string'
+                    }
+                },
+                'example': {
+                    'error': 'Invalid input data'
+                }
+            }
+        }
+    }
+})
+def predict():
     if request.method == "POST":
         try:
             new_company_info = {
@@ -293,7 +474,8 @@ def main():
     print("Data loaded")
     analyze_numerical_features()
 
+
 if __name__ == "__main__":
     main()
     print("Starting Flask app")
-    app.run(debug=True, host='0.0.0.0', port=8000, use_reloader=False)
+    app.run(debug=True, host='0.0.0.0', port=8000, use_reloader=True)

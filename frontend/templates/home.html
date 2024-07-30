@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>StartupHealthScore Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            padding: 40px;
+            max-width: 800px;
+            text-align: center;
+            background-color: #ffffff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            margin: 20px;
+        }
+
+        .header {
+            padding: 20px;
+            background-color: #4CAF50;
+            color: #ffffff;
+            font-size: 32px;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 40px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .description {
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">StartupHealthScore</div>
+        <div class="description">
+            <h2>Welcome to StartupHealthScore</h2>
+            <p>Predict the potential success of your startup within the next 5 years based on various metrics and
+                classifications.</p>
+        </div>
+        <a href="{{ url_for('predict') }}" class="btn">Predict Company Success</a>
+    </div>
+</body>
+
+</html>
