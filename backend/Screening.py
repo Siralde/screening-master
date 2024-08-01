@@ -9,7 +9,7 @@ from sklearn.metrics import precision_score, recall_score
 import pickle
 from flask import Flask, render_template, request, jsonify
 from flasgger import Swagger, swag_from
-
+import json
 
 base_path = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(base_path, '../data/csvs')
@@ -465,6 +465,10 @@ def predict():
 
     return render_template("index.html")
 
+@app.route('/openapi.json')
+def get_openapi_spec():
+    with open('openapi.json') as json_file:
+        return json.load(json_file)
 
 def main():
     print("Main function")
@@ -477,5 +481,9 @@ def main():
 
 if __name__ == "__main__":
     main()
+    with app.app_context():
+        openapi_spec = swagger.get_apispecs()
+        with open('openapi.json', 'w') as json_file:
+            json.dump(openapi_spec, json_file, indent=2)
     print("Starting Flask app")
     app.run(debug=True, host='0.0.0.0', port=8000, use_reloader=True)
