@@ -7,7 +7,7 @@
   },
   "paths": {
     "/predict": {
-      "post": {
+      "get": {
         "description": "Enter company information and receive a rating describing its ",
         "responses": {
           "200": {
@@ -181,7 +181,7 @@
           "Prediction Endpoints"
         ]
       },
-      "get": {
+      "post": {
         "description": "Enter company information and receive a rating describing its ",
         "responses": {
           "200": {
@@ -353,6 +353,41 @@
         ],
         "tags": [
           "Prediction Endpoints"
+        ]
+      }
+    },
+    "/search_companies": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "A list of companies matching the search string",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "company_name": {
+                    "type": "string"
+                  },
+                  "other_column": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "company_name",
+            "in": "query",
+            "type": "string",
+            "required": true,
+            "description": "The name of the company to search for"
+          }
+        ],
+        "tags": [
+          "Company Search"
         ]
       }
     }

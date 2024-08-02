@@ -38,6 +38,12 @@ This project is part of my master's program.
    python backend/Screening.py
    ```
 
+   - Otherwise run the following to make the server run quicker
+
+   ```sh
+   flask run
+   ```
+
 7. **To quit and shutdown the server**:
    Press `CTRL+C`
 
