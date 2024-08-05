@@ -31,8 +31,7 @@ This project is part of my master's program.
 
 6. **Run the backend**:
 
-   - If it's the first time running, ensure the `train_models` function line is not commented out at the bottom of the `Screening.py` file.
-   - After the models have been trained once, you can comment out that line again.
+   - If it's the first time running the models will take time to train
 
    ```sh
    python backend/Screening.py
