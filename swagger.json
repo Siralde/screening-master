@@ -1,0 +1,25 @@
+{
+  "swagger": "2.0",
+  "basePath": "/",
+  "paths": {},
+  "info": {
+    "title": "Screening API",
+    "version": "1.0",
+    "description": "A simple API for screening operations"
+  },
+  "produces": [
+    "application/json"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "tags": [],
+  "responses": {
+    "ParseError": {
+      "description": "When a mask can't be parsed"
+    },
+    "MaskError": {
+      "description": "When any error occurs on mask"
+    }
+  }
+}
