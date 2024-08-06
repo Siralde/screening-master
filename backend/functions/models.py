@@ -7,7 +7,6 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import precision_score, recall_score
 import pickle
-<<<<<<< HEAD:backend/functions/models.py
 
 
 # Path definitions
@@ -80,20 +79,6 @@ def analyze_numerical_features():
         plt.ylabel('Probability of Positive Classification')
         plt.savefig(os.path.join(base_path, f'../../data/pngs/{feature}_effect.png'))
         plt.close()
-=======
-from flask import Flask, render_template, request, jsonify
-from flask_restx import Api, Resource, fields
-import json
-
-
-app = Flask(__name__)
-api = Api(app, version='1.0', title='Screening API',
-          description='A simple API for screening operations')
-
-ns = api.namespace('screening', description='Screening operations')
-
-
->>>>>>> master:Screening.py
 
 def train_model(data):
     # Encode categorical variables
@@ -186,11 +171,7 @@ def train_model(data):
     data[f'{target}_Confidence'] = classifier.predict_proba(X)[:, 1]
 
     # Save training and evaluation results to a file
-<<<<<<< HEAD:backend/functions/models.py
     with open(os.path.join(pkl_path, 'model_results.pkl'), 'wb') as file:
-=======
-    with open('results/model_results.pkl', 'wb') as file:
->>>>>>> master:Screening.py
         pickle.dump({
             'results': results,
             'positive_predictions': positive_predictions,
@@ -198,7 +179,6 @@ def train_model(data):
         }, file)
 
     # Save the trained classifier
-<<<<<<< HEAD:backend/functions/models.py
     with open(os.path.join(pkl_path, 'final_model.pkl'), 'wb') as file:
         pickle.dump(classifier, file)
 
@@ -213,197 +193,3 @@ def train_model(data):
     # Save the target encoder
     with open(os.path.join(pkl_path, 'target_encoder.pkl'), 'wb') as file:
         pickle.dump(target_encoder, file)
-=======
-    with open('backend_files/final_model.pkl', 'wb') as file:
-        pickle.dump(classifier, file)
-
-    # Save the label encoders
-    with open('backend_files/label_encoders.pkl', 'wb') as file:
-        pickle.dump(encoders, file)
-
-    # Save the column names
-    with open('backend_files/column_names.pkl', 'wb') as file:
-        pickle.dump(column_names, file)
-
-    # Save the target encoder
-    with open('backend_files/target_encoder.pkl', 'wb') as file:
-        pickle.dump(target_encoder, file)
-
-def analyze_numerical_features():
-    with open('backend_files/final_model.pkl', 'rb') as file:
-        classifier = pickle.load(file)
-
-    with open('backend_files/column_names.pkl', 'rb') as file:
-        column_names = pickle.load(file)
-
-    # Assuming data is loaded from the same file and preprocessed in the same way
-    data = pd.read_csv('backend_files/unique_filtered_final_with_target_variable.csv')
-
-    # Encode categorical variables
-    categorical_columns = [
-        'country_code', 'region', 'city', 
-        'category_list', 'last_round_investment_type'
-    ]
-
-    encoders = {}
-    for col in categorical_columns:
-        le = LabelEncoder()
-        data[col] = le.fit_transform(data[col].astype(str))
-        encoders[col] = le
-
-    # Encode target variable
-    target_encoder = LabelEncoder()
-    data['outcome'] = target_encoder.fit_transform(data['outcome'].astype(str))
-
-    # Define features and print included and excluded features
-    excluded_features = [
-        'uuid_org', 'name_org', 'permalink_org', 'domain', 'homepage_url', 
-        'address', 'postal_code', 'short_description', 'facebook_url', 
-        'linkedin_url', 'twitter_url', 'founded_on', 'last_funding_on', 
-        'closed_on', 'total_funding_currency_code', 'outcome', 'state_code', 
-        'status', 'total_funding', 'category_groups_list', 'founders_degree_count_mean'
-    ]
-    X = data.drop(columns=excluded_features)
-    
-    # Ensure all feature names are valid
-    numerical_features = [
-        'num_funding_rounds', 'total_funding_usd', 'round_count', 
-        'last_round_timelapse_months', 'age_months', 'raised_amount_usd', 
-        'last_round_raised_amount_usd', 'last_round_post_money_valuation',
-        'last_round_investor_count', 'founders_dif_country_count', 
-        'founders_male_count', 'founders_female_count', 
-        'founders_degree_count_total', 'founders_degree_count_max'
-    ]
-    numerical_features = [feature for feature in numerical_features if feature in X.columns]
-
-    for feature in numerical_features:
-        x_values = np.linspace(X[feature].min(), X[feature].max(), 100)
-        y_values = []
-        for x in x_values:
-            test_sample = X.iloc[0].copy()
-            test_sample[feature] = x
-            test_sample_df = pd.DataFrame([test_sample], columns=column_names)
-            y_values.append(classifier.predict_proba(test_sample_df)[0, 1])
-
-        plt.figure()
-        plt.plot(x_values, y_values)
-        plt.title(f'Effect of {feature} on Positive Classification')
-        plt.xlabel(f'{feature}')
-        plt.ylabel('Probability of Positive Classification')
-        plt.savefig(f'statistics/{feature}_effect.png')
-        plt.close()
-
-@app.route("/", methods=["GET", "POST"])
-def test_novel_datapoint():
-    print("Index route accessed")
-    if request.method == "POST":
-        try:
-            new_company_info = {
-                'country_code': request.form['country_code'],
-                'region': request.form['region'],
-                'city': request.form['city'],
-                'category_list': request.form['category_list'],
-                'last_round_investment_type': request.form['last_round_investment_type'],
-                'num_funding_rounds': int(request.form['num_funding_rounds']),
-                'total_funding_usd': float(request.form['total_funding_usd']),
-                'age_months': int(request.form['age_months']),
-                'has_facebook_url': int(request.form.get('has_facebook_url', 0)),
-                'has_twitter_url': int(request.form.get('has_twitter_url', 0)),
-                'has_linkedin_url': int(request.form.get('has_linkedin_url', 0)),
-                'round_count': int(request.form['round_count']),
-                'raised_amount_usd': float(request.form['raised_amount_usd']),
-                'last_round_raised_amount_usd': float(request.form['last_round_raised_amount_usd']),
-                'last_round_post_money_valuation': float(request.form['last_round_post_money_valuation']),
-                'last_round_timelapse_months': int(request.form['last_round_timelapse_months']),
-                'last_round_investor_count': int(request.form['last_round_investor_count']),
-                'founders_dif_country_count': int(request.form['founders_dif_country_count']),
-                'founders_male_count': int(request.form['founders_male_count']),
-                'founders_female_count': int(request.form['founders_female_count']),
-                'founders_degree_count_total': int(request.form['founders_degree_count_total']),
-                'founders_degree_count_max': int(request.form['founders_degree_count_max'])
-            }
-
-            print("New company info collected:")
-            print(new_company_info)
-
-            with open('backend_files/final_model.pkl', 'rb') as file:
-                classifier = pickle.load(file)
-                print("Classifier loaded")
-            
-            with open('backend_files/label_encoders.pkl', 'rb') as file:
-                encoders = pickle.load(file)
-                print("Encoders loaded")
-            
-            with open('backend_files/column_names.pkl', 'rb') as file:
-                column_names = pickle.load(file)
-                print("Column names loaded")
-
-            def encode_and_handle_unseen(column, value):
-                encoder = encoders[column]
-                if value not in encoder.classes_:
-                    encoder.classes_ = np.append(encoder.classes_, value)
-                return encoder.transform([value])[0]
-
-            new_company_df = pd.DataFrame([new_company_info])
-            print("New company DataFrame created:")
-            print(new_company_df)
-
-            categorical_columns = [
-                'country_code', 'region', 'city', 'category_list',
-                'last_round_investment_type'
-            ]
-            for col in categorical_columns:
-                new_company_df[col] = new_company_df[col].apply(lambda x: encode_and_handle_unseen(col, x))
-                print(f"Encoded {col}:")
-                print(new_company_df[col])
-
-            new_company_df = new_company_df.reindex(columns=column_names, fill_value=0)
-            print("Reindexed DataFrame:")
-            print(new_company_df)
-
-            prediction = int(classifier.predict(new_company_df)[0])
-            confidence = float(classifier.predict_proba(new_company_df)[:, 1][0])
-            if prediction == 0:
-                confidence = 1 - confidence
-            confidence = confidence * 100
-            print(f"Prediction: {prediction}")
-            print(f"Confidence: {confidence}")
-
-            results = {
-                "CL/NE_vs_FR/AC/IP Prediction": (prediction, confidence)
-            }
-
-            print("Results calculated")
-            return jsonify(results=results)
-
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            return jsonify(error=str(e))
-
-    return render_template("index.html")
-
-def main():
-    print("Main function")
-    data = pd.read_csv('backend_files/unique_filtered_final_with_target_variable.csv')
-    #train_model(data)
-    data_column_names = data.columns
-    print("Data loaded")
-    analyze_numerical_features()
-
-api.add_namespace(ns)
-
-def save_openapi_spec():
-    with app.test_request_context():
-        # Get the OpenAPI specification as a dictionary
-        spec = api.__schema__
-        # Save it to a JSON file
-        with open('swagger.json', 'w') as f:
-            json.dump(spec, f, indent=2)
-        print("swagger.json file saved")
-
-if __name__ == "__main__":
-    save_openapi_spec()
-    main()
-    print("Starting Flask app")
-    app.run(debug=True, host='0.0.0.0', port=8000, use_reloader=False)
->>>>>>> master:Screening.py
