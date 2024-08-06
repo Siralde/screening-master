@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .header {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 8px 8px 0 0;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: 70%;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .back-btn {
+            padding: 10px 20px;
+            background-color: #27e356;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background-color: #047620a9;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="/" class="back-btn">Back to Home</a>
+            <h2>Search Results</h2>
+        </div>
+        <form method="get" action="{{ url_for('search_companies') }}">
+            <input type="text" name="company_name" placeholder="Search for a company"
+                value="{{ request.args.get('company_name', '') }}">
+            <input type="submit" value="Search">
+        </form>
+        <div class="table-container">
+            {% if results %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company Name</th>
+                        <th>Country Code</th>
+                        <th>Region</th>
+                        <th>City</th>
+                        <th>Category List</th>
+                        <th>Number of Funding Rounds</th>
+                        <th>Total Funding (USD)</th>
+                        <th>Age (Months)</th>
+                        <th>Has Facebook URL</th>
+                        <th>Has Twitter URL</th>
+                        <th>Has LinkedIn URL</th>
+                        <th>Round Count</th>
+                        <th>Raised Amount (USD)</th>
+                        <th>Last Round Investment Type</th>
+                        <th>Last Round Raised Amount (USD)</th>
+                        <th>Last Round Post Money Valuation</th>
+                        <th>Last Round Timelapse (Months)</th>
+                        <th>Investor Count</th>
+                        <th>Last Round Investor Count</th>
+                        <th>Founders Different Country Count</th>
+                        <th>Founders Male Count</th>
+                        <th>Founders Female Count</th>
+                        <th>Founders Degree Count Total</th>
+                        <th>Founders Degree Count Max</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in results %}
+                    <tr>
+                        <td>{{ row.name_org }}</td>
+                        <td>{{ row.country_code }}</td>
+                        <td>{{ row.region }}</td>
+                        <td>{{ row.city }}</td>
+                        <td>{{ row.category_list }}</td>
+                        <td>{{ row.num_funding_rounds }}</td>
+                        <td>{{ row.total_funding_usd }}</td>
+                        <td>{{ row.age_months }}</td>
+                        <td>{{ row.has_facebook_url }}</td>
+                        <td>{{ row.has_twitter_url }}</td>
+                        <td>{{ row.has_linkedin_url }}</td>
+                        <td>{{ row.round_count }}</td>
+                        <td>{{ row.raised_amount_usd }}</td>
+                        <td>{{ row.last_round_investment_type }}</td>
+                        <td>{{ row.last_round_raised_amount_usd }}</td>
+                        <td>{{ row.last_round_post_money_valuation }}</td>
+                        <td>{{ row.last_round_timelapse_months }}</td>
+                        <td>{{ row.investor_countup }}</td>
+                        <td>{{ row.last_round_investor_count }}</td>
+                        <td>{{ row.founders_dif_country_count }}</td>
+                        <td>{{ row.founders_male_count }}</td>
+                        <td>{{ row.founders_female_count }}</td>
+                        <td>{{ row.founders_degree_count_total }}</td>
+                        <td>{{ row.founders_degree_count_max }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>No results found.</p>
+            {% endif %}
+        
+</body>
+
+</html>

@@ -3,4 +3,11 @@ pandas
 matplotlib
 scikit-learn
 flask
+<<<<<<< HEAD
 flask-restx
+flask-restful
+flasgger
+python-dotenv
+=======
+flask-restx
+>>>>>>> master
