@@ -15,10 +15,10 @@ import json
 from functions.models import train_model, analyze_numerical_features
 
 base_path = os.path.dirname(os.path.abspath(__file__))
-data_path = os.path.join(base_path, '../data/csvs')
-pkl_path = os.path.join(base_path, '../data/pkls')
+data_path = os.path.join(base_path, 'data/csvs')
+pkl_path = os.path.join(base_path, 'data/pkls')
 template_path = os.path.join(base_path, '../frontend/templates')
-csv_path = os.path.join(base_path, '../data/csvs/unique_filtered_final_with_target_variable.csv')
+csv_path = os.path.join(base_path, 'data/csvs/unique_filtered_final_with_target_variable.csv')
 
 df = pd.read_csv(csv_path)
 

@@ -12,8 +12,8 @@ import pickle
 # Path definitions
 
 base_path = os.path.dirname(os.path.abspath(__file__))
-data_path = os.path.join(base_path, '../../data/csvs')
-pkl_path = os.path.join(base_path, '../../data/pkls')
+data_path = os.path.join(base_path, '../data/csvs')
+pkl_path = os.path.join(base_path, '../data/pkls')
 template_path = os.path.join(base_path, '../../frontend/templates')
 
 def analyze_numerical_features():
@@ -77,7 +77,7 @@ def analyze_numerical_features():
         plt.title(f'Effect of {feature} on Positive Classification')
         plt.xlabel(f'{feature}')
         plt.ylabel('Probability of Positive Classification')
-        plt.savefig(os.path.join(base_path, f'../../data/pngs/{feature}_effect.png'))
+        plt.savefig(os.path.join(base_path, f'../data/pngs/{feature}_effect.png'))
         plt.close()
 
 def train_model(data):
