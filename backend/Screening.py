@@ -27,6 +27,18 @@ csv_path = os.path.join(base_path, 'data/csvs/unique_filtered_final_with_target_
 app = Flask(__name__, template_folder=template_path)
 swagger = Swagger(app)
 
+with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
+    classifier = pickle.load(file)
+    print("Classifier loaded")
+
+with open(os.path.join(pkl_path, 'label_encoders.pkl'), 'rb') as file:
+    encoders = pickle.load(file)
+    print("Encoders loaded")
+
+with open(os.path.join(pkl_path, 'column_names.pkl'), 'rb') as file:
+    column_names = pickle.load(file)
+    print("Column names loaded")
+
 ### Routes:
 
 @app.route("/", methods=["GET"])
@@ -234,20 +246,20 @@ def predict():
                 'founders_degree_count_max': int(request.form['company_founders_degree_count_max'])
             }
 
-            print("New company info collected:")
-            print(new_company_info)
+            #print("New company info collected:")
+            #print(new_company_info)
 
-            with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
-                classifier = pickle.load(file)
-                print("Classifier loaded")
+            # with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
+            #     classifier = pickle.load(file)
+            #     print("Classifier loaded")
             
-            with open(os.path.join(pkl_path, 'label_encoders.pkl'), 'rb') as file:
-                encoders = pickle.load(file)
-                print("Encoders loaded")
+            # with open(os.path.join(pkl_path, 'label_encoders.pkl'), 'rb') as file:
+            #     encoders = pickle.load(file)
+            #     print("Encoders loaded")
             
-            with open(os.path.join(pkl_path, 'column_names.pkl'), 'rb') as file:
-                column_names = pickle.load(file)
-                print("Column names loaded")
+            # with open(os.path.join(pkl_path, 'column_names.pkl'), 'rb') as file:
+            #     column_names = pickle.load(file)
+            #     print("Column names loaded")
 
             def encode_and_handle_unseen(column, value):
                 encoder = encoders[column]
@@ -256,8 +268,8 @@ def predict():
                 return encoder.transform([value])[0]
 
             new_company_df = pd.DataFrame([new_company_info])
-            print("New company DataFrame created:")
-            print(new_company_df)
+            #print("New company DataFrame created:")
+            #print(new_company_df)
 
             categorical_columns = [
                 'country_code', 'region', 'city', 'category_list',
@@ -265,12 +277,12 @@ def predict():
             ]
             for col in categorical_columns:
                 new_company_df[col] = new_company_df[col].apply(lambda x: encode_and_handle_unseen(col, x))
-                print(f"Encoded {col}:")
-                print(new_company_df[col])
+                #print(f"Encoded {col}:")
+                #print(new_company_df[col])
 
             new_company_df = new_company_df.reindex(columns=column_names, fill_value=0)
-            print("Reindexed DataFrame:")
-            print(new_company_df)
+            #print("Reindexed DataFrame:")
+            #print(new_company_df)
 
             prediction = int(classifier.predict(new_company_df)[0])
             confidence = float(classifier.predict_proba(new_company_df)[:, 1][0])
@@ -278,15 +290,15 @@ def predict():
             if prediction == 0:
                 confidence = 100 - confidence
             prediction_name = "Closed/No Event" if prediction == 0 else "Funding Round/Acquisition/IPO"
-            print(f"Prediction: {prediction_name}")
-            print(f"Confidence: {confidence:.2f}%")
+            #print(f"Prediction: {prediction_name}")
+            #print(f"Confidence: {confidence:.2f}%")
 
             results = {
                 "Prediction": prediction_name,
                 "Confidence": f"{confidence:.2f}"
             }
 
-            print("Results calculated")
+            #print("Results calculated")
             return jsonify(results)
 
         except Exception as e:
