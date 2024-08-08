@@ -6,3 +6,4 @@ flask
 flasgger
 python-dotenv
 psutil
+gunicorn
