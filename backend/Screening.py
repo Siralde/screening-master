@@ -362,8 +362,8 @@ def main():
     data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
     
     file_path = os.path.join(pkl_path, 'final_model.pkl')
-    #if not os.path.exists(file_path):
-    train_model(data=data)
+    if not os.path.exists(file_path):
+        train_model(data=data)
     
     data_column_names = data.columns
     print("Data loaded")
