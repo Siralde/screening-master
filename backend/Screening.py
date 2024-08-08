@@ -1,11 +1,6 @@
 import os
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.model_selection import StratifiedKFold
-from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import precision_score, recall_score
 import pickle
 from flask import Flask, render_template, request, jsonify
 from flasgger import Swagger, swag_from
@@ -21,7 +16,7 @@ pkl_path = os.path.join(base_path, 'data/pkls')
 template_path = os.path.join(base_path, '../frontend/templates')
 csv_path = os.path.join(base_path, 'data/csvs/unique_filtered_final_with_target_variable.csv')
 
-df = pd.read_csv(csv_path)
+#df = pd.read_csv(csv_path)
 
 app = Flask(__name__, template_folder=template_path)
 swagger = Swagger(app)

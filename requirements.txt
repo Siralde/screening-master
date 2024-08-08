@@ -3,9 +3,5 @@ pandas
 matplotlib
 scikit-learn
 flask
-flask-restx
-flask-restful
 flasgger
 python-dotenv
-flask-restx
-psutil
