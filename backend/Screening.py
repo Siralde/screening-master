@@ -6,6 +6,7 @@ from flask import Flask, render_template, request, jsonify
 from flasgger import Swagger, swag_from
 import json
 import psutil
+from waitress import serve
 
 def get_memory_usage():
     process = psutil.Process(os.getpid())
@@ -395,5 +396,5 @@ if __name__ == "__main__":
     print(f"Memory usage before: {initial_memory} MB")
     print(f"Memory usage after: {final_memory} MB")
     print(f"Memory used by code: {final_memory - initial_memory} MB")
-    app.run(debug=True, host='0.0.0.0', port=8000, use_reloader=True)
+    serve(app, host='0.0.0.0', port=8000)
     
