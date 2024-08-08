@@ -118,15 +118,15 @@ def train_model(data):
 
     # Train and evaluate classifier
     results = {}
-    positive_predictions = {}
+    #positive_predictions = {}
 
     target = 'CL/NE_vs_FR/AC/IP'
     y = data[target]
     skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
-    precision_scores = []
-    recall_scores = []
+    #precision_scores = []
+    #recall_scores = []
 
-    feature_importances = []
+    #feature_importances = []
     
     for train_index, test_index in skf.split(X, y):
         X_train, X_test = X.iloc[train_index], X.iloc[test_index]
@@ -136,34 +136,34 @@ def train_model(data):
         y_pred = classifier.predict(X_test)
         y_proba = classifier.predict_proba(X_test)[:, 1]  # Probability of the positive class
         
-        precision_scores.append(precision_score(y_test, y_pred, zero_division=0))
-        recall_scores.append(recall_score(y_test, y_pred, zero_division=0))
+        #precision_scores.append(precision_score(y_test, y_pred, zero_division=0))
+        #recall_scores.append(recall_score(y_test, y_pred, zero_division=0))
         
-        feature_importances.append(classifier.feature_importances_)
+        #feature_importances.append(classifier.feature_importances_)
         
         # Identify true positive predictions with their probabilities
-        for i in range(len(y_test)):
-            if y_pred[i] == 1 and y_test.iloc[i] == y_pred[i]:
-                index = X_test.index[i]
-                if index not in positive_predictions:
-                    positive_predictions[index] = {}
-                positive_predictions[index][target] = y_proba[i]
+        # for i in range(len(y_test)):
+        #     if y_pred[i] == 1 and y_test.iloc[i] == y_pred[i]:
+        #         index = X_test.index[i]
+        #         if index not in positive_predictions:
+        #             positive_predictions[index] = {}
+        #         positive_predictions[index][target] = y_proba[i]
     
-    results = {
-        'mean_precision': np.mean(precision_scores),
-        'std_precision': np.std(precision_scores),
-        'mean_recall': np.mean(recall_scores),
-        'std_recall': np.std(recall_scores)
-    }
+    # results = {
+    #     'mean_precision': np.mean(precision_scores),
+    #     'std_precision': np.std(precision_scores),
+    #     'mean_recall': np.mean(recall_scores),
+    #     'std_recall': np.std(recall_scores)
+    # }
 
-    mean_feature_importances = np.mean(feature_importances, axis=0)
-    feature_importance_df = pd.DataFrame({'Feature': column_names, 'Importance': mean_feature_importances})
-    feature_importance_df = feature_importance_df.sort_values(by='Importance', ascending=False)
+    # mean_feature_importances = np.mean(feature_importances, axis=0)
+    # feature_importance_df = pd.DataFrame({'Feature': column_names, 'Importance': mean_feature_importances})
+    # feature_importance_df = feature_importance_df.sort_values(by='Importance', ascending=False)
     
-    print(f"{target}: Mean precision = {np.mean(precision_scores):.4f}, Std = {np.std(precision_scores):.4f}")
-    print(f"{target}: Mean recall = {np.mean(recall_scores):.4f}, Std = {np.std(recall_scores):.4f}")
-    print("Feature importances:")
-    print(feature_importance_df)
+    # print(f"{target}: Mean precision = {np.mean(precision_scores):.4f}, Std = {np.std(precision_scores):.4f}")
+    # print(f"{target}: Mean recall = {np.mean(recall_scores):.4f}, Std = {np.std(recall_scores):.4f}")
+    # print("Feature importances:")
+    # print(feature_importance_df)
     
     # Train on the full dataset for predictions
     classifier.fit(X, y)
@@ -171,12 +171,12 @@ def train_model(data):
     data[f'{target}_Confidence'] = classifier.predict_proba(X)[:, 1]
 
     # Save training and evaluation results to a file
-    with open(os.path.join(pkl_path, 'model_results.pkl'), 'wb') as file:
-        pickle.dump({
-            'results': results,
-            'positive_predictions': positive_predictions,
-            'feature_importances': feature_importance_df
-        }, file)
+    # with open(os.path.join(pkl_path, 'model_results.pkl'), 'wb') as file:
+    #     pickle.dump({
+    #         'results': results,
+    #         'positive_predictions': positive_predictions,
+    #         'feature_importances': feature_importance_df
+    #     }, file)
 
     # Save the trained classifier
     with open(os.path.join(pkl_path, 'final_model.pkl'), 'wb') as file:

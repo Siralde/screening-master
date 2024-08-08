@@ -10,6 +10,7 @@ import pickle
 from flask import Flask, render_template, request, jsonify
 from flasgger import Swagger, swag_from
 import json
+import psutil
 
 # Local Imports
 from functions.models import train_model, analyze_numerical_features
@@ -339,26 +340,40 @@ def search_companies():
     print(X.columns)
     result = X.to_dict(orient='records')
 
-    return render_template('search_companies.html', results=result)
-
-### Routes: 
+    return render_template('search_companies.html', results=result) 
 
 @app.route('/openapi.json')
 def get_openapi_spec():
     with open('openapi.json') as json_file:
         return json.load(json_file)
-    
+
+
+# Function to get memory usage
+def get_memory_usage():
+    process = psutil.Process(os.getpid())
+    return process.memory_info().rss / 1024 ** 2  
+
+
+
 def main():
+    initial_memory = get_memory_usage()
+
     print("Main function")
     data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
     
     file_path = os.path.join(pkl_path, 'final_model.pkl')
-    if not os.path.exists(file_path):
-        train_model(data=data)
+    #if not os.path.exists(file_path):
+    train_model(data=data)
     
     data_column_names = data.columns
     print("Data loaded")
-    analyze_numerical_features()
+    #analyze_numerical_features()
+
+    final_memory = get_memory_usage()
+    print(f"Memory usage before: {initial_memory} MB")
+    print(f"Memory usage after: {final_memory} MB")
+    print(f"Memory used by code: {final_memory - initial_memory} MB")
+
 
 
 if __name__ == "__main__":

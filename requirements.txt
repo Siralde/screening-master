@@ -8,3 +8,4 @@ flask-restful
 flasgger
 python-dotenv
 flask-restx
+psutil
