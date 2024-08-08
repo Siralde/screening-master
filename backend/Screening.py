@@ -7,6 +7,12 @@ from flasgger import Swagger, swag_from
 import json
 import psutil
 
+def get_memory_usage():
+    process = psutil.Process(os.getpid())
+    return process.memory_info().rss / 1024 ** 2  
+
+initial_memory = get_memory_usage()
+
 # Local Imports
 from functions.models import train_model, analyze_numerical_features
 
@@ -351,7 +357,6 @@ def get_memory_usage():
 
 
 def main():
-    initial_memory = get_memory_usage()
 
     print("Main function")
     #data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
@@ -364,10 +369,6 @@ def main():
     print("Data loaded")
     #analyze_numerical_features()
 
-    final_memory = get_memory_usage()
-    print(f"Memory usage before: {initial_memory} MB")
-    print(f"Memory usage after: {final_memory} MB")
-    print(f"Memory used by code: {final_memory - initial_memory} MB")
 
 
 
@@ -378,4 +379,9 @@ if __name__ == "__main__":
         with open('openapi.json', 'w') as json_file:
             json.dump(openapi_spec, json_file, indent=2)
     print("Starting Flask app")
+    final_memory = get_memory_usage()
+    print(f"Memory usage before: {initial_memory} MB")
+    print(f"Memory usage after: {final_memory} MB")
+    print(f"Memory used by code: {final_memory - initial_memory} MB")
     app.run(debug=True, host='0.0.0.0', port=8000, use_reloader=True)
+    
