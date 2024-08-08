@@ -7,7 +7,7 @@
   },
   "paths": {
     "/predict": {
-      "get": {
+      "post": {
         "description": "Enter company information and receive a rating describing its ",
         "responses": {
           "200": {
@@ -181,7 +181,7 @@
           "Prediction Endpoints"
         ]
       },
-      "post": {
+      "get": {
         "description": "Enter company information and receive a rating describing its ",
         "responses": {
           "200": {
