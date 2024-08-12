@@ -4,10 +4,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import StratifiedKFold
 from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier
 from sklearn.metrics import precision_score, recall_score
-import pickle
-
+from pickle import dump, load
 
 # Path definitions
 
@@ -17,11 +16,11 @@ pkl_path = os.path.join(base_path, '../data/pkls')
 template_path = os.path.join(base_path, '../../frontend/templates')
 
 def analyze_numerical_features():
-    with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
-        classifier = pickle.load(file)
+    with open(os.path.join(pkl_path, 'final_model.joblib'), 'rb') as file:
+        classifier = load(file)
 
-    with open(os.path.join(pkl_path, 'column_names.pkl'), 'rb') as file:
-        column_names = pickle.load(file)
+    with open(os.path.join(pkl_path, 'column_names.joblib'), 'rb') as file:
+        column_names = load(file)
 
     # Assuming data is loaded from the same file and preprocessed in the same way
     data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
@@ -114,7 +113,8 @@ def train_model(data):
     data['CL/NE_vs_FR/AC/IP'] = data['outcome'].apply(lambda x: 1 if x in target_encoder.transform(['FR', 'AC', 'IP']) else 0)
 
     # Define classifier
-    classifier = RandomForestClassifier()
+    #classifier = RandomForestClassifier()
+    classifier = GradientBoostingClassifier()
 
     # Train and evaluate classifier
     results = {}
@@ -180,16 +180,16 @@ def train_model(data):
 
     # Save the trained classifier
     with open(os.path.join(pkl_path, 'final_model.pkl'), 'wb') as file:
-        pickle.dump(classifier, file)
+        dump(classifier, file)
 
     # Save the label encoders
     with open(os.path.join(pkl_path, 'label_encoders.pkl'), 'wb') as file:
-        pickle.dump(encoders, file)
+        dump(encoders, file)
 
     # Save the column names
     with open(os.path.join(pkl_path, 'column_names.pkl'), 'wb') as file:
-        pickle.dump(column_names, file)
+        dump(column_names, file)
 
     # Save the target encoder
     with open(os.path.join(pkl_path, 'target_encoder.pkl'), 'wb') as file:
-        pickle.dump(target_encoder, file)
+        dump(target_encoder, file)
