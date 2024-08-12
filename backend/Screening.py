@@ -6,7 +6,10 @@ from flask import Flask, render_template, request, jsonify
 from flasgger import Swagger, swag_from
 import json
 import psutil
-from waitress import serve
+import sys
+from pickle import load
+# Local Imports
+from functions.models import train_model, analyze_numerical_features
 
 def get_memory_usage():
     process = psutil.Process(os.getpid())
@@ -14,8 +17,6 @@ def get_memory_usage():
 
 initial_memory = get_memory_usage()
 
-# Local Imports
-from functions.models import train_model, analyze_numerical_features
 
 base_path = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(base_path, 'data/csvs')
@@ -23,22 +24,22 @@ pkl_path = os.path.join(base_path, 'data/pkls')
 template_path = os.path.join(base_path, '../frontend/templates')
 csv_path = os.path.join(base_path, 'data/csvs/unique_filtered_final_with_target_variable.csv')
 
-#df = pd.read_csv(csv_path)
+df = None # pd.read_csv(csv_path)
 
 app = Flask(__name__, template_folder=template_path)
 swagger = Swagger(app)
 
-with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
-    classifier = pickle.load(file)
-    print("Classifier loaded")
 
-with open(os.path.join(pkl_path, 'label_encoders.pkl'), 'rb') as file:
-    encoders = pickle.load(file)
-    print("Encoders loaded")
-
-with open(os.path.join(pkl_path, 'column_names.pkl'), 'rb') as file:
-    column_names = pickle.load(file)
-    print("Column names loaded")
+file_path = os.path.join(pkl_path, 'final_model.pkl')
+if os.path.exists(file_path):
+    with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
+        classifier = load(file)
+    with open(os.path.join(pkl_path, 'label_encoders.pkl'), 'rb') as file:
+        encoders = load(file)
+    with open(os.path.join(pkl_path, 'column_names.pkl'), 'rb') as file:
+        column_names = load(file)
+    with open(os.path.join(pkl_path, 'target_encoder.pkl'), 'rb') as file:
+        target_encoder = load(file)
 
 ### Routes:
 
@@ -370,14 +371,11 @@ def get_memory_usage():
 
 
 def main():
-
     print("Main function")
-    #data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
-    
     file_path = os.path.join(pkl_path, 'final_model.pkl')
-    # if not os.path.exists(file_path):
-    #     train_model(data=data)
-    
+    if not os.path.exists(file_path):
+        data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
+        train_model(data=data)
     #data_column_names = data.columns
     print("Data loaded")
     #analyze_numerical_features()
@@ -393,8 +391,5 @@ if __name__ == "__main__":
             json.dump(openapi_spec, json_file, indent=2)
     print("Starting Flask app")
     final_memory = get_memory_usage()
-    print(f"Memory usage before: {initial_memory} MB")
-    print(f"Memory usage after: {final_memory} MB")
-    print(f"Memory used by code: {final_memory - initial_memory} MB")
-    serve(app, host='0.0.0.0', port=8000)
+    app.run(debug=True)
     
