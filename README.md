@@ -1,7 +1,5 @@
 # Screening Master
 
-This project is part of my master's program.
-
 ## Running Instructions
 
 1. **Open a terminal**:
@@ -64,3 +62,20 @@ This project is part of my master's program.
 ```sh
 deactivate
 ```
+
+## Render Running Settings
+
+![Render Running Instructions](Render.png)
+
+## Customization Instructions
+
+1. **Choosing which Model**:
+   In "backend/functions/models.py" the train_model function can be modified to use a different classifier
+2. **Choosing to run analytics**:
+   The analyze_numerical_features function can also be added into Screening.py to generate graphs and statistics about the model when the application is run.
+
+## Other Considerations
+
+1. **Re-training the Model**:
+   To retrain the models you need to make use of the 'unique_filtered_final_with_target_variable.csv' file which contains the training data.
+   To have the models retrain, just delete the 'final_model.pkl' file from the data/pkls folder and run the code using 'python backend/Screening.py'
