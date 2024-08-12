@@ -79,3 +79,5 @@ deactivate
 1. **Re-training the Model**:
    To retrain the models you need to make use of the 'unique_filtered_final_with_target_variable.csv' file which contains the training data.
    To have the models retrain, just delete the 'final_model.pkl' file from the data/pkls folder and run the code using 'python backend/Screening.py'
+2. **API Documentation Link**:
+   https://screening-master.apidocumentation.com/reference
