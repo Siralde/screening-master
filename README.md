@@ -7,7 +7,7 @@
 2. **Clone the repository**:
 
    ```sh
-   git clone <repository-link>
+   git clone https://github.com/Siralde/screening-master.git
    ```
 
 3. **Change directory into the repository folder**:
