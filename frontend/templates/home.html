@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+<!-- This file is for the home page specifically -->
 
 <head>
     <meta charset="utf-8">
@@ -76,9 +77,9 @@
             <p>Predict the potential success of your startup within the next 5 years based on various metrics and
                 classifications.</p>
         </div>
-        <a href="{{ url_for('predict') }}" class="btn">Predict Company Success</a>
+        <a href="{{ url_for('predict') }}" class="btn">Predict Company Success</a> <!-- Leads to prediction endpoint page -->
         <div style="margin-top: 40px;">
-            <a href="{{ url_for('search_companies') }}" class="btn">Search Companies</a>
+            <a href="{{ url_for('search_companies') }}" class="btn">Search Companies</a> <!-- Leads to search companies endpoint page -->
         </div>
     </div>
 

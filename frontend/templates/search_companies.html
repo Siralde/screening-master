@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 
+<!-- Page for the search companies endpoint -->
+
 <head>
     <meta charset="utf-8">
     <title>Search Results</title>
@@ -109,6 +111,7 @@
             <a href="/" class="back-btn">Back to Home</a>
             <h2>Search Results</h2>
         </div>
+        <!-- API Call -->
         <form method="get" action="{{ url_for('search_companies') }}">
             <input type="text" name="company_name" placeholder="Search for a company"
                 value="{{ request.args.get('company_name', '') }}">

@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="en">
 
+<!-- Predictions page -->
+
 <head>
     <meta charset="utf-8">
     <title>StartupHealthScore</title>
@@ -220,6 +222,8 @@
         StartupHealthScore <small>by Plug&Play</small>
     </div>
     
+    <!-- Small summary about the page -->
+
     <div class="container">
         <div class="description">
             <h2>About the Score</h2>
@@ -242,6 +246,9 @@
                 <li><strong>Funding Round (FR):</strong> Indicates the startup has had a funding round.</li>
             </ul>
         </div>
+
+        <!-- Different required information fields. -->
+
         <div class="content">
             <div class="form-container">
                 <h1>Enter Company Information</h1>
@@ -461,6 +468,8 @@
             event.preventDefault();
 
             const formData = new FormData(event.target);
+            
+            // API call
 
             fetch('/predict', {
                 method: 'POST',
