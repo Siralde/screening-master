@@ -16,10 +16,10 @@ pkl_path = os.path.join(base_path, '../data/pkls')
 template_path = os.path.join(base_path, '../../frontend/templates')
 
 def analyze_numerical_features():
-    with open(os.path.join(pkl_path, 'final_model.joblib'), 'rb') as file:
+    with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
         classifier = load(file)
 
-    with open(os.path.join(pkl_path, 'column_names.joblib'), 'rb') as file:
+    with open(os.path.join(pkl_path, 'column_names.pkl'), 'rb') as file:
         column_names = load(file)
 
     # Assuming data is loaded from the same file and preprocessed in the same way

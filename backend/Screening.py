@@ -11,13 +11,6 @@ from pickle import load
 # Local Imports
 from functions.models import train_model, analyze_numerical_features
 
-def get_memory_usage():
-    process = psutil.Process(os.getpid())
-    return process.memory_info().rss / 1024 ** 2  
-
-initial_memory = get_memory_usage()
-
-
 base_path = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(base_path, 'data/csvs')
 pkl_path = os.path.join(base_path, 'data/pkls')
@@ -59,10 +52,12 @@ else:
 
 ### Routes:
 
+# Home Page
 @app.route("/", methods=["GET"])
 def home():
     return render_template("home.html")
 
+# Predictions page endpoint
 @app.route("/predict", methods=["GET", "POST"])
 @swag_from({
     'tags': ['Prediction Endpoints'],
@@ -325,6 +320,7 @@ def predict():
 
     return render_template("index.html")
 
+# Searching companies page endpoint
 @app.route('/search_companies', methods=['GET'])
 @swag_from({
     'responses': {
@@ -373,27 +369,25 @@ def search_companies():
 
     return render_template('search_companies.html', results=result) 
 
+# Generating OpenAPI file endpoint
 @app.route('/openapi.json')
 def get_openapi_spec():
     with open('openapi.json') as json_file:
         return json.load(json_file)
 
-
-# Function to get memory usage
-def get_memory_usage():
-    process = psutil.Process(os.getpid())
-    return process.memory_info().rss / 1024 ** 2  
-
-
-
 def main():
     print("Main function")
     file_path = os.path.join(pkl_path, 'final_model.pkl')
     if not os.path.exists(file_path):
-        data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
-        train_model(data=data)
-    #data_column_names = data.columns
-    print("Data loaded")
+        if not os.path.exists(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv')):
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+            print(f"CSV named unique_filtered_final_with_target_variable.csv containing CrunchBase Data is missing from csvs folder")
+            print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        else:
+            data = pd.read_csv(os.path.join(data_path, 'unique_filtered_final_with_target_variable.csv'))
+            print("Training Models and populating pkls folder.")
+            train_model(data=data)
+    # Uncomment the below line if you desire extra details about the model performance.
     #analyze_numerical_features()
 
 
@@ -401,10 +395,14 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+    # Stores the OpenAPI for Scalar
     with app.app_context():
         openapi_spec = swagger.get_apispecs()
         with open('openapi.json', 'w') as json_file:
             json.dump(openapi_spec, json_file, indent=2)
+    
+    
     print("Starting Flask app")
     final_memory = get_memory_usage()
     app.run(debug=True)
