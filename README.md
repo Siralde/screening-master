@@ -89,11 +89,7 @@ deactivate
    ```sh
    "Starting Flask app"
    ```
-   is printed to terminal, you can hit
-   ```sh
-   "CTRL+C"
-   ```
-   to quit and then restart the server using
+   is printed to terminal, you can hit 'CTRL+C' to quit and then restart the server using
    ```sh
    flask run
    ```

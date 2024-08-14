@@ -30,8 +30,24 @@ app = Flask(__name__, template_folder=template_path)
 swagger = Swagger(app)
 
 
-file_path = os.path.join(pkl_path, 'final_model.pkl')
-if os.path.exists(file_path):
+# List of required files
+required_files = [
+    'final_model.pkl',
+    'label_encoders.pkl',
+    'column_names.pkl',
+    'target_encoder.pkl'
+]
+
+missing_files = [file for file in required_files if not os.path.exists(os.path.join(pkl_path, file))]
+
+if missing_files:
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    print(f"ERROR: The following required files are missing: {', '.join(missing_files)}\n Check the README.md for how to run the server in a way that generates the necessary files")
+    print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+    
+    quit
+else:
+    # Load the files if all are present
     with open(os.path.join(pkl_path, 'final_model.pkl'), 'rb') as file:
         classifier = load(file)
     with open(os.path.join(pkl_path, 'label_encoders.pkl'), 'rb') as file:
