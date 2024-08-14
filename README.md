@@ -105,3 +105,24 @@ deactivate
    https://screening-master.apidocumentation.com/reference
 3. **Company Search Page**:
    Currently deprecated since the csv is too large and requires too much RAM to load.
+
+## Notes On API Usage:
+
+1. **Documentation**:
+   https://screening-master.apidocumentation.com/reference
+2. **Examples Of Ways To Call**:
+   Python
+   ```sh
+   import requests
+   response = requests.post('http://127.0.0.1:5000/predict', json=data)
+   ```
+   Node.js
+   ```sh
+   import axios from 'axios';
+   axios.get('http://127.0.0.1:5000/predict')
+   ```
+   Curl
+   ```sh
+   curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: application/json" -d '{"key1":"value1", "key2":"value2"}'
+   ```
+   Check the Documenation for the required parameters.
