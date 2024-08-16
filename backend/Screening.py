@@ -23,10 +23,10 @@ swagger_template = {
         "description": "API for predicting company success rates.",
         "version": "1.0.0",
     },
-    "host": "screening-master-3.onrender.com",  # Replace with your actual host
-    "basePath": "/",  # The base path for your API endpoints
+    "host": "screening-master-3.onrender.com", 
+    "basePath": "/", 
     "schemes": [
-        "https",  # Use "http" if your API is not served over HTTPS
+        "https", 
     ],
     "externalDocs": {
         "description": "Find more info here",
