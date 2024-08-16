@@ -16,9 +16,27 @@ csv_path = os.path.join(base_path, 'data/csvs/unique_filtered_final_with_target_
 
 df = None # pd.read_csv(csv_path)
 
-app = Flask(__name__, template_folder=template_path)
-swagger = Swagger(app)
+swagger_template = {
+    "swagger": "2.0",
+    "info": {
+        "title": "My API",
+        "description": "API for predicting company success rates.",
+        "version": "1.0.0",
+    },
+    "host": "screening-master-3.onrender.com",  # Replace with your actual host
+    "basePath": "/",  # The base path for your API endpoints
+    "schemes": [
+        "https",  # Use "http" if your API is not served over HTTPS
+    ],
+    "externalDocs": {
+        "description": "Find more info here",
+        "url": "https://screening-master.apidocumentation.com/"
+    }
+}
 
+
+app = Flask(__name__, template_folder=template_path)
+swagger = Swagger(app, template=swagger_template)
 
 # List of required files
 required_files = [
@@ -55,179 +73,13 @@ def home():
     return render_template("home.html")
 
 # Predictions page endpoint
-@app.route("/predict", methods=["GET", "POST"])
-@swag_from({
-    'tags': ['Prediction Endpoints'],
-    'description': 'Enter company information and receive a rating describing its ',
-    'parameters': [
-        {
-            'name': 'company_country_code',
-            'in': 'formData',
-            'type': 'string',
-            'required': True
-        },
-        {
-            'name': 'company_region',
-            'in': 'formData',
-            'type': 'string',
-            'required': True
-        },
-        {
-            'name': 'company_city',
-            'in': 'formData',
-            'type': 'string',
-            'required': True
-        },
-        {
-            'name': 'company_category_list',
-            'in': 'formData',
-            'type': 'string',
-            'required': True
-        },
-        {
-            'name': 'company_last_round_investment_type',
-            'in': 'formData',
-            'type': 'string',
-            'required': True
-        },
-        {
-            'name': 'company_num_funding_rounds',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        },
-        {
-            'name': 'company_total_funding_usd',
-            'in': 'formData',
-            'type': 'number',
-            'required': True
-        },
-        {
-            'name': 'company_age_months',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        },
-        {
-            'name': 'company_has_facebook_url',
-            'in': 'formData',
-            'type': 'integer',
-            'required': False
-        },
-        {
-            'name': 'company_has_twitter_url',
-            'in': 'formData',
-            'type': 'integer',
-            'required': False
-        },
-        {
-            'name': 'company_has_linkedin_url',
-            'in': 'formData',
-            'type': 'integer',
-            'required': False
-        },
-        {
-            'name': 'company_round_count',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        },
-        {
-            'name': 'company_raised_amount_usd',
-            'in': 'formData',
-            'type': 'number',
-            'required': True
-        },
-        {
-            'name': 'company_last_round_raised_amount_usd',
-            'in': 'formData',
-            'type': 'number',
-            'required': True
-        },
-        {
-            'name': 'company_last_round_post_money_valuation',
-            'in': 'formData',
-            'type': 'number',
-            'required': True
-        },
-        {
-            'name': 'company_last_round_timelapse_months',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        },
-        {
-            'name': 'company_last_round_investor_count',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        },
-        {
-            'name': 'company_founders_dif_country_count',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        },
-        {
-            'name': 'company_founders_male_count',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        },
-        {
-            'name': 'company_founders_female_count',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        },
-        {
-            'name': 'company_founders_degree_count_total',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        },
-        {
-            'name': 'company_founders_degree_count_max',
-            'in': 'formData',
-            'type': 'integer',
-            'required': True
-        }
-    ],
-    'responses': {
-        '200': {
-            'description': 'Prediction result',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'Prediction': {
-                        'type': 'string'
-                    },
-                    'Confidence': {
-                        'type': 'string'
-                    }
-                },
-                'example': {
-                    'Prediction': 'Funding Round/Acquisition/IPO',
-                    'Confidence': '85.00'
-                }
-            }
-        },
-        '400': {
-            'description': 'Bad Request',
-            'schema': {
-                'type': 'object',
-                'properties': {
-                    'error': {
-                        'type': 'string'
-                    }
-                },
-                'example': {
-                    'error': 'Invalid input data'
-                }
-            }
-        }
-    }
-})
+@app.route("/predict", methods=["GET"])
+@swag_from('yml_files/predict_get.yml')
+def predict_get():
+    return render_template("index.html")
+
+@app.route("/predict", methods=["POST"])
+@swag_from('yml_files/predict_post.yml')
 def predict():
     if request.method == "POST":
         try:

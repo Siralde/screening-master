@@ -1,0 +1,10 @@
+Gets the HTML for the prediction webpage
+---
+tags:
+  - Prediction Endpoints
+description: Fetch the HTML page for entering company information and receiving a rating describing its success rate. No parameters are required.
+responses:
+  200:
+    description: HTML page retrieved successfully
+  404:
+    description: Page not found
