@@ -1,16 +1,13 @@
 import os
 import numpy as np
 import pandas as pd
-import pickle
 from flask import Flask, render_template, request, jsonify
 from flasgger import Swagger, swag_from
 import json
-import psutil
-import sys
 from pickle import load
+
 # Local Imports
 from functions.models import train_model, analyze_numerical_features
-
 base_path = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(base_path, 'data/csvs')
 pkl_path = os.path.join(base_path, 'data/pkls')
@@ -369,6 +366,7 @@ def search_companies():
 
     return render_template('search_companies.html', results=result) 
 
+
 # Generating OpenAPI file endpoint
 @app.route('/openapi.json')
 def get_openapi_spec():
@@ -404,6 +402,5 @@ if __name__ == "__main__":
     
     
     print("Starting Flask app")
-    final_memory = get_memory_usage()
     app.run(debug=True)
     
