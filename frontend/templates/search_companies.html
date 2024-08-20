@@ -6,103 +6,7 @@
 <head>
     <meta charset="utf-8">
     <title>Search Results</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-        }
-
-        .container {
-            padding: 20px;
-            max-width: 1200px;
-            width: 100%;
-            background-color: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            text-align: center;
-        }
-
-        .header {
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
-            border-radius: 8px 8px 0 0;
-        }
-
-        form {
-            margin-bottom: 20px;
-        }
-
-        input[type="text"] {
-            padding: 10px;
-            width: 70%;
-            margin-right: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        .table-container {
-            overflow-x: auto;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid #ddd;
-        }
-
-        th,
-        td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f4f4f4;
-        }
-
-        .back-btn {
-            padding: 10px 20px;
-            background-color: #27e356;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 16px;
-            margin-top: 20px;
-            display: inline-block;
-        }
-
-        .back-btn:hover {
-            background-color: #047620a9;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='search_companies.css') }}">
 </head>
 
 <body>
@@ -182,7 +86,8 @@
             {% else %}
             <p>No results found.</p>
             {% endif %}
-        
+        </div>
+    </div>
 </body>
 
 </html>
