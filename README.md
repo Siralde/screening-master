@@ -45,7 +45,8 @@
 7. **Run the backend**:
 
    ```sh
-   flask run
+   cd backend
+   uvicorn fastapi_app:app --reload
    ```
 
 **NOTE** If you run into an error when running the code here,
@@ -69,6 +70,12 @@ Random Trees is one of the slowest (estimated 20 minutes).
 
 ```sh
 deactivate
+```
+
+10. **Example of API call**
+
+```sh
+curl -X POST "http://127.0.0.1:8000/token" -H "Content-Type: application/x-www-form-urlencoded" -d "username=johndoe&password=secret"
 ```
 
 ## Render Running Settings
