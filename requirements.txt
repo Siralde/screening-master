@@ -8,3 +8,10 @@ python-dotenv
 psutil
 gunicorn
 waitress
+fastapi[all]
+uvicorn
+pydantic
+python-multipart
+passlib
+bcrypt
+python-jose
