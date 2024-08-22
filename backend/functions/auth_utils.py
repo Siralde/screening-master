@@ -14,6 +14,9 @@ load_dotenv()
 
 # Secret key for JWT
 SECRET_KEY = os.getenv("SECRET_KEY")
+if SECRET_KEY is None:
+    raise ValueError("No SECRET_KEY set for application in .env")
+
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
 
