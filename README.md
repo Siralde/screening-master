@@ -95,6 +95,8 @@ curl -X POST "http://127.0.0.1:8000/token" -H "Content-Type: application/x-www-f
 
 ![Render Running Instructions](Render.png)
 
+Also remember to paste the environment variables before deploying.
+
 ## Customization Instructions
 
 1. **Choosing which Model**:
@@ -115,6 +117,7 @@ curl -X POST "http://127.0.0.1:8000/token" -H "Content-Type: application/x-www-f
    To have the models retrain, just delete the 'final_model.pkl' file from the data/pkls folder and run the code using 'python backend/fastapi_app.py'
 2. **API Documentation Link**:
    https://screening-master.apidocumentation.com/reference
+   You can also visit the /docs route of your running application.
 3. **Company Search Page**:
    Currently deprecated since the csv is too large and requires too much RAM to load.
 
