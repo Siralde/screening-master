@@ -42,6 +42,15 @@
    pip install -r requirements.txt
    ```
 
+   Create a .env file and place a variable named SECRET_KEY into it.
+   Use the following script to generate a SECRET_KEY for yourself
+
+   ```sh
+   import secrets
+   secret_key = secrets.token_hex(32)
+   print(f"Your secret key: {secret_key}")
+   ```
+
 7. **Run the backend**:
 
    ```sh

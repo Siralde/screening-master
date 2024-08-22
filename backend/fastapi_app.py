@@ -20,6 +20,15 @@ import sys
 
 # Local Imports
 from functions.models import train_model, analyze_numerical_features
+from functions.auth_utils import (
+    SECRET_KEY, ALGORITHM, ACCESS_TOKEN_EXPIRE_MINUTES,
+    pwd_context, oauth2_scheme, fake_users_db,
+    Token, TokenData, User, UserInDB,
+    verify_password, get_user, authenticate_user,
+    create_access_token, get_current_user, get_current_active_user
+)
+
+# Your other app-related code can go here
 
 # Load environment variables from .env file
 load_dotenv()
@@ -70,93 +79,6 @@ else:
     with open(os.path.join(pkl_path, 'target_encoder.pkl'), 'rb') as file:
         target_encoder = load(file)
 
-# Secret key for JWT
-SECRET_KEY = os.getenv("SECRET_KEY")
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
-
-# Password hashing
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-
-# OAuth2 token URL
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
-
-# Dummy user data
-fake_users_db = {
-    "testuser": {
-        "username": "testuser",
-        "full_name": "Test User",
-        "email": "testuser@example.com",
-        "hashed_password": pwd_context.hash("testpassword"),
-        "disabled": False,
-    }
-}
-
-class Token(BaseModel):
-    access_token: str
-    token_type: str
-
-class TokenData(BaseModel):
-    username: Optional[str] = None
-
-class User(BaseModel):
-    username: str
-    email: Optional[str] = None
-    full_name: Optional[str] = None
-    disabled: Optional[bool] = None
-
-class UserInDB(User):
-    hashed_password: str
-
-def verify_password(plain_password, hashed_password):
-    return pwd_context.verify(plain_password, hashed_password)
-
-def get_user(db, username: str):
-    if username in db:
-        user_dict = db[username]
-        return UserInDB(**user_dict)
-
-def authenticate_user(db, username: str, password: str):
-    user = get_user(db, username)
-    if not user:
-        return False
-    if not verify_password(password, user.hashed_password):
-        return False
-    return user
-
-def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
-    to_encode = data.copy()
-    if expires_delta:
-        expire = datetime.now(timezone.utc) + expires_delta
-    else:
-        expire = datetime.now(timezone.utc) + timedelta(minutes=15)
-    to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
-    return encoded_jwt
-
-async def get_current_user(token: str = Depends(oauth2_scheme)):
-    credentials_exception = HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
-        detail="Could not validate credentials",
-        headers={"WWW-Authenticate": "Bearer"},
-    )
-    try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
-        username: str = payload.get("sub")
-        if username is None:
-            raise credentials_exception
-        token_data = TokenData(username=username)
-    except JWTError:
-        raise credentials_exception
-    user = get_user(fake_users_db, username=token_data.username)
-    if user is None:
-        raise credentials_exception
-    return user
-
-async def get_current_active_user(current_user: User = Depends(get_current_user)):
-    if current_user.disabled:
-        raise HTTPException(status_code=400, detail="Inactive user")
-    return current_user
 
 @app.post("/token", response_model=Token)
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
@@ -175,9 +97,6 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
 
 
 
-
-# Assume the existing FastAPI app and configurations are in place
-
 df = None # call pd.read_csv() on the file with the company data
 
 # Path Setup
@@ -187,7 +106,6 @@ pkl_path = Path(__file__).resolve().parent / 'data/pkls'
 
 templates = Jinja2Templates(directory=str(template_path))
 
-# Assuming the model and other necessary variables are already loaded as shown before.
 
 # Home Page
 @app.get("/", response_class=HTMLResponse)
@@ -196,12 +114,14 @@ async def home(request: Request):
 
 # Predictions page endpoint
 @app.get("/predict", response_class=HTMLResponse)
-async def predict_get(request: Request, current_user: dict = Depends(get_current_active_user)):
+async def predict_get(request: Request,
+                       #current_user: dict = Depends(get_current_active_user)
+                       ):
     return templates.TemplateResponse("index.html", {"request": request})
 
 @app.post("/predict", response_class=JSONResponse)
 async def predict(
-    current_user: dict = Depends(get_current_active_user),
+    #current_user: dict = Depends(get_current_active_user),
     company_country_code: str = Form(...),
     company_region: str = Form(...),
     company_city: str = Form(...),
@@ -291,7 +211,8 @@ async def predict(
 async def search_companies(
                            request: Request,
                             company_name: str,
-                            current_user: dict = Depends(get_current_active_user)):
+                            #current_user: dict = Depends(get_current_active_user)
+                            ):
     search_string = company_name.lower()
     if not search_string:
         return templates.TemplateResponse('search_companies.html', {"request": request, "results": []})
@@ -312,7 +233,8 @@ async def search_companies(
 
 # Serve OpenAPI Specification
 @app.get('/openapi.json', response_class=JSONResponse)
-async def get_openapi_spec(current_user: dict = Depends(get_current_active_user)):
+async def get_openapi_spec(#current_user: dict = Depends(get_current_active_user)
+                           ):
     with open('openapi.json') as json_file:
         return JSONResponse(content=json.load(json_file))
 
