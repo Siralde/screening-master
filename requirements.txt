@@ -2,12 +2,9 @@ numpy
 pandas
 matplotlib
 scikit-learn
-flask
-flasgger
 python-dotenv
 psutil
 gunicorn
-waitress
 fastapi[all]
 uvicorn
 pydantic
