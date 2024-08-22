@@ -54,7 +54,7 @@ go ahead and empty the pkls folder located at 'backend/data/pkls'
 and then run the command
 
 ```sh
-python backend/Screening.py
+python backend/fastapi_app.py
 ```
 
 in order to retrain all the models and make the necessary files.
@@ -72,7 +72,7 @@ Random Trees is one of the slowest (estimated 20 minutes).
 deactivate
 ```
 
-10. **Example of API call**
+10. **Run an API call like so to get an access token for use with the other endpoints**
 
 ```sh
 curl -X POST "http://127.0.0.1:8000/token" -H "Content-Type: application/x-www-form-urlencoded" -d "username=johndoe&password=secret"

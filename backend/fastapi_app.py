@@ -16,7 +16,7 @@ from datetime import datetime, timedelta
 from passlib.context import CryptContext
 from jose import JWTError, jwt
 from dotenv import load_dotenv
-
+import sys
 
 # Local Imports
 from functions.models import train_model, analyze_numerical_features
@@ -332,5 +332,7 @@ if __name__ == "__main__":
             train_model(data=data)
     # Uncomment the below line if you desire extra details about the model performance.
     #analyze_numerical_features()
+    sys.exit()
+
 
     
