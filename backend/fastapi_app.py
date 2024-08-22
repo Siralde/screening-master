@@ -32,9 +32,6 @@ from functions.auth_utils import (
 
 # Your other app-related code can go here
 
-# Load environment variables from .env file
-load_dotenv()
-
 
 base_path = Path(__file__).resolve().parent
 data_path = base_path / 'data/csvs'
@@ -50,7 +47,7 @@ app = FastAPI(
 )
 
 # Mounting static files
-app.mount("/static", StaticFiles(directory=str(static_path)), name="static")
+#app.mount("/static", StaticFiles(directory=str(static_path)), name="static")
 
 
 
