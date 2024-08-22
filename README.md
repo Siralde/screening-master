@@ -63,6 +63,10 @@ depending on the classifier you are using.
 Gradient Boosting is one of the fastest to train (estimated 5 minutes),
 Random Trees is one of the slowest (estimated 20 minutes).
 
+Visit the /docs route of the given root to see an openapi specification of the available endpoints
+i.e. [127.0.0.1](http://127.0.0.1:8000/docs)
+There is no root page html.
+
 8. **To quit and shutdown the server**:
    Press `CTRL+C`
 
@@ -89,25 +93,17 @@ curl -X POST "http://127.0.0.1:8000/token" -H "Content-Type: application/x-www-f
    Add the needed data into the csvs folder, name the csv file "unique_filtered_final_with_target_variable.csv".
    Delete the final_model.pkl file and run the following command to train a new model.
    ```sh
-   python backend/Screening.py
+   python backend/fastapi_app.py
    ```
    The link to the application may not display in terminal but it defaults to http://127.0.0.1:5000.
-   If needed, after the line
-   ```sh
-   "Starting Flask app"
-   ```
-   is printed to terminal, you can hit 'CTRL+C' to quit and then restart the server using
-   ```sh
-   flask run
-   ```
 2. **Choosing to run analytics**:
-   The analyze_numerical_features function can also be added into Screening.py to generate graphs and statistics about the model when the application is run.
+   The analyze_numerical_features function can also be added into fastapi_app.py to generate graphs and statistics about the model when the application is run.
 
 ## Other Considerations
 
 1. **Re-training the Model**:
    To retrain the models you need to make use of the 'unique_filtered_final_with_target_variable.csv' file which contains the training data.
-   To have the models retrain, just delete the 'final_model.pkl' file from the data/pkls folder and run the code using 'python backend/Screening.py'
+   To have the models retrain, just delete the 'final_model.pkl' file from the data/pkls folder and run the code using 'python backend/fastapi_app.py'
 2. **API Documentation Link**:
    https://screening-master.apidocumentation.com/reference
 3. **Company Search Page**:
