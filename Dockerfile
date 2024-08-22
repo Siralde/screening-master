@@ -1,13 +1,13 @@
-FROM python:3.9
+FROM python:3.11-slim
 
-WORKDIR /app
+WORKDIR /backend
 
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+COPY ../requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENV FLASK_APP=backend/Screening.py
-ENV FLASK_ENV=production
+EXPOSE 8000
 
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "backend.Screening:app"]
+CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "backend.fastapi_app:app"]
