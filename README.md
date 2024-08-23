@@ -123,16 +123,14 @@ Also remember to paste the environment variables before deploying.
 1. **Re-training the Model**:
    To retrain the models you need to make use of the 'unique_filtered_final_with_target_variable.csv' file which contains the training data.
    To have the models retrain, just delete the 'final_model.pkl' file from the data/pkls folder and run the code using 'python backend/fastapi_app.py'
-2. **API Documentation Link**:
-   https://screening-master.apidocumentation.com/reference
-   You can also visit the /docs route of your running application.
-3. **Company Search Page**:
+2. **Company Search Page**:
    Currently deprecated since the csv is too large and requires too much RAM to load.
 
 ## Notes On API Usage:
 
 1. **Documentation**:
    https://screening-master.apidocumentation.com/reference
+   You can also visit the /docs route of your running application.
 2. **Examples Of Ways To Call**:
    Python
    ```sh
