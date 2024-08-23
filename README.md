@@ -63,8 +63,16 @@ go ahead and empty the pkls folder located at 'backend/data/pkls'
 and then run the command
 
 ```sh
+python fastapi_app.py
+```
+
+or
+
+```sh
 python backend/fastapi_app.py
 ```
+
+depending on what your current directory is
 
 in order to retrain all the models and make the necessary files.
 Be warned that this action could take a lot of computation (Time and CPU)
@@ -88,7 +96,7 @@ deactivate
 10. **Run an API call like so to get an access token for use with the other endpoints**
 
 ```sh
-curl -X POST "http://127.0.0.1:8000/token" -H "Content-Type: application/x-www-form-urlencoded" -d "username=johndoe&password=secret"
+curl -X POST "(base url goes here)/token" -H "Content-Type: application/x-www-form-urlencoded" -d "username=johndoe&password=secret"
 ```
 
 ## Render Running Settings
@@ -141,3 +149,12 @@ Also remember to paste the environment variables before deploying.
    curl -X POST http://127.0.0.1:5000/predict -H "Content-Type: application/json" -d '{"key1":"value1", "key2":"value2"}'
    ```
    Check the Documenation for the required parameters.
+
+## Notes On OAuth2:
+
+- Currently there is a commented out line in the arguments list of each endpoint which if uncommented
+  will allow the usage of OAuth.
+- The user will have to submit a username and password to the /token route and receive a token which they can use
+  when calling the other endpoints.
+- This is just a very basic OAuth setup and will require more secure measures as well as a good username/password
+  and a database to keep track of keys and such.
