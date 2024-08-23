@@ -18,6 +18,8 @@ from jose import JWTError, jwt
 from dotenv import load_dotenv
 import sys
 import uvicorn
+from fastapi.encoders import jsonable_encoder
+from fastapi.exceptions import RequestValidationError
 
 
 # Local Imports
@@ -47,7 +49,7 @@ app = FastAPI(
 )
 
 # Mounting static files
-#app.mount("/static", StaticFiles(directory=str(static_path)), name="static")
+app.mount("/static", StaticFiles(directory=str(static_path)), name="static")
 
 
 
@@ -94,7 +96,20 @@ async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends(
     )
     return {"access_token": access_token, "token_type": "bearer"}
 
-
+@app.exception_handler(RequestValidationError)
+async def validation_exception_handler(request: Request, exc: RequestValidationError):
+    # Log the error details
+    print(f"Request validation error: {exc}")
+    print(f"Body content: {exc.body}")  # Print the body of the request that caused the error
+    print(f"Errors: {exc.errors()}")  # Detailed errors
+    
+    return JSONResponse(
+        status_code=422,
+        content=jsonable_encoder({
+            "detail": exc.errors(),
+            "body": exc.body
+        }),
+    )
 
 df = None # call pd.read_csv() on the file with the company data
 
@@ -118,24 +133,29 @@ async def predict_get(request: Request,
                        ):
     return templates.TemplateResponse("index.html", {"request": request})
 
+def clean_numeric_input(value: str) -> float:
+    cleaned_value = value.replace(',', '')  # Remove commas
+    return float(cleaned_value)  # Convert to float 
+
+
 @app.post("/predict", response_class=JSONResponse)
 async def predict(
-    #current_user: dict = Depends(get_current_active_user),
+    # current_user: dict = Depends(get_current_active_user),
     company_country_code: str = Form(...),
     company_region: str = Form(...),
     company_city: str = Form(...),
     company_category_list: str = Form(...),
     company_last_round_investment_type: str = Form(...),
     company_num_funding_rounds: int = Form(...),
-    company_total_funding_usd: float = Form(...),
+    company_total_funding_usd: str = Form(...),  
     company_age_months: int = Form(...),
     company_has_facebook_url: int = Form(0),
     company_has_twitter_url: int = Form(0),
     company_has_linkedin_url: int = Form(0),
     company_round_count: int = Form(...),
-    company_raised_amount_usd: float = Form(...),
-    company_last_round_raised_amount_usd: float = Form(...),
-    company_last_round_post_money_valuation: float = Form(...),
+    company_raised_amount_usd: str = Form(...),  
+    company_last_round_raised_amount_usd: str = Form(...),  
+    company_last_round_post_money_valuation: str = Form(...),  
     company_last_round_timelapse_months: int = Form(...),
     company_last_round_investor_count: int = Form(...),
     company_founders_dif_country_count: int = Form(...),
@@ -144,6 +164,7 @@ async def predict(
     company_founders_degree_count_total: int = Form(...),
     company_founders_degree_count_max: int = Form(...)
 ):
+    
     try:
         new_company_info = {
             'country_code': company_country_code,
@@ -152,15 +173,15 @@ async def predict(
             'category_list': company_category_list,
             'last_round_investment_type': company_last_round_investment_type,
             'num_funding_rounds': company_num_funding_rounds,
-            'total_funding_usd': company_total_funding_usd,
+            'total_funding_usd': clean_numeric_input(company_total_funding_usd),
             'age_months': company_age_months,
             'has_facebook_url': company_has_facebook_url,
             'has_twitter_url': company_has_twitter_url,
             'has_linkedin_url': company_has_linkedin_url,
             'round_count': company_round_count,
-            'raised_amount_usd': company_raised_amount_usd,
-            'last_round_raised_amount_usd': company_last_round_raised_amount_usd,
-            'last_round_post_money_valuation': company_last_round_post_money_valuation,
+            'raised_amount_usd': clean_numeric_input(company_raised_amount_usd),
+            'last_round_raised_amount_usd': clean_numeric_input(company_last_round_raised_amount_usd),
+            'last_round_post_money_valuation': clean_numeric_input(company_last_round_post_money_valuation),
             'last_round_timelapse_months': company_last_round_timelapse_months,
             'last_round_investor_count': company_last_round_investor_count,
             'founders_dif_country_count': company_founders_dif_country_count,
