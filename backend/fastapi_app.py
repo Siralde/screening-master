@@ -134,8 +134,8 @@ async def predict_get(request: Request,
     return templates.TemplateResponse("index.html", {"request": request})
 
 def clean_numeric_input(value: str) -> float:
-    cleaned_value = value.replace(',', '')  # Remove commas
-    return float(cleaned_value)  # Convert to float 
+    cleaned_value = value.replace(',', '')  
+    return float(cleaned_value)  
 
 
 @app.post("/predict", response_class=JSONResponse)
