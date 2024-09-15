@@ -7,4 +7,4 @@ services:
     healthCheckPath: /
     plan: starter
     region: oregon
-    workingDirectory: backend # Specifies the working directory to be 'backend'
+    #workingDirectory: backend # Specifies the working directory to be 'backend'
